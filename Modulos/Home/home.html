@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCarga Home</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="home.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="img/header.jpg" alt="Encabezado">
+        </div>
+    </header>
+    <nav>
+        <div class="search">
+            <input type="text" placeholder="Introduce código postal...">
+            <img src="img/lupa.jpg" alt="Buscar" id="buscar" onclick="buscarMapa()">
+        </div>
+
+        <div class="login">
+            <img src="img/user.jpg" id= "user" alt="Login">
+        </div>
+        
+            <img src="img/select.png" alt="select" id="select" onclick="toggleMenu()">
+    
+        <!-- Menú desplegable -->
+        <div class="nav-menu" id="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="map-container"></div>
+
+    <!-- JavaScript para configurar el mapa de Highcharts -->
+    <div id="mapa"></div>
+
+    
+</body>
+</html>
