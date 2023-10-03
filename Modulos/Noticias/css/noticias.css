@@ -4,8 +4,15 @@
     width: 100%;
     max-width: 900px;
     margin: 0 auto; 
-    position: relative; 
+    position: relative;
+    margin-top: 25px; 
 }
+
+iframe {
+    display: block;
+    margin: 0 auto;
+  }
+  
 
 body{
     background-color: #FAF5E2;
@@ -114,5 +121,5 @@ p{
 }
 
 hr{
-    color:#FAF5E2;
+    color:#344306;
 }
