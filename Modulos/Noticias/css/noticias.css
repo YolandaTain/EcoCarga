@@ -83,6 +83,7 @@ header {
     width: 100px;
     height: auto; 
 }
+
 footer {
     display: flex;
     justify-content: center; 
@@ -102,9 +103,7 @@ footer nav a {
     color: #FAF5E2;
     font-weight: bold; 
     font-size: 16px; 
-    margin: 50px;
-    
-    
+    margin: 50px;      
 }
 
 #fecha{  
