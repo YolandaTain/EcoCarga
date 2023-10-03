@@ -1,9 +1,8 @@
-function toggleMenu() {
-    var menu = document.getElementById("menu");
-    menu.classList.toggle("active");
+function volverHome(){
+    window.open("/Modulos/Home/home.html", "_self");
 }
 
-
+/*
     //MAPA
     var mapaConfig = {
         chart: {
@@ -29,3 +28,4 @@ function toggleMenu() {
 
     // Crear el mapa con Highcharts
     var mapa = new Highcharts.Map(mapaConfig);
+*/
