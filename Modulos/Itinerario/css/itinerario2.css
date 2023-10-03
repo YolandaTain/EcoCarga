@@ -44,7 +44,8 @@ label {
 
 input[type="text"],
 input[type="date"],
-input[type="email"] {
+input[type="number"],
+select {
     width: 98%;
     padding: 10px;
     margin-bottom: 15px;
@@ -52,33 +53,67 @@ input[type="email"] {
     border-radius: 3px;
 }
 
-#boton {
+input[type="radio"] {
+    margin-right: 5px;
+
+}
+
+#contenedorFecha {
+    display: flex;
+
+}
+
+#contenedorFechaInicio {
+    margin-right: 2%;
+    width: 100%;
+}
+
+#contenedorFechaFin {
+    margin-right: 2%;
+    width: 100%;
+}
+
+#contenedorFechaIncio input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#contenedorFechaFin input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#contenedorVelocidadCarga{
+    display: block;
+    width: 20%;
+    margin-left: 15%;
+}
+
+button {
     background-color: #333;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    height: 40px;
-    width: 250px;
-
-}
-
-#botonPadre {
-    display: flex;
-    justify-content: center;
-}
-
-#boton a {
-    color: #fff;
+    height: 50px;
+    width: 300px;
     font-weight: bold;
     font-size: large;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
+
 }
 
+#boton {
+    display: flex;
+    justify-content: center;
+}
 
-#boton:hover {
+button:hover {
     background-color: #555;
 }
