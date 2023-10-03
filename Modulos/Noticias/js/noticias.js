@@ -1,6 +1,6 @@
 // Configuración del carrusel de noticias
 $('#carrusel-noticias').slick({
-    slidesToShow: 3, // Muestra 3 noticias a la vez
+    slidesToShow: 2, // Muestra 2 noticias a la vez
     slidesToScroll: 1,
     arrows: true,
     prevArrow: $('#prev'),
