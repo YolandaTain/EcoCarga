@@ -1,0 +1,117 @@
+#carrusel-noticias {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; 
+    position: relative; 
+}
+
+body{
+    background-color: #FAF5E2;
+}
+
+header {
+    background-image: url("../img/header.jpg");
+    background-size: cover; /* O ajusta esto según tus necesidades */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-position: center center; /* Centra la imagen en el elemento */
+}
+
+.noticia {
+    flex: 0 0 33.33%; 
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.5s ease; 
+}
+
+.noticia img {
+    max-width: 100%;
+    height: auto;
+}
+
+.arrow {
+    background-color: #ffffff00;
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 5; 
+}
+
+#prev {
+    left: 150px;
+}
+#flecha{
+    width: 200px;
+    height: 100px;
+}
+#next {
+    right: 300px; 
+}
+
+
+.noticia {
+    padding: 10px;
+    text-align: center;
+}
+
+.noticia h2 {
+    font-size: 1.5rem;
+    font-family: Verdana;
+    margin: 10px 0;
+}
+
+.noticia img {
+    max-width: 100%;
+    height: auto;
+}
+#logo img {
+    width: 100px;
+    height: auto; 
+}
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100px;
+    background-color: #344306; 
+}
+
+footer nav {
+    background-color: #344306; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+footer nav a {
+    text-decoration: none;
+    color: #FAF5E2;
+    font-weight: bold; 
+    font-size: 16px; 
+    margin: 50px;
+    
+    
+}
+
+#fecha{  
+    font-family: Arial, sans-serif;
+    font-weight: bold; 
+    color:#14a44b   
+}
+
+h2{
+    color:#399fec
+}
+p{
+    color:#000000
+}
+
+hr{
+    color:#FAF5E2;
+}
