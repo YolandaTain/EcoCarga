@@ -89,10 +89,76 @@ input[type="radio"] {
     border-radius: 3px;
 }
 
-#contenedorVelocidadCarga{
-    display: block;
-    width: 20%;
-    margin-left: 15%;
+#contenedorAutonomiayTipoCoche {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#contenedorAutonomia {
+    margin-right: 2%;
+    width: 47%;
+    margin-top: 1%;
+}
+
+#contenedorTipoCoche {
+    margin-right: 2%;
+    width: 51%;
+    margin-top: 0.9%;
+    margin-right: -0.8%;
+}
+
+#contenedorAutonomia input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#contenedorTipoCoche input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    border: 3px;
+}
+
+#contenedorVelocidadCargaYNumPasajeros {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#contenedorVelocidadCarga {
+    margin-right: 2%;
+    width: 60%;
+    margin-top: 1%;
+}
+
+#contenedorNumPasajeros {
+    margin-right: 2%;
+    width: 55%;
+    margin-top: 1%;
+
+}
+
+#contenedorVelocidadCarga input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#contenedorNumPasajeros input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
 }
 
 button {
