@@ -36,31 +36,37 @@
                 <input type="date" id="fechaFin" name="fechaFin" required><br><br>
             </div>
         </div>
+        <div id="contenedorAutonomiayTipoCoche">
+            <div id="contenedorAutonomia">
+                <label for="autonomia">Autonomía del Coche Eléctrico (en kilómetros):</label>
+                <input type="number" id="autonomia" name="autonomia" required><br><br>
+            </div>
 
-        <label for="autonomia">Autonomía del Coche Eléctrico (en kilómetros):</label>
-        <input type="number" id="autonomia" name="autonomia" required><br><br>
+            <div id="contenedorTipoCoche">
+                <label for="tipoCoche">Tipo de Coche Eléctrico:</label>
+                <select id="tipoCoche" name="tipoCoche" required>
+                    <option value="compacto">Compacto</option>
+                    <option value="sedán">Sedán</option>
+                    <option value="SUV">SUV</option>
+                    <option value="4x4">4x4</option>
+                    <option value="deportivo">Deportivo</option>
 
-
-
-        <label for="tipoCoche">Tipo de Coche Eléctrico:</label>
-        <select id="tipoCoche" name="tipoCoche" required>
-            <option value="compacto">Compacto</option>
-            <option value="sedán">Sedán</option>
-            <option value="SUV">SUV</option>
-            <option value="4x4">4x4</option>
-            <option value="deportivo">Deportivo</option>
-
-        </select><br><br>
-        <div id="contenedorVelocidadCarga">
-            <label for="velocidadCarga">Velocidad de Carga Deseada:</label>
-            <input type="radio" id="velocidadCargaAlta" name="velocidadCarga" value="alta" required>
-            <label for="velocidadCargaAlta">Alta (rápida)</label>
-            <input type="radio" id="velocidadCargaNormal" name="velocidadCarga" value="normal" required>
-            <label for="velocidadCargaNormal">Normal</label><br><br>
+                </select><br><br>
+            </div>
         </div>
-        <label for="numPasajeros">Número de Pasajeros:</label>
-        <input type="number" id="numPasajeros" name="numPasajeros" required><br><br>
-
+        <div id="contenedorVelocidadCargaYNumPasajeros">
+            <div id="contenedorVelocidadCarga">
+                <label for="velocidadCarga">Velocidad de Carga Deseada:</label>
+                <select name="velocidadCarga" id="velocidadCargaAlta">
+                    <option value="alta">Alta</option>
+                    <option value="normal">Normal</option>
+                </select>
+            </div>
+            <div id="contenedorNumPasajeros">
+                <label for="numPasajeros">Número de Pasajeros:</label>
+                <input type="number" id="numPasajeros" name="numPasajeros" required><br><br>
+            </div>
+        </div>
         <label>Preferencias de Actividades:</label><br>
         <input type="checkbox" id="restaurantes" name="preferenciasActividades[]" value="restaurantes">
         <label for="restaurantes">Restaurantes</label><br>
