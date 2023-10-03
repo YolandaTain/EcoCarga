@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoCarga Home</title>
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="home.js"></script>
+    <script src="js/home.js"></script>
     <link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <img src="img/header.jpg" alt="Encabezado">
+        <div class="img-container" onclick="volverHome()">
+            <img src="img/header.jpg" alt="Encabezado" id= "header">
+            <img src="img/logo.png" alt="Logo" id= "headerLogo">
+            <img src="img/logo.png" alt="Logo" id= "headerLogo">
         </div>
     </header>
     <nav>
@@ -20,10 +22,6 @@
             <img src="img/lupa.jpg" alt="Buscar" id="buscar" onclick="buscarMapa()">
         </div>
 
-        <div class="login">
-            <img src="img/user.jpg" id= "user" alt="Login">
-        </div>
-        
             <img src="img/select.png" alt="select" id="select" onclick="toggleMenu()">
     
         <!-- Menú desplegable -->
@@ -36,11 +34,11 @@
             </ul>
         </div>
     </nav>
-    <div id="map-container"></div>
-
+    
     <!-- JavaScript para configurar el mapa de Highcharts -->
-    <div id="mapa"></div>
-
+    <div id="mapa-container">
+        <img src="img/mapa.png" id= "mapa" alt="mapa">
+    </div>
     
 </body>
 </html>
