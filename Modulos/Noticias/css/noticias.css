@@ -15,7 +15,7 @@ iframe {
   
 
 body{
-    background-color: #FAF5E2;
+    background-color: #FFFDF4;
 }
 
 header {
@@ -52,14 +52,14 @@ header {
 }
 
 #prev {
-    left: 150px;
+    left: 230px;
 }
 #flecha{
-    width: 200px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 #next {
-    right: 300px; 
+    right: 250px; 
 }
 
 
@@ -76,9 +76,10 @@ header {
 }
 
 .noticia img {
-    max-width: 100%;
-    height: auto;
+  width: 120%;
+ 
 }
+
 #logo img {
     width: 100px;
     height: auto; 
@@ -100,7 +101,7 @@ footer nav {
 
 footer nav a {
     text-decoration: none;
-    color: #FAF5E2;
+    color: #FFFDF4;
     font-weight: bold; 
     font-size: 16px; 
     margin: 50px;      
@@ -108,12 +109,15 @@ footer nav a {
 
 #fecha{  
     font-family: Arial, sans-serif;
+    font-size: small;
     font-weight: bold; 
     color:#14a44b   
 }
 
 h2{
-    color:#399fec
+    color:#344306;
+    font-size: small;
+    
 }
 p{
     color:#000000
@@ -121,4 +125,62 @@ p{
 
 hr{
     color:#344306;
+}
+
+.texto{
+    display: flexbox;
+
+}
+
+
+.descripcion-noticia {
+    display: none; /* Oculta inicialmente el cuadro de información */
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.titulo-noticia {
+    display: none; /* Oculta inicialmente el título */
+}
+
+.imagen-noticia {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer; /* Cambiar el cursor al pasar sobre la imagen */
+}
+
+/* Estilo para el cuadro emergente (inicialmente oculto) */
+.imagen-noticia:hover + .titulo-noticia + .descripcion-noticia {
+    display: block;
+    position: absolute;
+    background-color: #b9b7b7;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-width: 300px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Estilo para el cuadro emergente (inicialmente oculto) */
+#cuadro-emergente {
+    display: none;
+    transform: translate(35%, -70%); /* Centrar completamente */
+    background-color: #d0ef73;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Ancho igual al 100% del contenedor del carrusel-noticias */
+    height: 20px; /* Altura fija para abarcar el espacio que desees */
+    color: #817e7e;
+    left: 10%;
+}
+
+#descripcion-noticia-popup {
+    margin: 10px; /* Añadir margen interno alrededor del texto */
 }

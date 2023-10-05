@@ -1,6 +1,6 @@
 // Configuración del carrusel de noticias
 $('#carrusel-noticias').slick({
-    slidesToShow: 2, // Muestra 2 noticias a la vez
+    slidesToShow: 3, // Muestra 2 noticias a la vez
     slidesToScroll: 1,
     arrows: true,
     prevArrow: $('#prev'),
@@ -34,8 +34,38 @@ $('#prev').click(() => {
     }
 });
 
-// Evento para mostrar u ocultar el menú al hacer clic en el botón del menú
-menuButton.addEventListener('click', () => {
-    menuOptions.classList.toggle('show'); // Muestra u oculta el menú
-});
+document.addEventListener("DOMContentLoaded", function() {
+    const imagenes = document.querySelectorAll(".imagen-noticia");
+    const descripciones = document.querySelectorAll(".descripcion-noticia");
+    const cuadroEmergente = document.getElementById("cuadro-emergente");
+    const contenidoEmergente = document.getElementById("descripcion-noticia-popup");
+    const cerrar = document.getElementById("cerrar");
+  
+    imagenes.forEach((imagen, index) => {
+      imagen.addEventListener("click", () => {
+        contenidoEmergente.textContent = descripciones[index].textContent;
+  
+        // Obtener el tamaño y posición del carrusel
+        const carrusel = document.getElementById("carrusel-noticias");
+        const carruselAncho = carrusel.clientWidth;
+        const carruselAlto = carrusel.clientHeight;
+        const carruselPosicion = carrusel.getBoundingClientRect();
+  
+        // Establecer el ancho y alto del cuadro emergente
+        cuadroEmergente.style.width = "880px";
+        cuadroEmergente.style.height = "100px";
+  
+        // Centrar el cuadro emergente dentro del carrusel
+        cuadroEmergente.style.left = `${carruselPosicion.left}px`;
+        cuadroEmergente.style.top = `${carruselPosicion.top}px`;
+  
+        cuadroEmergente.style.display = "block";
+      });
+    });
+  });
+  
+  
+  
+
+
 
