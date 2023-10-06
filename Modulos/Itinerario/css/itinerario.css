@@ -125,3 +125,15 @@ button {
 button:hover {
     background-color: #1C2206;
 }
+
+a{
+    color: white;
+  }
+  
+  a:hover{
+    color: white;
+  }
+  
+  a:active{
+    color: white;
+  }

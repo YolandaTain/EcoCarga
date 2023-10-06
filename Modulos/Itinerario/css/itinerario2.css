@@ -270,6 +270,18 @@ input[type="checkbox"]:checked{
     background-color: #83A931;
 }
 
+a{
+    color: white;
+  }
+  
+  a:hover{
+    color: white;
+  }
+  
+  a:active{
+    color: white;
+  }
+
 
 
  

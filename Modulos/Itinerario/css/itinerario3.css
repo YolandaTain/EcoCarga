@@ -225,3 +225,15 @@ input[type="checkbox"]:checked{
     font-size: 100%;
     margin-left: 8%;
 }
+
+a{
+    color: white;
+  }
+  
+  a:hover{
+    color: white;
+  }
+  
+  a:active{
+    color: white;
+  }
