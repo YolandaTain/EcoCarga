@@ -34,10 +34,7 @@ header {
     transition: transform 0.5s ease; 
 }
 
-.noticia img {
-    max-width: 100%;
-    height: auto;
-}
+
 
 .arrow {
     background-color: #ffffff00;
@@ -117,7 +114,7 @@ footer nav a {
     font-family: Arial, sans-serif;
     font-size: small;
     font-weight: bold; 
-    color:#14a44b   
+    color:#344306;   
 }
 
 h2{
@@ -154,7 +151,7 @@ hr{
 
 .imagen-noticia {
     max-width: 100%;
-    height: auto;
+    height: 200px;
     cursor: pointer; 
 }
 
@@ -170,10 +167,13 @@ hr{
     left: 50%;
     transform: translateX(-50%);
 }
+header h1{
+    color:#fbfbfb;
+}
 
 #cuadro-emergente {
     display: none;
-    transform: translate(36%, -30%);
+    transform: translate(36%, -5%);
     background-color:rgb(170, 225, 60);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 100%; 
@@ -264,4 +264,20 @@ hr{
     color: rgb(170, 225, 60); 
 }
 
+.video{
+    background-color: #344306;
+}
 
+/* CSS para el carrusel principal */
+.noticia .imagen-noticia img {
+    width: 300px; /* Tamaño deseado para las imágenes en el carrusel principal */
+    height: 200px; /* Tamaño deseado para las imágenes en el carrusel principal */
+    object-fit: cover; /* Esto ajustará la imagen para que llene el espacio sin distorsionarla */
+}
+
+/* CSS para el carrusel 2 */
+.noticia2 .imagen-noticia2 img {
+    width: 300px; /* Tamaño deseado para las imágenes en el carrusel 2 */
+    height: 200px; /* Tamaño deseado para las imágenes en el carrusel 2 */
+    object-fit: cover; /* Esto ajustará la imagen para que llene el espacio sin distorsionarla */
+}
