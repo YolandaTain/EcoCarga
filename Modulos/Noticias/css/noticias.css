@@ -20,9 +20,9 @@ body{
 
 header {
     background-image: url("../img/header.jpg");
-    background-size: cover; /* O ajusta esto según tus necesidades */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-position: center center; /* Centra la imagen en el elemento */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
 }
 
 .noticia {
@@ -134,7 +134,7 @@ hr{
 
 
 .descripcion-noticia {
-    display: none; /* Oculta inicialmente el cuadro de información */
+    display: none; 
     background-color: white;
     padding: 10px;
     position: absolute;
@@ -145,17 +145,12 @@ hr{
     z-index: 1;
 }
 
-.titulo-noticia {
-    display: none; /* Oculta inicialmente el título */
-}
-
 .imagen-noticia {
     max-width: 100%;
     height: auto;
-    cursor: pointer; /* Cambiar el cursor al pasar sobre la imagen */
+    cursor: pointer; 
 }
 
-/* Estilo para el cuadro emergente (inicialmente oculto) */
 .imagen-noticia:hover + .titulo-noticia + .descripcion-noticia {
     display: block;
     position: absolute;
@@ -169,18 +164,35 @@ hr{
     transform: translateX(-50%);
 }
 
-/* Estilo para el cuadro emergente (inicialmente oculto) */
 #cuadro-emergente {
     display: none;
-    transform: translate(35%, -70%); /* Centrar completamente */
-    background-color: #d0ef73;
+    transform: translate(36%, -30%);
+    background-color:rgb(129, 176, 34);;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 100%; /* Ancho igual al 100% del contenedor del carrusel-noticias */
-    height: 20px; /* Altura fija para abarcar el espacio que desees */
-    color: #817e7e;
+    width: 100%; 
+    height: 50px; 
+    color: #fbfbfb;
     left: 10%;
 }
 
 #descripcion-noticia-popup {
-    margin: 10px; /* Añadir margen interno alrededor del texto */
+    margin: 10px; 
+}
+
+.cambio-color {
+    color: rgb(129, 176, 34); 
+}
+
+.imagen-noticia:hover + .titulo-noticia + .descripcion-noticia h2 {
+    font-size: 24px !important; 
+}
+
+#cerrar{
+    margin: 10px;
+}
+
+#titulo-noticia-popup{
+    font-size: 24px; 
+    color: #ffffff; 
+    margin-left: 200px;
 }
