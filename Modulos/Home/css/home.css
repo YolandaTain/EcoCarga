@@ -1,6 +1,12 @@
 body {
+    font-family: 'Marvel', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+h1{
+    z-index: 2;
+    color: #FAF5E2;
 }
 
 header {
@@ -39,6 +45,22 @@ header {
     z-index: 2;
 }
 
+#select{
+    align-items: right;
+    z-index: 3;
+}
+
+.search{
+    display: flex;
+    position: relative;
+}
+
+#searchBar{
+    align-items: left;
+  
+}
+
+
 
 
 nav {
@@ -46,6 +68,8 @@ nav {
     color: white;
     background: linear-gradient(to right, #3a3a3a, #558bb8);
 }
+
+
 
 .mapa-container {
     max-width: 100%; 
@@ -57,31 +81,12 @@ nav {
     height: auto; 
 }
 
-#select{
-    width: 50px;
-    float: right;
-    margin-right: 20px;
-}
-
-#buscar{
-    width: 50px;
-    float: left;
-    margin-left: 20px;
-}
-
 
 #map-container {
     width: 100%;
     height: 400px; /* Ajusta la altura según tus necesidades */
 }
 
-/* Estilos generales */
-/* Estilos generales */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
 
 /* Estilos específicos para el menú desplegable */
 .nav-menu {

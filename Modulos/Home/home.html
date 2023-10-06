@@ -7,23 +7,30 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="js/home.js"></script>
     <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
+
+   
 </head>
 <body>
     <header>
         <div class="img-container" onclick="volverHome()">
             <img src="img/header.jpg" alt="Encabezado" id= "header">
             <img src="img/logo.png" alt="Logo" id= "headerLogo">
-            <img src="img/logo.png" alt="Logo" id= "headerLogo">
+            <svg xmlns="http://www.w3.org/2000/svg" id="select" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <h1>EcoCarga</h1>
+        
         </div>
+        
     </header>
     <nav>
         <div class="search">
-            <input type="text" placeholder="Introduce código postal...">
-            <img src="img/lupa.jpg" alt="Buscar" id="buscar" onclick="buscarMapa()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#faf5e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="searchBar" placeholder="Introduce código postal...">
+            
         </div>
-
-            <img src="img/select.png" alt="select" id="select" onclick="toggleMenu()">
-    
+            
         <!-- Menú desplegable -->
         <div class="nav-menu" id="menu">
             <ul>
