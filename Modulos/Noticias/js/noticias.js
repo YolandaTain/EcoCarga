@@ -1,24 +1,19 @@
-// Configuración del carrusel de noticias
 $('#carrusel-noticias').slick({
-    slidesToShow: 3, // Muestra 2 noticias a la vez
+    slidesToShow: 3, 
     slidesToScroll: 1,
     arrows: true,
     prevArrow: $('#prev'),
     nextArrow: $('#next'),
 });
 
-// Obtén referencias a elementos HTML
 const menuButton = document.getElementById('menu-button');
 const menuOptions = document.getElementById('menu-options');
 
 let posicionActual = 0;
 
-// Función para mostrar la noticia en la posición actual
 function mostrarNoticia() {
     $('#carrusel-noticias').slick('slickGoTo', posicionActual);
 }
-
-// Evento para avanzar a la siguiente noticia
 $('#next').click(() => {
     if (posicionActual < $('#carrusel-noticias .slick-slide').length - 3) {
         posicionActual++;
