@@ -56,6 +56,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         otroTitulo.classList.remove("cambio-color");
                     }
                 });
+            
+                cerrar.addEventListener("click", () => {
+                    cuadroEmergente.style.display = "none";
+                });
 
             // Obtener el tamaño y posición del carrusel
             const carrusel = document.getElementById("carrusel-noticias");
