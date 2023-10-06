@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Itinerario para Coche Eléctrico</title>
     <link rel="stylesheet" type="text/css" href="css/itinerario.css">
+    <script src="/Modulos/Itinerario/js/itinerario.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+    <header>
+        <div class="img-container" onclick="volverHome()">
+            <img src="../Nav/img/header.jpg" alt="Encabezado" id="header">
+            <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo">
+        </div>
+    </header>
     <h1>Tu planificador de viajes</h1>
 
     <div id="barraProgreso">
@@ -29,8 +39,10 @@
         <input type="date" id="fechaNac" name="fechaNac" required><br><br>
         <div id="botonPadre">
             <div id="boton">
-                <a href="/Modulos/Itinerario/itinerario2.html">
-                    Siguiente
+                <a href="/Modulos/Itinerario/itinerario2.html" target="">
+                    <button>Siguiente
+    
+                    </button>
                 </a>
             </div>
         </div>

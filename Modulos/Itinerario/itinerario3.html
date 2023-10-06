@@ -6,47 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/itinerario3.css">
+    <script src="/Modulos/Itinerario/js/itinerario.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <div class="img-container" onclick="volverHome()">
+            <img src="../Nav/img/header.jpg" alt="Encabezado" id="header">
+            <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo">
+        </div>
+    </header>
+    <div id="barraProgreso">
+        <label for="file">
+            <h3>Progeso de solicitud</h3>
+        </label>
+        <progress id="file" max="100" value="66">66%</progress>
+    </div>
+    <br>
+
     <form method="get">
-        <label for="tipoCoche">Tipo de Coche Eléctrico:</label>
-        <select id="tipoCoche" name="tipoCoche" required>
-            <option value="compacto">Compacto</option>
-            <option value="sedán">Sedán</option>
-            <option value="SUV">SUV</option>
-            <option value="4x4">4x4</option>
-            <option value="deportivo">Deportivo</option>
+        <div id="contenedorPasajerosYCoche">
+            <div id="contenedorPasajeros">
+                <label for="numPasajeros">Número de Pasajeros:</label>
+                <input type="number" id="numPasajeros" name="numPasajeros" required><br><br>
+            </div>
+            <div id="contenedorTipoCoche">
+                <label for="tipoCoche">Tipo de Coche Eléctrico:</label>
+                <select id="tipoCoche" name="tipoCoche" required>
+                    <option value="compacto">Compacto</option>
+                    <option value="sedán">Sedán</option>
+                    <option value="SUV">SUV</option>
+                    <option value="4x4">4x4</option>
+                    <option value="deportivo">Deportivo</option>
 
-        </select><br><br>
+                </select><br><br>
+            </div>
+        </div>
+        <div id="titulos">
+            <label for="velocidadCarga">Velocidad de Carga Deseada:</label>
+            <label>Preferencias de Actividades:</label><br><br>
+        </div>
+        <div id="contenedorChecks">
+            <div id="contenedorVelocidadCarga">
+           
+                <input type="radio" id="velocidadCargaAlta" name="velocidadCarga" value="alta" required>
+                <label for="velocidadCargaAlta">Alta (rápida)</label>
+                <input type="radio" id="velocidadCargaNormal" name="velocidadCarga" value="normal" required>
+                <label for="velocidadCargaNormal">Normal</label><br><br>
+            </div>
 
-        <label for="velocidadCarga">Velocidad de Carga Deseada:</label>
-        <input type="radio" id="velocidadCargaAlta" name="velocidadCarga" value="alta" required>
-        <label for="velocidadCargaAlta">Alta (rápida)</label>
-        <input type="radio" id="velocidadCargaNormal" name="velocidadCarga" value="normal" required>
-        <label for="velocidadCargaNormal">Normal</label><br><br>
+            <div id="contenedorActividades">
+                <div id="contenedorActividades1">
+                    <input type="checkbox" id="restaurantes" name="preferenciasActividades[]" value="restaurantes">
+                    <label for="restaurantes">Restaurantes</label><br>
+                    <input type="checkbox" id="puntosInteres" name="preferenciasActividades[]" value="puntosInteres">
+                    <label for="puntosInteres">Puntos de Interés Turístico</label><br>
+                    <input type="checkbox" id="bares" name="preferenciasActividades[]" value="bares">
+                    <label for="bares">Bares</label><br>
+                </div>
+                <div id="contenedorActividades2">
+                    <input type="checkbox" id="centrosComerciales" name="preferenciasActividades[]"
+                        value="centrosComerciales">
+                    <label for="centrosComerciales">Centros Comerciales</label><br>
+                    <input type="checkbox" id="parques" name="preferenciasActividades[]" value="parques">
+                    <label for="parques">Parques</label><br>
+                    <input type="checkbox" id="museos" name="preferenciasActividades[]" value="museos">
+                    <label for="museos">Museos</label><br>
+                    </select><br><br>
+                </div>
+            </div>
 
-        <label for="numPasajeros">Número de Pasajeros:</label>
-        <input type="number" id="numPasajeros" name="numPasajeros" required><br><br>
-
-        <label>Preferencias de Actividades:</label><br>
-        <input type="checkbox" id="restaurantes" name="preferenciasActividades[]" value="restaurantes">
-        <label for="restaurantes">Restaurantes</label><br>
-        <input type="checkbox" id="puntosInteres" name="preferenciasActividades[]" value="puntosInteres">
-        <label for="puntosInteres">Puntos de Interés Turístico</label><br>
-        <input type="checkbox" id="bares" name="preferenciasActividades[]" value="bares">
-        <label for="bares">Bares</label><br>
-        <input type="checkbox" id="centrosComerciales" name="preferenciasActividades[]" value="centrosComerciales">
-        <label for="centrosComerciales">Centros Comerciales</label><br>
-        <input type="checkbox" id="parques" name="preferenciasActividades[]" value="parques">
-        <label for="parques">Parques</label><br>
-        <input type="checkbox" id="museos" name="preferenciasActividades[]" value="museos">
-        <label for="museos">Museos</label><br>
-        </select><br><br>
-      
-
-
-        <input type="submit" value="Generar Itinerario">
+        </div>
+        <div id="boton">
+        <button>Generar itinerario</button>
+    </div>
     </form>
 
 </body>

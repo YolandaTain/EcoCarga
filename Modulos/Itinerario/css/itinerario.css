@@ -1,8 +1,48 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Marvel', sans-serif;
+    background-color: #FFFDF4;
     margin: 0;
     padding: 0;
+    font-size: 150%
+}
+
+header {
+    width: 100%;
+    /* Ajusta el ancho al 100% para ocupar todo el ancho del viewport */
+    height: 200px;
+    position: relative;
+    text-align: center;
+    background-color: #1C2206;
+}
+
+.img-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    /* Alinea las imágenes a la izquierda */
+    align-items: center;
+    /* Centra verticalmente las imágenes */
+    position: relative;
+    cursor: pointer;
+}
+
+#header {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#headerLogo {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 h1 {
@@ -20,11 +60,21 @@ h1 {
 
 div progress {
     width: 90%;
-    padding: 10px;
+    /*padding: 10px;*/
     margin-bottom: 15px;
-    border: 3px solid #ccc;
-    border-radius: 10px;
+    border: 3px solid #1c220642;
+    border-radius: 50px;
 }
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eeeeee;
+    border-radius: 50px;
+  }
+  
+  progress[value]::-webkit-progress-value {
+    border-radius:50px;
+    background-color:#83A931;
+  }
 
 form {
     max-width: 1200px;
@@ -52,33 +102,26 @@ input[type="email"] {
     border-radius: 3px;
 }
 
-#boton {
-    background-color: #333;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    height: 40px;
-    width: 250px;
-
-}
-
 #botonPadre {
     display: flex;
     justify-content: center;
 }
 
-#boton a {
+button {
+    background-color: #333;
     color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 50px;
+    width: 300px;
     font-weight: bold;
     font-size: large;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
+
 }
 
 
-#boton:hover {
-    background-color: #555;
+button:hover {
+    background-color: #1C2206;
 }

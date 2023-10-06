@@ -1,8 +1,48 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Marvel', sans-serif;
+    background-color: #FFFDF4;
     margin: 0;
     padding: 0;
+    font-size:150% 
+}
+
+header {
+    width: 100%;
+    /* Ajusta el ancho al 100% para ocupar todo el ancho del viewport */
+    height: 200px;
+    position: relative;
+    text-align: center;
+    background-color: #1C2206;
+}
+
+.img-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    /* Alinea las imágenes a la izquierda */
+    align-items: center;
+    /* Centra verticalmente las imágenes */
+    position: relative;
+    cursor: pointer;
+}
+
+#header {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#headerLogo {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 h1 {
@@ -20,11 +60,21 @@ h1 {
 
 div progress {
     width: 90%;
-    padding: 10px;
+    /*padding: 10px;*/
     margin-bottom: 15px;
-    border: 3px solid #ccc;
-    border-radius: 10px;
+    border: 3px solid #1c220642;
+    border-radius: 50px;
 }
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eeeeee;
+    border-radius: 50px;
+  }
+  
+  progress[value]::-webkit-progress-value {
+    border-radius:50px;
+    background-color:#83A931;
+  }
 
 form {
     max-width: 1200px;
@@ -116,7 +166,7 @@ input[type="radio"] {
     border-radius: 3px;
 }
 
-#contenedorTipoCoche input{
+#contenedorTipoCoche input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -133,13 +183,14 @@ input[type="radio"] {
 
 #contenedorVelocidadCarga {
     margin-right: 2%;
-    width: 60%;
-    margin-top: 1%;
+    width: 51%;
+    margin-top: 0.9%;
+    margin-right: -0.8%;
 }
 
 #contenedorNumPasajeros {
     margin-right: 2%;
-    width: 55%;
+    width: 47%;
     margin-top: 1%;
 
 }
@@ -152,7 +203,7 @@ input[type="radio"] {
     border-radius: 3px;
 }
 
-#contenedorNumPasajeros input{
+#contenedorNumPasajeros input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -181,5 +232,44 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #1C2206;
 }
+
+#contenedorPreferenciaActividades{
+    display:flex;
+    justify-content:space-between;
+    font-size: 80%;
+}
+
+#contenedorPreferenciaActividades1{
+    margin-right: 2%;
+    width: 47%;
+
+}
+
+#contenedorPreferenciaActividades2{
+    margin-right: 2%;
+    width: 47%;
+
+    
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+    background-color: #ffffffc6;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 1px solid #979797;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+input[type="checkbox"]:checked{
+    background-color: #83A931;
+}
+
+
+
+ 
