@@ -131,17 +131,12 @@ button:hover {
     background-color: #1C2206;
 }
 
-
-
 #boton2 {
    background-color: #a0a0a0;
    width: 7%;
    height: 5%;
    font-size: 50%;
 }
-
-
-
 
 #contenedorChecks{
     display:flex;
