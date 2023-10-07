@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Itinerario para Coche Eléctrico</title>
+    <link rel="stylesheet" type="text/css" href="css/itinerario2.css">
+    <script src="/Modulos/Itinerario/js/itinerario.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="img-container" onclick="volverHome()">
+            <img src="../Nav/img/header.jpg" alt="Encabezado" id="header">
+            <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo">
+        </div>
+    </header>
+    <h1>Tu planificador de viajes</h1>
+
+    <div id="barraProgreso">
+        <label for="file">
+            <h3>Progeso de solicitud</h3>
+        </label>
+        <progress id="file" max="100" value="66">66%</progress>
+    </div>
+    <br>
+
+    <form method="get">
+        <label for="puntoPartida">Punto de Partida (dirección o código postal):</label>
+        <input type="text" id="puntoPartida" name="puntoPartida" required><br><br>
+
+        <label for="puntoDestino">Punto de Destino (dirección o código postal):</label>
+        <input type="text" id="puntoDestino" name="puntoDestino" required><br><br>
+        <div id="contenedorFecha">
+            <div id="contenedorFechaInicio">
+                <label for="fechaInicio">Fecha de Inicio:</label>
+                <input type="date" id="fechaInicio" name="fechaInicio" required><br><br>
+            </div>
+            <div id="contenedorFechaFin">
+                <label for="fechaFin">Fecha de Fin:</label>
+                <input type="date" id="fechaFin" name="fechaFin" required><br><br>
+            </div>
+        </div>
+        <div id="contenedorAutonomiayTipoCoche">
+            <div id="contenedorAutonomia">
+                <label for="autonomia">Autonomía del Coche Eléctrico (en kilómetros):</label>
+                <input type="number" id="autonomia" name="autonomia" required><br><br>
+            </div>
+
+            <div id="contenedorTipoCoche">
+                <label for="tipoCoche">Tipo de Coche Eléctrico:</label>
+                <select id="tipoCoche" name="tipoCoche" required>
+                    <option value="compacto">Compacto</option>
+                    <option value="sedán">Sedán</option>
+                    <option value="SUV">SUV</option>
+                    <option value="4x4">4x4</option>
+                    <option value="deportivo">Deportivo</option>
+
+                </select><br><br>
+            </div>
+        </div>
+        <div id="contenedorVelocidadCargaYNumPasajeros">
+            <div id="contenedorNumPasajeros">
+                <label for="numPasajeros">Número de Pasajeros:</label>
+                <input type="number" id="numPasajeros" name="numPasajeros" required><br><br>
+            </div>
+            <div id="contenedorVelocidadCarga">
+                <label for="velocidadCarga">Velocidad de Carga Deseada:</label>
+                <select name="velocidadCarga" id="velocidadCargaAlta">
+                    <option value="alta">Alta</option>
+                    <option value="normal">Normal</option>
+                </select>
+            </div>
+
+
+        </div>
+        <br><br>
+        <div id="boton">
+
+            <button><a href="/Modulos/Itinerario/itinerario3.html">Siguiente
+
+                </a> </button>
+
+        </div>
+        <br>
+        <div id="boton">
+            <button id="boton2"><a href="/Modulos/Itinerario/itinerario.html">Volver
+
+                </a> </button>
+        </div>
+
+    </form>
+</body>
+
+</html>

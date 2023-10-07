@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/itinerario3.css">
+    <script src="/Modulos/Itinerario/js/itinerario.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="img-container" onclick="volverHome()">
+            <img src="../Nav/img/header.jpg" alt="Encabezado" id="header">
+            <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo">
+        </div>
+    </header>
+    <div id="barraProgreso">
+        <label for="file">
+            <h3>Progeso de solicitud</h3>
+        </label>
+        <progress id="file" max="100" value="100">100%</progress>
+    </div>
+    <br>
+
+    <form method="get">
+
+        <div id="titulos">
+
+            <label>Preferencias de Actividades:</label><br><br>
+        </div>
+        <div id="contenedorChecks">
+
+
+            <div id="contenedorActividades1">
+                <input type="checkbox" id="restaurantes" name="preferenciasActividades[]" value="restaurantes">
+                <label for="restaurantes">Restaurantes</label><br>
+                <input type="checkbox" id="puntosInteres" name="preferenciasActividades[]" value="puntosInteres">
+                <label for="puntosInteres">Puntos de Interés Turístico</label><br>
+                <input type="checkbox" id="bares" name="preferenciasActividades[]" value="bares">
+                <label for="bares">Bares</label><br>
+            </div>
+            <div id="contenedorActividades2">
+                <input type="checkbox" id="centrosComerciales" name="preferenciasActividades[]"
+                    value="centrosComerciales">
+                <label for="centrosComerciales">Centros Comerciales</label><br>
+                <input type="checkbox" id="parques" name="preferenciasActividades[]" value="parques">
+                <label for="parques">Parques</label><br>
+                <input type="checkbox" id="museos" name="preferenciasActividades[]" value="museos">
+                <label for="museos">Museos</label><br>
+                </select><br><br>
+            </div>
+        </div>
+        <div id="boton">
+            <button onclick="procesoFinalizado()"><a href="">Generar itinerario
+
+                </a> </button>
+        </div>
+        <br>
+        <div id="boton">
+            <button id="boton2"><a href="/Modulos/Itinerario/itinerario2.html">Volver
+    
+                </a> </button>
+        </div>
+    </form>
+  
+
+</body>
+
+</html>

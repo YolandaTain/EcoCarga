@@ -1,14 +1,276 @@
 <!DOCTYPE html>
-<html>
-      <head>
-         <meta charset="utf-8"/>
-         <title>Noticias</title> 
-         <style></style>   
-      </head>   
-      <body>
-         <h1>Las noticias mas Actualizadas</h1>
-         <div>
-            ggg
-         </div>
-      </body>
-    </html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - Eco Carga</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/noticias.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="logo" class="logo">
+            <img src="img/logo.png" alt="Logo de Eco Carga">
+        </div> 
+        <div class="tituloseccion">
+           <h1>NOTICIAS</h1>
+        </div> 
+    </header>
+    <main>
+        <section id="noticias">
+            <button id="prev" class="arrow">
+                <img src="img/flecha02.png" alt="Anterior" id="flecha" class="arrow">
+            </button>
+            <div id="carrusel-noticias">   
+                <div class="noticia">                 
+                    <div class="texto">
+                    <h2 class="titulo-noticia">Conoce las ventajas de conducir un coche eléctrico</h2>
+                    <div>
+                    <img src="img/noticia1.jpeg" class="imagen-noticia" alt="Noticia 1" id="imanoti">
+                    <p id="fecha"> 30, Septiembre, 2023</p>
+                    </div>
+                    <p class="descripcion-noticia">¿Te preguntas por qué deberías cambiar a un coche eléctrico? Te contamos las ventajas de conducir un vehículo 
+                        eléctrico, desde el ahorro en combustible hasta la contribución a un planeta más limpio.</p> 
+                </div>
+            </div>
+                <div class="noticia">
+                    <div class="texto">
+                    <h2 class="titulo-noticia">Ampliamos nuestra red de estaciones de carga eléctrica</h2> 
+                    <div>
+                    <img src="img/noticia 2.jpeg" class="imagen-noticia" alt="Noticia 2" id="imanoti">
+                    <p id="fecha"> 21, Septiembre, 2023</p>
+                    </div> 
+                    <p class="descripcion-noticia">Eco Carga se complace en anunciar la expansión de nuestra red de estaciones de carga eléctrica. Hemos inaugurado 
+                        nuevas estaciones en varias ciudades para ofrecer a nuestros clientes una experiencia de carga más conveniente y accesible.</p>     
+            </div>
+        </div>              
+                <div class="noticia">      
+                    <div class="texto">
+                    <h2 class="titulo-noticia">Colaboración con empresas de energía renovable</h2>
+                    <div>
+                    <img src="img/noticia 3.jpeg" class="imagen-noticia" alt="Noticia 3" id="imanoti">
+                    <p id="fecha"> 15, Septiembre, 2023</p> 
+                    </div>      
+                    <p class="descripcion-noticia">En Eco Carga, estamos comprometidos con la sostenibilidad. Nos complace anunciar nuestra colaboración con empresas 
+                        líderes en energía renovable para garantizar que nuestra red de carga esté alimentada por fuentes limpias y renovables.</p>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <h2 class="titulo-noticia">Lanzamiento de la nueva aplicación móvil Eco Carga</h2>
+                    <div>
+                    <img src="img/noticia 4.jpeg" class="imagen-noticia" alt="Noticia 4" id="imanoti">
+                    <p id="fecha"> 10, Septiembre, 2023</p>
+                    </div>
+                    <p class="descripcion-noticia">Estamos emocionados de presentar nuestra nueva aplicación móvil Eco Carga, que facilita la ubicación de 
+                        estaciones de carga, la planificación de rutas y la reserva de cargas. Descárgala hoy mismo y simplifica 
+                        tus viajes en coche eléctrico.</p>         
+                </div>               
+                <div class="noticia">
+                    <h2 class="titulo-noticia">Eco Carga se une a la lucha contra el cambio climático</h2>
+                    <div>
+                    <img src="img/noticia 5.jpeg" class="imagen-noticia" alt="Noticia 5" id="imanoti">
+                    <p id="fecha"> 5, Octubre, 2023</p>
+                    </div>
+                    <p class="descripcion-noticia">Eco Carga reafirma su compromiso con el medio ambiente al unirse a la lucha contra el cambio climático. Estamos 
+                        invirtiendo en tecnologías avanzadas de carga eléctrica y colaborando con organizaciones medioambientales para 
+                        reducir las emisiones de carbono en el transporte.</p>          
+               </div>    
+                <div class="noticia">
+                    <h2 class="titulo-noticia">Eco Carga presenta cargadores ultrarrápidos</h2>
+                    <div>
+                    <img src="img/noticia 6.jpeg" class="imagen-noticia" alt="Noticia 6" id="imanoti">
+                    <p id="fecha">Fecha de  20, Septiembre, 2023</p>
+                    </div> 
+                    <p class="descripcion-noticia">¡Grandes noticias para los conductores de vehículos eléctricos! Eco Carga ha presentado cargadores ultrarrápidos 
+                        en nuestras estaciones clave. Ahora puedes cargar tu vehículo más rápido que nunca y</p>
+                </div>
+                <div class="noticia">
+                    <h2 class="titulo-noticia">Eco Carga expande sus servicios a nivel internacional</h2>
+                <div>
+                    <img src="img/noticia 7.jpeg" class="imagen-noticia" alt="Noticia 7" id="imanoti">
+                    <p id="fecha"> 1, Octubre, 2023</p>
+                </div> 
+                    <p class="descripcion-noticia">Estamos emocionados de anunciar que Eco Carga está llevando su red de estaciones de carga eléctrica a nuevos países. 
+                        Pronto podrás cargar tu coche eléctrico con comodidad en múltiples lugares del mundo.</p>  
+                </div>  
+                <div class="noticia">
+                    <h2 class="titulo-noticia">La sostenibilidad es nuestro compromiso</h2>
+                <div>
+                    <img src="img/noticia 8.jpeg" class="imagen-noticia" alt="Noticia 8" id="imanoti">
+                    <p id="fecha"> 25, Septiembre, 2023</p> 
+                </div>                
+                    <p class="descripcion-noticia">En Eco Carga, la sostenibilidad no es solo una palabra, es nuestro compromiso. Hemos implementado prácticas de gestión
+                         ambiental en todas nuestras operaciones para reducir nuestro impacto en el planeta.</p>            
+                </div>      
+                <div class="noticia">
+                    <h2 class="titulo-noticia">Nueva inversión en tecnología de carga rápida</h2>
+                    <div>
+                    <img src="img/noticia 9.jpeg" class="imagen-noticia" alt="Noticia 9" id="imanoti">
+                    <p id="fecha"> 12, Octubre, 2023</p>
+                </div>           
+                    <p class="descripcion-noticia">Para brindar a nuestros usuarios la mejor experiencia de carga posible, hemos invertido en tecnología de carga 
+                        rápida de vanguardia. ¡Disfruta de una carga más rápida y eficiente en todas nuestras estaciones!</p>     
+                </div>      
+                <div class="noticia">
+                    <h2 class="titulo-noticia">Comprometidos con la seguridad de tus datos</h2>
+                <div>
+                    <img src="img/noticia 10.jpeg" class="imagen-noticia" alt="Noticia 10" id="imanoti">
+                    <p id="fecha"> 8, Octubre, 2023</p>
+                </div>
+                    <p class="descripcion-noticia">La privacidad y la seguridad de tus datos son fundamentales para nosotros. Hemos implementado medidas de 
+                        seguridad de alto nivel en nuestra aplicación móvil y en todas nuestras transacciones para garantizar la 
+                        protección de tus datos personales.</p>          
+                </div>                       
+            </div>
+                <div class="cuadro-emergente" id="cuadro-emergente">
+                    <span class="cerrar" id="cerrar">&times;</span>
+                    <h2 id="titulo-noticia-popup"></h2>
+                    <p class="descripcion-noticia-popup" id="descripcion-noticia-popup"></p>
+                </div>
+            </div>            
+            <button id="next" class="arrow" >
+                <img src="img/flecha01.png" alt="Anterior" id="flecha">
+            </button>
+        </section>
+        <hr>
+        <hr>
+        <div class="video">
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OCREpzteD-U" frameborder="0" allowfullscreen></iframe>
+        <h3 class="titulovideo">Video destacado!</h3>
+        <br>
+        </div>
+        <hr>
+        <hr>        
+        <div id="carrusel-noticias2" class="carrusel2">
+            <div class="noticia2">
+                <div class="imagen-noticia2">
+                    <img src="img/noticia1.jpeg" alt="Noticia 1" id="imanoti">
+                </div>
+                <div class="contenido-noticia2">
+                    <h2 class="titulo-noticia">Conoce las ventajas de conducir un coche eléctrico</h2>
+                    <p id="fecha">30, Septiembre, 2023</p>
+                    <p class="descripcion-noticia2">¿Te preguntas por qué deberías cambiar a un coche eléctrico? Te contamos las ventajas de conducir un vehículo eléctrico, desde el ahorro en combustible hasta la contribución a un planeta más limpio.</p>
+                </div>
+            </div>
+
+            <div class="noticia2">
+                <div class="imagen-noticia2">
+                    <img src="img/noticia 2.jpeg" alt="Noticia 2" id="imanoti">
+                </div>
+                <div class="contenido-noticia2">
+                    <h2 class="titulo-noticia">Ampliamos nuestra red de estaciones de carga eléctrica</h2>
+                    <p id="fecha">21, Septiembre, 2023</p>
+                    <p class="descripcion-noticia2">Eco Carga se complace en anunciar la expansión de nuestra red de estaciones de carga eléctrica. Hemos inaugurado nuevas estaciones en varias ciudades para ofrecer a nuestros clientes una experiencia de carga más conveniente y accesible.</p>
+                </div>
+            </div>
+
+            <div class="noticia2">
+                <div class="imagen-noticia2">
+                    <img src="img/noticia 3.jpeg" alt="Noticia 3" id="imanoti">
+                </div>
+                <div class="contenido-noticia2">
+                    <h2 class="titulo-noticia">Colaboración con empresas de energía renovable</h2>
+                    <p id="fecha">15, Septiembre, 2023</p>
+                    <p class="descripcion-noticia2">En Eco Carga, estamos comprometidos con la sostenibilidad. Nos complace anunciar nuestra colaboración con empresas líderes en energía renovable para garantizar que nuestra red de carga esté alimentada por fuentes limpias y renovables.</p>
+                </div>
+            </div>
+        
+            <div class="noticia2">
+                <div class="imagen-noticia2">
+                    <img src="img/noticia 4.jpeg" alt="Noticia 4" id="imanoti">
+                </div>
+                <div class="contenido-noticia2">
+                    <h2 class="titulo-noticia">Lanzamiento de la nueva aplicación móvil Eco Carga</h2>
+                    <p id="fecha">10, Septiembre, 2023</p>
+                    <p class="descripcion-noticia2">Estamos emocionados de presentar nuestra nueva aplicación móvil Eco Carga, que facilita la ubicación de estaciones de carga, la planificación de rutas y la reserva de cargas. Descárgala hoy mismo y simplifica tus viajes en coche eléctrico.</p>
+                </div>
+            </div>
+
+            <div class="noticia2">
+                <div class="imagen-noticia2">
+                    <img src="img/noticia 5.jpeg" alt="Noticia 5" id="imanoti">
+                </div>
+                <div class="contenido-noticia2">
+                    <h2 class="titulo-noticia">Eco Carga se une a la lucha contra el cambio climático</h2>
+                    <p id="fecha">5, Octubre, 2023</p>
+                    <p class="descripcion-noticia2">Eco Carga reafirma su compromiso con el medio ambiente al unirse a la lucha contra el cambio climático. Estamos invirtiendo en tecnologías avanzadas de carga eléctrica y colaborando con organizaciones medioambientales para reducir las emisiones de carbono en el transporte.</p>
+                </div>
+            </div>
+
+            <div class="noticia2">
+                <div class="imagen-noticia2">
+                    <img src="img/noticia 6.jpeg" alt="Noticia 6">
+                </div>
+                <div class="contenido-noticia2">
+                    <h2 class="titulo-noticia">Eco Carga presenta cargadores ultrarrápidos</h2>
+                    <p id="fecha">20, Septiembre, 2023</p>
+                    <p class="descripcion-noticia2">¡Grandes noticias para los conductores de vehículos eléctricos! Eco Carga ha presentado cargadores ultrarrápidos en nuestras estaciones clave. Ahora puedes cargar tu vehículo más rápido que nunca.</p>
+                </div>
+            </div>
+        
+            <div class="noticia2">
+                <div class="imagen-noticia2">
+                    <img src="img/noticia 7.jpeg" alt="Noticia 7">
+                </div>
+                <div class="contenido-noticia2">
+                    <h2 class="titulo-noticia">Eco Carga expande sus servicios a nivel internacional</h2>
+                    <p id="fecha">1, Octubre, 2023</p>
+                    <p class="descripcion-noticia2">Estamos emocionados de anunciar que Eco Carga está llevando su red de estaciones de carga eléctrica a nuevos países. Pronto podrás cargar tu coche eléctrico con comodidad en múltiples lugares del mundo.</p>
+                </div>
+            </div>
+        
+            <div class="noticia2">
+                <div class="imagen-noticia2">
+                    <img src="img/noticia 8.jpeg" alt="Noticia 8">
+                </div>
+                <div class="contenido-noticia2">
+                    <h2 class="titulo-noticia">La sostenibilidad es nuestro compromiso</h2>
+                    <p id="fecha">25, Septiembre, 2023</p>
+                    <p class="descripcion-noticia2">En Eco Carga, la sostenibilidad no es solo una palabra,
+                         es nuestro compromiso. Hemos implementado prácticas de gestión ambiental en todas 
+                         nuestras operaciones para reducir nuestro impacto.</p>
+                </div> 
+            </div>    
+            <div class="noticia2">
+                <div class="imagen-noticia2">
+                <img src="img/noticia 9.jpeg" alt="Noticia 9">
+                </div>
+                <div class="contenido-noticia2">
+                <h2 class="titulo-noticia">Nueva inversión en tecnología de carga rápida</h2>
+                <p id="fecha"> 12, Octubre, 2023</p>           
+                <p class="descripcion-noticia2">Para brindar a nuestros usuarios la mejor experiencia de carga posible, hemos invertido en tecnología de carga 
+                    rápida de vanguardia. ¡Disfruta de una carga más rápida y eficiente en todas nuestras estaciones!</p> 
+                </div>    
+            </div>
+
+            <div class="noticia2">
+                <div class="imagen-noticia2">
+                <img src="img/noticia 10.jpeg" alt="Noticia 10">
+                </div>
+                <div class="contenido-noticia2">
+                <h2 class="titulo-noticia">Comprometidos con la seguridad de tus datos</h2>
+                <p id="fecha"> 8, Octubre, 2023</p>
+                <p class="descripcion-noticia2">La privacidad y la seguridad de tus datos son fundamentales para nosotros. Hemos implementado medidas de 
+                    seguridad de alto nivel en nuestra aplicación móvil y en todas nuestras transacciones para garantizar la 
+                    protección de tus datos personales.</p>          
+                </div>
+            </div>                       
+        </div>
+        <br>
+    </main>
+    <footer>
+        <script src="js/noticias.js"></script>
+        <nav>
+            <a href="index.html">Home</a></li>
+            <a href="itinerario.html">Itinerario</a></li>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a></li> 
+        </nav>
+    </footer>
+</body>
+</html>

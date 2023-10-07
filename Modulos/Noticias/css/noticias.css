@@ -1,0 +1,315 @@
+#carrusel-noticias {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; 
+    position: relative;
+    margin-top: 25px; 
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+  }
+  
+
+body{
+    background-color: #FFFDF4;
+    font-family: 'Marvel', sans-serif; 
+}
+
+header {
+    background-image: url("../img/header.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    font-family: 'Marvel', sans-serif;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: flex; /* Cambiamos a flexbox */
+    align-items: center; /* Centrar verticalmente los elementos */
+    text-align: center;
+    background-color: #1C2206;
+    padding: 0 20px;
+}
+
+.noticia {
+    flex: 0 0 33.33%; 
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.5s ease; 
+}
+
+
+
+.arrow {
+    background-color: #ffffff00;
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 5; 
+}
+
+#prev {
+    left: 230px;
+    top: 450px;
+}
+
+#flecha{
+    width: 50px;
+    height: 50px;
+}
+#next {
+    right: 250px; 
+    top: 450px;
+}
+
+
+.noticia {
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.noticia h2 {
+    font-size: 1.5rem;
+    font-family: 'Marvel', sans-serif;
+    margin: 10px 0;
+}
+
+.noticia img {
+  width: 120%;
+ 
+}
+
+#logo img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100px;
+    background-color: #344306; 
+    font-family: 'Marvel', sans-serif;
+}
+
+footer nav {
+    background-color: #344306; 
+    padding: 10px; 
+    border-radius: 5px; 
+    font-family: 'Marvel', sans-serif;
+}
+
+footer nav a {
+    display:inline ;
+    text-decoration: none;
+    color: #FFFDF4;
+    font-weight: bold; 
+    font-size: 16px; 
+    margin: 50px;   
+    font-family: 'Marvel', sans-serif;   
+}
+
+#fecha{  
+    font-family: Arial, sans-serif;
+    font-size: small;
+    font-weight: bold; 
+    color:#344306;   
+}
+
+h2{
+    color:#344306;
+    font-size: small;
+    font-family: 'Marvel', sans-serif;
+    
+}
+p{
+    color:#000000;    
+}
+
+hr{
+    color:#344306;
+}
+
+.texto{
+    display: flexbox;
+
+}
+
+
+.descripcion-noticia {
+    display: none; 
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.imagen-noticia {
+    max-width: 100%;
+    height: 200px;
+    cursor: pointer; 
+}
+
+.imagen-noticia:hover + .titulo-noticia + .descripcion-noticia {
+    display: block;
+    position: absolute;
+    background-color: #b9b7b7;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-width: 300px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header h1{
+    color:#fbfbfb;
+    font-family: 'Marvel', sans-serif;
+}
+
+#cuadro-emergente {
+    display: none;
+    transform: translate(36%, -5%);
+    background-color:rgb(170, 225, 60);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%; 
+    height: 50px; 
+    color: #fbfbfb;
+    left: 10%;
+}
+
+#descripcion-noticia-popup {
+    margin: 20px; 
+}
+
+
+#cerrar{
+    margin-left: 15px;
+    margin-top:auto;
+    padding:10px;
+    
+}
+
+
+#titulo-noticia-popup{
+    font-size: 22px; 
+    color: #000000; 
+    margin-left: 100px;
+}
+
+@font-face {
+    font-family: 'Marvel';
+    src: url('ruta/a/tu/fuente-Marvel.ttf') format('truetype'); 
+}
+
+.imagen-noticia2{
+    float:left;
+}
+
+.carrusel2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.noticia2 {
+    display: flex;
+    margin: 10px;
+    max-width: 100%;
+    border: 1px solid #344306;
+    padding: 10px;
+}
+
+.imagen-noticia2 {
+    flex: 1;
+    margin-right: 10px;
+    max-width: 300px; /* Tamaño máximo deseado para las imágenes */
+    height: auto;
+}
+
+.imagen-noticia2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenido-noticia2 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-noticia2 {
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#fecha {
+    font-family: Arial, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color:rgb(50, 73, 5);
+}
+
+.descripcion-noticia {
+    font-size: 0.8rem;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.cambio-color {
+    color: rgb(170, 225, 60); 
+}
+
+.video{
+    background-color: #344306;
+}
+
+/* CSS para el carrusel principal */
+.noticia .imagen-noticia img {
+    width: 300px; /* Tamaño deseado para las imágenes en el carrusel principal */
+    height: 200px; /* Tamaño deseado para las imágenes en el carrusel principal */
+    object-fit: cover; /* Esto ajustará la imagen para que llene el espacio sin distorsionarla */
+}
+
+/* CSS para el carrusel 2 */
+.noticia2 .imagen-noticia2 img {
+    width: 300px; /* Tamaño deseado para las imágenes en el carrusel 2 */
+    height: 200px; /* Tamaño deseado para las imágenes en el carrusel 2 */
+    object-fit: cover; /* Esto ajustará la imagen para que llene el espacio sin distorsionarla */
+}
+
+.titulovideo{
+    margin-left: 650px;
+    color:#fbfbfb;
+}
+
+iframe{
+    border: #84e81a 3px;
+    
+}
+
+.tituloseccion h1{
+    color:rgb(255, 255, 255);
+    margin-left: 250px;
+    font-family: 'Marvel', sans-serif;
+}
