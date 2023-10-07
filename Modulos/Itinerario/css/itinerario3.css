@@ -51,6 +51,8 @@ body {
 .nav-menu ul {
     list-style-type: none;
     margin-left: 75%;
+    position: fixed;
+
 
 }
 
