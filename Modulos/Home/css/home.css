@@ -60,16 +60,11 @@ header {
   
 }
 
-
-
-
 nav {
     padding: 20px;
     color: white;
     background: linear-gradient(to right, #3a3a3a, #558bb8);
 }
-
-
 
 .mapa-container {
     max-width: 100%; 
@@ -81,12 +76,10 @@ nav {
     height: auto; 
 }
 
-
 #map-container {
     width: 100%;
     height: 400px; /* Ajusta la altura según tus necesidades */
 }
-
 
 /* Estilos específicos para el menú desplegable */
 .nav-menu {
