@@ -1,6 +1,22 @@
-window.onload = inicio;
+document.addEventListener("DOMContentLoaded", inicio);
 
-function inicio() { }
+function inicio() { 
+   /* document.getElementById('siguiente-button1').addEventListener('click', function () {
+        window.location.href = '/MI-PROYECTO/Modulos/Itinerario/itinerario2.html';
+    });
+
+    document.getElementById('siguiente-button2').addEventListener('click', function () {
+        window.location.href = '/MI-PROYECTO/Modulos/Itinerario/itinerario3.html';
+    });
+    
+    document.getElementById('volver-button').addEventListener('click', function () {
+        window.location.href = '/MI-PROYECTO/Modulos/Itinerarioo/itinerario.html';
+    });
+    
+    document.getElementById('volver-button3').addEventListener('click', function () {
+        window.location.href = '/MI-PROYECTO/Modulos/Itinerario/itinerario2.html';
+    });    */
+}
 
 function volverHome() {
     window.open("/Modulos/Home/home.html", "_self");
@@ -25,26 +41,18 @@ function desplegar() {
 
 function procesoFinalizado() {
     alert("Itinerario enviado, disfrute!")
-    window.location.href = "/MI-PROYECTO/Modulos/Home/home.html";
+    window.open("/Modulos/Home/home.html", "_self");
 
 }
 
+function siguiente(numero){
+    numero = numero == 1? "" : numero;
+    window.open("/Modulos/Itinerario/itinerario"+numero+".html", "_self");
+   /* window.location.href = '/MI-PROYECTO/Modulos/Itinerario/itinerario'+numero+'.html';*/
+}
 
-document.getElementById('siguiente-button1').addEventListener('click', function () {
-    window.location.href = '/itinerario2.html';
-});
-
-document.getElementById('siguiente-button2').addEventListener('click', function () {
-    window.location.href = '/Modulos/Itinerario/itinerario3.html';
-});
-
-document.getElementById('volver-button').addEventListener('click', function () {
-    window.location.href = '/Modulos/Itinerario/itinerario.html';
-});
-
-document.getElementById('volver-button3').addEventListener('click', function () {
-    window.location.href = '/Modulos/Itinerario/itinerario2.html';
-});
-
-
+function volver(numero){
+    numero = numero == 1? "" : numero;
+    window.open("/Modulos/Itinerario/itinerario"+numero+".html", "_self");
+}
 
