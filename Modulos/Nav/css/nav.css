@@ -10,7 +10,7 @@ body {
     background-size: 1800px;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    width: auto;
     height: 260px;
     display: flex;
 }
@@ -50,6 +50,10 @@ body {
     cursor: pointer;
 }
 
+.nave-menu{
+  z-index: -1000;
+}
+
 .nav-menu ul{ 
     list-style-type: none;
     margin-left: 1420px;
@@ -61,8 +65,7 @@ body {
     padding: 12px;   
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
     margin-right: 50px;
-    margin-bottom: 1px;
-    
+    margin-bottom: 1px; 
 }
 
 .slide-in-blurred-top{
@@ -172,14 +175,14 @@ a {
 }    
 
 #footer{
-    color: #FFFDF4;
-    display: flex;
-    width: 1780px;
-    background-color: #344306;
-    padding: 10px;
-    position: absolute; 
-    bottom: 0;
-    left: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100px;
+  background-color: #344306; 
+  font-family: 'Marvel', sans-serif;
+  color:#FAF5E2;
+  position: static;
 }
 
 #footer svg{
@@ -191,5 +194,7 @@ a {
     margin-top: 20px;
 }
 
-
+.wrapper{
+  flex: 1;
+}
 
