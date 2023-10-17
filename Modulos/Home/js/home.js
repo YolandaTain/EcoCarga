@@ -1,6 +1,16 @@
-function volverHome(){
-    window.open("/Modulos/Home/home.html", "_self");
+function resultado(){
+    var menu = document.getElementById("destacados");
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+
+    } else {
+        menu.style.display = "block";
+    }
 }
+
+
+
 
 /*
     //MAPA

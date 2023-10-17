@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
     <script src="../Nav/js/nav.js"></script>
+    <script src="../Home/js/home.js"></script>
     <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
@@ -71,12 +72,14 @@
             <input type="text" id="searchBar" placeholder="INTRODUCE UN CP">
         </div>
         <div class="botonContenedor">
-            <button id="boton">BUSCAR</button>
+            <button id="boton" onclick="resultado()">BUSCAR</button>
         </div>
-
+        <br>
         <hr>
-
+        <br>
+        
         <div id="destacados" class="des-menu">
+            <h1>DESTACADOS</h1>
             <ul>
                 <div class="cajaD">
                     <li><a href="#">C. A, 4, 537,6, 41007 Sevilla</a></li>
@@ -103,9 +106,10 @@
                 </div>
             </ul>
         </div>
-
+        <br><br><br><br><br>
+       
          <!-- JavaScript para configurar el mapa de Highcharts -->
-         <div id="mapa-container">
+        <div id="mapa-container">
             <img src="img/mapa.png" id="mapa" alt="mapa">
         </div>
 

@@ -81,30 +81,34 @@
     display: none;
 }
 
+#destacados h1{
+    margin-left: 2rem; 
+    text-decoration: underline;
+}
+
 .cajaD {
-  padding: 0.2rem;
-  text-align: center;
+  padding: 1rem;
+  margin-right: 1rem;
+  text-align: left;
 }
 
 .cajaD li a {
-  text-decoration: none;
-  font-size: 4rem;
-  color: #FAF5E2;
-  padding: 1rem;
+    text-decoration: none;
+    font-size: 4rem;
+    color: #1c1701;
+    padding: 1rem;
   
 }
 
 .des-menu ul {
     list-style-type: none;
-    margin-left: 105rem;
-    position: fixed;
   }
   
 .des-menu li {/*COMPARTIDO CON NAV*/
-background-color: #83A931;
-padding: 0.5rem;
-box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
-margin-right: 1rem;
-margin-bottom: 0.5rem;
+    background-color: #FAF5E2;
+    padding: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
 
 }
