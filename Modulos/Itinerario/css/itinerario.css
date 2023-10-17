@@ -1,3 +1,10 @@
+:root {
+    --fondoBody: #FFFDF4;
+    --ecoCarga: #ffffff;
+    --fondoMenu: #83A931;
+
+  }
+
 html{ /*COMPARTIDO CON NAV*/
     font-size: 62.5%;
     
@@ -5,7 +12,7 @@ html{ /*COMPARTIDO CON NAV*/
 /*1 rem = 10px*/
 body {/*COMPARTIDO CON NAV*/
     font-family: 'Marvel', sans-serif;
-    background-color: #FFFDF4;
+    background-color: var(--fondoBody);
     margin: 0;
     padding: 0;
     font-size: 16px;
@@ -36,7 +43,7 @@ body {/*COMPARTIDO CON NAV*/
 }
 
 .header-container h1 {/*COMPARTIDO CON NAV*/
-    color: #FAF5E2;
+    color: var(--ecoCarga);
     font-size: 6rem;
     display: flex;
     position: relative;
@@ -64,7 +71,7 @@ body {/*COMPARTIDO CON NAV*/
 }
 
 .nav-menu li {/*COMPARTIDO CON NAV*/
-    background-color: #83A931;
+    background-color: var(--fondoMenu);
     padding: 0.5rem;
     box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
     margin-right: 1rem;
@@ -174,10 +181,10 @@ body {/*COMPARTIDO CON NAV*/
     text-align: center;
 }
 
-a {/*COMPARTIDO CON NAV*/
+.caja li a {/*COMPARTIDO CON NAV*/
     text-decoration: none;
     font-size: 4rem;
-    color: #FAF5E2;
+    color: #08095b;
     padding: 1rem;
 }
 
