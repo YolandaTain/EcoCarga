@@ -159,7 +159,6 @@ body {
   }
 } 
 
-
 .nave-menu{
     display: block;
     justify-content: space-between;
@@ -170,11 +169,11 @@ body {
 }
 
 .caja {
-  padding: 0.2rem;
+  padding: 0.7rem;
   text-align: center;
 }
 
-a {
+.caja li a {
   text-decoration: none;
   font-size: 4rem;
   color: #FAF5E2;

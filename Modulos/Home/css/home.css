@@ -2,12 +2,43 @@
 .search {
     display: flex;
     align-items: center;
-    background-color: #333; /* Cambia el color de fondo a tu preferencia */
-    padding: 10px;
+    background-color: #d2cdcd;
+    padding: 1.5rem;
     border-radius: 5px; /* Añade bordes redondeados al contenedor */
+    border: 3px solid #515151;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: 45%;
+    font-family: 'Marvel', sans-serif;
   }
-  
+
+.botonContenedor{
+    display: flex;
+    align-items: center;
+    margin-top: -6rem;
+    margin-left: 67.3rem;
+    margin-bottom: 1rem;
+    padding: -2rem; 
+}
+
+  /* Estilo para el botón */
+#boton {
+    display: flex;
+    justify-content: center;
+    border: 3px solid #515151;
+    background-color: #515151; /* Color de fondo del botón */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    color: white; /* Color del texto del botón */
+    padding: 1rem; /* Espaciado dentro del botón */
+    border-radius: 0 5px 5px 0; /* Bordes redondeados solo en la parte derecha */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    width: 15%;
+    padding: 1.5rem;
+    font-family: 'Marvel', sans-serif;
+    font-size: 2rem; 
+  }
+
   /* Estilo para el icono SVG */
   .search svg {
     fill: none;
@@ -23,18 +54,57 @@
     border: none; /* Quita el borde predeterminado */
     background: transparent; /* Fondo transparente para que coincida con el contenedor */
     color: #faf5e2; /* Color del texto en el campo de entrada */
-    width: 100%; /* Ocupa todo el ancho disponible en el contenedor */
-    padding: 0; /* Quita el relleno predeterminado */
+    width: 100%; 
+    padding: 0; 
     outline: none; /* Quita el contorno al enfocar el campo */
+
   }
   
   /* Estilo para el texto de marcador de posición en el campo de entrada */
   #searchBar::placeholder {
-    color: #faf5e2; /* Color del marcador de posición */
+    color: gray; /* Color del marcador de posición */
     opacity: 0.7; /* Opacidad del marcador de posición */
+    font-size: 1.5rem;
   }
   
   /* Estilo para el campo de entrada cuando está enfocado */
   #searchBar:focus {
     border-bottom: 2px solid #faf5e2; /* Agrega una línea de fondo cuando está enfocado */
   }
+
+.des-menu{
+    display: block;
+    justify-content: space-between;
+}
+
+#destacados{
+    display: none;
+}
+
+.cajaD {
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.cajaD li a {
+  text-decoration: none;
+  font-size: 4rem;
+  color: #FAF5E2;
+  padding: 1rem;
+  
+}
+
+.des-menu ul {
+    list-style-type: none;
+    margin-left: 105rem;
+    position: fixed;
+  }
+  
+.des-menu li {/*COMPARTIDO CON NAV*/
+background-color: #83A931;
+padding: 0.5rem;
+box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
+margin-right: 1rem;
+margin-bottom: 0.5rem;
+
+}
