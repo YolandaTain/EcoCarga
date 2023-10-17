@@ -10,18 +10,18 @@
 }
 
 #nombre{
-    font-size: 80px;
+    font-size: 8rem;
     margin:0;
     margin-left: 5%;
-    color: #344306;
+    color: var();
 }
 
 #posision{
     margin-left: 5%;
-    font-size: 40px;
+    font-size: 4rem;
     margin:0;
     margin-left: 5%;
-    color: #344306;
+    color: var(--oscuro);
     
 }
 
@@ -35,14 +35,14 @@ p{
 }
 
 #imagen{
-    border-radius: 400px 400px 400px 400px;
-    width: 330px;
+    border-radius: 40rem 40rem 40rem 40rem;
+    width: 33rem;
 }
 
 #titulodesc{
     display: flex;
-    color: #344306;
-    font-size: 80px;
+    color: var(--oscuro);
+    font-size: 8rem;
     margin:0;
     margin-right: 10%;
     margin-left: 10%;
@@ -50,7 +50,7 @@ p{
 #descipcion{
     margin-right: 10%;
     margin-left: 10%;
-    color: #344306;
+    color: var(--oscuro);
 }
 
 p{
@@ -58,13 +58,13 @@ p{
 }
 
 hr{
-    border-top: 4px double #000000;
+    border-top: 3px double var(--rotulos);
     margin-left: 9%;
     margin-right: 9%;
 }
 
 #separador{
-    border-top: 4px double #000000;
+    border-top: 3px double var(--rotulos);
     margin-left: 30%;
     margin-right: 24%;
 }
