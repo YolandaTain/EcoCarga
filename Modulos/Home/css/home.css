@@ -1,114 +1,40 @@
-body {
-    font-family: 'Marvel', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-h1{
-    z-index: 2;
-    color: #FAF5E2;
-}
-
-header {
-    width: 100%; /* Ajusta el ancho al 100% para ocupar todo el ancho del viewport */
-    height: 200px;
-    position: relative;
-    text-align: center;
-    background-color: #1C2206;
-}
-
-.img-container {
-    width: 100%;
-    height: 200px;
+/* Estilo para el contenedor del botón de búsqueda y el campo de entrada */
+.search {
     display: flex;
-    justify-content: flex-start; /* Alinea las imágenes a la izquierda */
-    align-items: center; /* Centra verticalmente las imágenes */
-    position: relative;
-    cursor:pointer;
-}
-
-#header {
-    width: 100%;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-#headerLogo {
-    width: auto;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
-
-#select{
-    align-items: right;
-    z-index: 3;
-}
-
-.search{
-    display: flex;
-    position: relative;
-}
-
-#searchBar{
-    align-items: left;
+    align-items: center;
+    background-color: #333; /* Cambia el color de fondo a tu preferencia */
+    padding: 10px;
+    border-radius: 5px; /* Añade bordes redondeados al contenedor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
   
-}
-
-nav {
-    padding: 20px;
-    color: white;
-    background: linear-gradient(to right, #3a3a3a, #558bb8);
-}
-
-.mapa-container {
-    max-width: 100%; 
-    text-align: center; 
-}
-
-.mapa-container img {
-    width: 100%;
-    height: auto; 
-}
-
-#map-container {
-    width: 100%;
-    height: 400px; /* Ajusta la altura según tus necesidades */
-}
-
-/* Estilos específicos para el menú desplegable */
-.nav-menu {
-    display: none;
-    background-color: #333;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-}
-
-.nav-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-menu li {
-    padding: 15px;
-    text-align: center;
-}
-
-.nav-menu a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav-menu.active {
-    display: block;
-}
-
-
+  /* Estilo para el icono SVG */
+  .search svg {
+    fill: none;
+    stroke: #faf5e2; /* Cambia el color del icono a tu preferencia */
+    stroke-width: 2;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* Espacio entre el icono y el campo de entrada */
+  }
+  
+  /* Estilo para el campo de entrada */
+  #searchBar {
+    border: none; /* Quita el borde predeterminado */
+    background: transparent; /* Fondo transparente para que coincida con el contenedor */
+    color: #faf5e2; /* Color del texto en el campo de entrada */
+    width: 100%; /* Ocupa todo el ancho disponible en el contenedor */
+    padding: 0; /* Quita el relleno predeterminado */
+    outline: none; /* Quita el contorno al enfocar el campo */
+  }
+  
+  /* Estilo para el texto de marcador de posición en el campo de entrada */
+  #searchBar::placeholder {
+    color: #faf5e2; /* Color del marcador de posición */
+    opacity: 0.7; /* Opacidad del marcador de posición */
+  }
+  
+  /* Estilo para el campo de entrada cuando está enfocado */
+  #searchBar:focus {
+    border-bottom: 2px solid #faf5e2; /* Agrega una línea de fondo cuando está enfocado */
+  }

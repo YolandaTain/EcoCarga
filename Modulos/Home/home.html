@@ -10,35 +10,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
-
-   
+    <script src="../Nav/js/nav.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
+ 
 </head>
 <body>
-    <header>
-        <div class="img-container" onclick="volverHome()">
-            <img src="img/header.jpg" alt="Encabezado" id= "header">
-            <img src="img/logo.png" alt="Logo" id= "headerLogo">
-            <svg xmlns="http://www.w3.org/2000/svg" id="select" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+  
+<body>
+    <header id="header">
+        <div class="header-container" onclick="volverHome()">
+            <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo">
             <h1>EcoCarga</h1>
-        
         </div>
-        
+        <div class="header-container-select">
+
+            <div id="select" onclick="desplegar()">
+                <svg xmlns="http://www.w3.org/2000/svg" id="select" width="70" height="70" viewBox="0 0 24 24"
+                    fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+
+        </div>
     </header>
+
+    <div id="menu" class="nav-menu">
+        <ul>
+            <div class="caja">
+                <li><a href="#">Inicio</a></li>
+            </div>
+
+            <div class="caja">
+                <li><a href="#">Noticias</a></li>
+            </div>
+
+            <div class="caja">
+                <li><a href="#">Itinerario</a></li>
+            </div>
+
+            <div class="caja">
+                <li><a href="#">Sobre nosotros</a></li>
+            </div>
+        </ul>
+    </div>
+    
+    <!--Motor de búsqueda-->
     <nav>
         <div class="search">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#faf5e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="searchBar" placeholder="Introduce código postal...">
+            <input type="text" id="searchBar" placeholder="Introduce código postal y ciudad">
             
-        </div>
-            
-        <!-- Menú desplegable -->
-        <div class="nav-menu" id="menu">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
         </div>
     </nav>
     
@@ -46,6 +71,29 @@
     <div id="mapa-container">
         <img src="img/mapa.png" id= "mapa" alt="mapa">
     </div>
-    
+
+
+    <div id="wrapper">
+        <footer id="footer">
+            <svg fill="#FFFDF4" height="64px" width="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 367.467 367.467" xml:space="preserve">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <path
+                            d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z">
+                        </path>
+                        <path
+                            d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+            <p>Todos los derechos reservados</p>
+
+        </footer>
+    </div>
 </body>
 </html>
+    
