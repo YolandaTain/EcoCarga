@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias - EcoCarga</title>
     <link rel="stylesheet" type="text/css" href="css/noticias.css">
+    <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css">
     <script src="../Nav/js/nav.js"></script>
     <script src="../Noticias/js/noticias.js"></script>
 </head>
@@ -18,6 +18,7 @@
             <h1>EcoCarga</h1>
         </div>
         <div class="header-container-select">
+
             <div id="select" onclick="desplegar()">
                 <svg xmlns="http://www.w3.org/2000/svg" id="select" width="70" height="70" viewBox="0 0 24 24"
                     fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -26,9 +27,9 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </div>
+
         </div>
     </header>
-
     <div id="menu" class="nav-menu">
         <ul>
             <div class="caja">
@@ -177,14 +178,46 @@
             <span class="cerrar" id="cerrar">&times;</span>
             <h2 id="titulo-noticia-popup"></h2>
             <p class="descripcion-noticia-popup" id="descripcion-noticia-popup"></p>
-        </div>
-        <br>        
-        <div class="video">
-        <br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/OCREpzteD-U" frameborder="0" allowfullscreen></iframe>
-        <h3 class="titulovideo">Video destacado!</h3>
-        <br>
         </div>       
+        <div class="video">
+        <div class="slider" id="fondoVideo">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OCREpzteD-U" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-carousel">
+            <div class="video-list">
+              <ul class="lista">
+                <li>
+                  <span class="video-icon strawberry"></span>
+                  <h3>Video 1 </h3>
+                </li>
+                <li>
+                  <span class="video-icon banana"></span>
+                  <h3>Video 2</h3>
+                </li>
+                <li>
+                  <span class="video-icon apple"></span>
+                  <h3>Video 3 </p>
+                </li>
+                <li>
+                  <span class="video-icon orange"></span>
+                  <h3>Video 4 </h3>
+                </li>
+                <li>
+                  <span class="video-icon cherry"></span>
+                  <h3>Video 5 </h3>
+                </li>
+              </ul>
+            </div>
+            <div id="middle-border"></div>
+            <div class="video-player">
+              <iframe id="video1" src="https://www.youtube.com/embed/OCREpzteD-U" frameborder="0" allowfullscreen></iframe>
+              <iframe id="video2" src="https://www.youtube.com/embed/OCREpzteD-U" frameborder="0" allowfullscreen></iframe>
+              <iframe id="video3" src="https://www.youtube.com/embed/OCREpzteD-U" frameborder="0" allowfullscreen></iframe>
+              <iframe id="video4" src="https://www.youtube.com/embed/OCREpzteD-U" frameborder="0" allowfullscreen></iframe>
+              <iframe id="video5" src="https://www.youtube.com/embed/OCREpzteD-U" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+                                    
         <br>
     </main>
 
