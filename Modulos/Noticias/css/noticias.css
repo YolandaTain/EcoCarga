@@ -287,6 +287,10 @@ header h1{
 
 #fondoVideo{
     background-color: var(--boton);
+    background-color: var(--boton);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .titulovideo{
@@ -296,6 +300,7 @@ header h1{
 
 iframe{
     display: flex;
+    justify-content: center;
     margin-top: 5px;
     margin-left:10px;
     margin-bottom:10px;
@@ -316,6 +321,12 @@ iframe{
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    margin-top: 5px;
+    margin-left:10px;
+    margin-bottom:10px;
+    border: #ffffff 3px;
+    padding:5px;
 }
 
 .tituloseccion h1{
@@ -443,10 +454,12 @@ li {
   .video-list ul.lista li h3 {
     text-align: center;
     margin: 0;
-    color:black;
-    font-size:24px;
   }
 
+  h3{
+    color:#000000;
+    background-color: #eee;
+  }
   .video-list li {
     cursor: pointer;
     display: flex;
@@ -561,23 +574,42 @@ li {
     margin-right: 5px;
   }
   
-  .lista .strawberry {
-    background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/83067-200.png');
-  }
-  
-  .lista .banana {
-    background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/53209-200.png');
-  }
-  
-  .lista .apple {
-    background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/14333-200.png');
-  }
-  
-  .lista .orange {
-    background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/9636-200.png');
-  }
-  
-  /* Estilos para los títulos (h3) */
-  .lista h3 {
+  ul.lista li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+h3#listaVideo{
+    background-color: #8b1515;
+}
+  ul.lista {
+    background-color: #fffbfb00;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+ul.lista li.active {
+    background-color: #646262;
+}
+
+ul.lista li:hover {
+    background-color: #ccc;
+}
+
+ul.lista li h3 {
+    text-align: center;
     margin: 0;
-  }  
+    color: black;
+    font-size: 24px;
+    width: 400px;
+    height: 50px;
+}
+
+li.active{
+    margin-left:100px;
+}
