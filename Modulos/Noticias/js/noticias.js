@@ -54,7 +54,40 @@ function mostrarNoticia(index) {
 }
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const listaItems = document.querySelectorAll('.video-list li');
 
+  listaItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+          const videoId = item.getAttribute('data-video-id');
+          const iframes = document.querySelectorAll('.video-player iframe');
+
+          iframes.forEach(function (iframe) {
+              iframe.style.display = 'none';
+          });
+
+          const videoIframe = document.getElementById(videoId);
+          if (videoIframe) {
+              videoIframe.style.display = 'block';
+          }
+      });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const listaItems = document.querySelectorAll('.video-list li');
+
+  listaItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+          listaItems.forEach(function (otherItem) {
+              otherItem.querySelector('.listaVideo').classList.remove('selected');
+          });
+
+          const videoTitle = item.querySelector('.listaVideo');
+          videoTitle.classList.add('selected');
+      });
+  });
+});
 
 
 
