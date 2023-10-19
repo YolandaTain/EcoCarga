@@ -1,15 +1,12 @@
-.caja {
-  padding: 0.7rem;
-  text-align: center;
+:root {
+  --body: #FFFDF4;
+  --claro: #ffffff;
+  --menu: #83A931;
+  --oscuro: #344306;
+  --rotulos: #000000;
+  --boton:#333;
+  --botonHover: #1C2206;
 }
-
-.caja li a {
-  text-decoration: none;
-  font-size: 4rem;
-  color: var(--claro);
-  padding: 1rem;
-}
-
   .carrusel {
     position: relative;
     width: 960px;
@@ -107,11 +104,14 @@
     background-color: var(--menu);
   }
   
-  .slide-image img {
+  .slide-image{
     max-width: 100%;
     margin-right: 40px;
+    z-index: 1;
    
   }
+
+
   
   /* Slide animations */
   #btn-1:checked ~ .slides .slide:nth-child(1),
@@ -296,19 +296,21 @@ iframe{
     font-family: 'Marvel';
 }
   
-
+p{
+  color:#fff
+}
   
   .slide-content {
     width: 500px;
   }
 
- .video-list{
-    width: 200px;
-  }  
 
-  .video-player{
-    width: 900px;
+
+  .video-carousel .video-player {
+    width: 550px;
+    height: 360px;
   }
+  
   
   .slide-link {
     margin-left: 100px;
@@ -386,7 +388,7 @@ iframe{
   /* Estilos para la lista de videos en la zona izquierda */
   .video-list {
     float: left;
-    width: 450px;
+    width: 400px;
     background: #fff;
     padding: 10px;
     overflow: auto; /* Permite hacer scroll si hay demasiados elementos */
@@ -420,7 +422,7 @@ iframe{
     margin-right: 5px;;
   }
   .active h3{
-    background-color:#6ce327;
+    background-color:var(--menu);
     color:#fff;
   }
 
@@ -457,7 +459,7 @@ iframe{
     padding: 10px;
     overflow: hidden;
     margin-right: 10px;
-    background-color: #fff;
+    background-color: var(--claro);
   }
   
   .video-player iframe {
@@ -467,7 +469,7 @@ iframe{
   
   /* Estilos para la barra divisoria en el medio (middle-border) */
   #middle-border {
-    background-color: #4a4949;
+    background-color: var(--boton);
     height: 75%; /* Ajusta el tamaño de la barra según tus necesidades */
     flex-grow: 1;
     max-width: 2px;
@@ -483,8 +485,13 @@ iframe{
     width:300px;
   }
   
+  .listaVideo.selected {
+    background-color:#c0ff39; /* Cambia esto al color que desees */
+    color: #000000; /* Cambia el color del texto si es necesario */
+}
 
-  
+
+
   .video-list h3 {
     display: flex;
     text-align: center;
