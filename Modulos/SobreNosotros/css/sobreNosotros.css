@@ -10,44 +10,61 @@
 }
 
 #nombre{
+    font-size: 8rem;
+    margin:0;
     margin-left: 5%;
+    color: var();
 }
 
 #posision{
     margin-left: 5%;
+    font-size: 4rem;
+    margin:0;
+    margin-left: 5%;
+    color: var(--oscuro);
+    
+}
+
+p{
+    text-align: justify;
 }
 
 #info{
     margin-left: 5%;
+    margin-right: 10%;
 }
 
-img{
-    border-radius: 400px 400px 400px 400px;
-    width: 350px;
+#imagen{
+    border-radius: 40rem 40rem 40rem 40rem;
+    width: 33rem;
 }
 
-#descipcion{
+#titulodesc{
     display: flex;
-    margin-right: 20%;
+    color: var(--oscuro);
+    font-size: 8rem;
+    margin:0;
+    margin-right: 10%;
     margin-left: 10%;
 }
-
-h3{
-    font-size: 80px;
-    margin:0;
-}
-
-h4{
-    font-size: 40px;
-    margin:0;
+#descipcion{
+    margin-right: 10%;
+    margin-left: 10%;
+    color: var(--oscuro);
 }
 
 p{
     font-size: 30px;
-    
 }
 
-h1{
-    font-size: 80px;
-    margin:0
+hr{
+    border-top: 3px double var(--rotulos);
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+#separador{
+    border-top: 3px double var(--rotulos);
+    margin-left: 30%;
+    margin-right: 24%;
 }
