@@ -180,6 +180,7 @@ body {
 .caja {
   padding: 0.7rem;
   text-align: center;
+  opacity:0.9;
 }
 
 .caja li a {

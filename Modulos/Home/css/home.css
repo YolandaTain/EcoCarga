@@ -1,4 +1,13 @@
-/* Estilo para el contenedor del botón de búsqueda y el campo de entrada */
+:root {
+  --body: #FFFDF4;
+  --claro: #ffffff;
+  --menu: #83A931;
+  --oscuro: #344306;
+  --rotulos: #000000;
+  --boton:#333;
+  --botonHover: #1C2206;
+}
+
 .search {
     display: flex;
     align-items: center;
@@ -7,7 +16,7 @@
     border-radius: 5px; /* Añade bordes redondeados al contenedor */
     border: 3px solid #515151;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     margin-left: 2rem;
     width: 45%;
     font-family: 'Marvel', sans-serif;
@@ -16,27 +25,27 @@
 .botonContenedor{
     display: flex;
     align-items: center;
-    margin-top: -6rem;
-    margin-left: 67.3rem;
-    margin-bottom: 1rem;
-    padding: -2rem; 
+    padding: 1rem; 
 }
 
   /* Estilo para el botón */
 #boton {
     display: flex;
+    margin-bottom: 1rem;
+    margin-top: -6.9rem;
+    margin-left: 72.5rem;
     justify-content: center;
-    border: 3px solid #515151;
-    background-color: #515151; /* Color de fondo del botón */
+    border: none;
+    background-color: var(--menu); /* Color de fondo del botón */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
     color: white; /* Color del texto del botón */
-    padding: 1rem; /* Espaciado dentro del botón */
+    padding: 1.8rem; /* Espaciado dentro del botón */
     border-radius: 0 5px 5px 0; /* Bordes redondeados solo en la parte derecha */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    width: 15%;
-    padding: 1.5rem;
+    width: 15rem;
     font-family: 'Marvel', sans-serif;
     font-size: 2rem; 
+    outline:none;
   }
 
   /* Estilo para el icono SVG */
@@ -75,6 +84,7 @@
 .des-menu{
     display: block;
     justify-content: space-between;
+    
 }
 
 #destacados{
@@ -83,13 +93,17 @@
 
 #destacados h1{
     margin-left: 2rem; 
-    text-decoration: underline;
+    text-decoration:  underline;
+    color:var(--oscuro);
+    font-weight: 400;
+    font-size: 3rem;
 }
 
 .cajaD {
   padding: 1rem;
   margin-right: 1rem;
   text-align: left;
+
 }
 
 .cajaD li a {
@@ -97,18 +111,79 @@
     font-size: 4rem;
     color: #1c1701;
     padding: 1rem;
+    color:var(--oscuro);
   
 }
 
 .des-menu ul {
     list-style-type: none;
+    
   }
-  
+
+
 .des-menu li {/*COMPARTIDO CON NAV*/
     background-color: #FAF5E2;
     padding: 0.5rem;
     box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
     margin-right: 1rem;
     margin-bottom: 0.5rem;
+    border-radius: 60px;
+    width: 60%;
 
 }
+
+#mapa-container{
+  display:flex;
+  justify-content: center;
+
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  background-color: var(--boton);
+
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+#mapa-container img{
+  border-radius: 1rem;
+}
+
+.bannerItinerario{
+  display:block;
+}
+
+.bannerItinerario h1{
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+#botonBanner{
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: -6.9rem;
+  margin-left: 72.5rem;
+  justify-content: center;
+  border: none;
+  background-color: var(--menu); /* Color de fondo del botón */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  color: white; /* Color del texto del botón */
+  padding: 1.8rem; /* Espaciado dentro del botón */
+  border-radius: 5px; /* Bordes redondeados solo en la parte derecha */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  width: 15rem;
+  font-family: 'Marvel', sans-serif;
+  font-size: 2rem; 
+  outline:none;
+}
+
+#botonBanner a{
+  text-decoration: none;
+  color:var(--claro);
+}
+
