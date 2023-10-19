@@ -1,4 +1,15 @@
- 
+.caja {
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.caja li a {
+  text-decoration: none;
+  font-size: 4rem;
+  color: var(--claro);
+  padding: 1rem;
+}
+
   .carrusel {
     position: relative;
     width: 960px;
@@ -99,6 +110,7 @@
   .slide-image img {
     max-width: 100%;
     margin-right: 40px;
+   
   }
   
   /* Slide animations */
@@ -381,7 +393,7 @@ iframe{
   }
 
 .lista{
-  margin-top:40px;
+  margin-top:30px;
 }
 
 .listaVideo{
@@ -461,7 +473,7 @@ iframe{
     max-width: 2px;
     z-index: 0;
     width: 5px;
-    margin-top:35px;
+    margin-top:50px;
   }
   
   .video-list ul li {
