@@ -10,12 +10,10 @@
 
 .search {
     display: flex;
-    align-items:flex-start;
-    justify-content: flex-start;
     background-color: #d2cdcd;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 5px; /* Añade bordes redondeados al contenedor */
-    border: 3px solid #515151;
+    border:9999999999 3px solid #515151;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
     margin-top: 1.2rem;
     margin-left: 2rem;
@@ -23,19 +21,25 @@
     font-family: 'Marvel', sans-serif;
   }
 
+.botonContenedor{
+  display: flex;
+  margin-top: 1.2rem;
+  
+}
+
+.componenteSearch{
+    display: flex;
+    justify-content: flex-start;
+}
 
 #boton {
-    display: flex;
-    margin-bottom: 1rem;
-    margin-top: -6.9rem;
-    margin-left: 72.5rem;
     justify-content: center;
     border: none;
     background-color: var(--menu); /* Color de fondo del botón */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
     color: white; /* Color del texto del botón */
     padding: 1.8rem; /* Espaciado dentro del botón */
-    border-radius: 0 5px 5px 0; /* Bordes redondeados solo en la parte derecha */
+    border-radius: 5px; /* Bordes redondeados solo en la parte derecha */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     width: 15rem;
     font-family: 'Marvel', sans-serif;
