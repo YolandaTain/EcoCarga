@@ -27,15 +27,15 @@ function desplegar() {
 
     if (menu.style.display === "block") {
         menu.style.display = "none";
-        menu.classList.remove("slide-in-blurred-top");
-        menu.classList.add("slide-in-blurred-top2");
+        menu.classList.remove("scale-up-hor-right");
+        menu.classList.add("scale-up-hor-left");
 
 
 
     } else {
         menu.style.display = "block";
-        menu.classList.remove("slide-in-blurred-top2");
-        menu.classList.add("slide-in-blurred-top");
+        menu.classList.remove("scale-up-hor-left");
+        menu.classList.add("scale-up-hor-right");
     }
 }
 
