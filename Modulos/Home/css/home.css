@@ -10,7 +10,8 @@
 
 .search {
     display: flex;
-    align-items: center;
+    align-items:flex-start;
+    justify-content: flex-start;
     background-color: #d2cdcd;
     padding: 1.5rem;
     border-radius: 5px; /* Añade bordes redondeados al contenedor */
@@ -22,13 +23,7 @@
     font-family: 'Marvel', sans-serif;
   }
 
-.botonContenedor{
-    display: flex;
-    align-items: center;
-    padding: 1rem; 
-}
 
-  /* Estilo para el botón */
 #boton {
     display: flex;
     margin-bottom: 1rem;
