@@ -45,11 +45,17 @@ function procesoFinalizado() {
 
 }
 
-function siguiente(numero){
-    numero = numero == 1? "" : numero;
-    window.open("/Modulos/Itinerario/itinerario"+numero+".html", "_self");
-   /* window.location.href = '/MI-PROYECTO/Modulos/Itinerario/itinerario'+numero+'.html';*/
+function siguiente(numero) {
+    var formulario = document.getElementById('miFormulario');
+
+    if (formulario.checkValidity()) {
+        numero = numero == 1 ? "" : numero; //variable = condición ? valor_si_cierto : valor_si_falso;
+        window.open("/Modulos/Itinerario/itinerario" + numero + ".html", "_self");
+    } else {
+        alert("Por favor, completa todos los campos requeridos.");
+    }
 }
+
 
 function volver(numero){
     numero = numero == 1? "" : numero;

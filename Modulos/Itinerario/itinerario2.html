@@ -57,25 +57,25 @@
     </div>
     <br>
 
-    <form method="get">
-        <label for="puntoPartida">Punto de Partida (dirección o código postal):</label>
+    <form method="get" id="miFormulario">
+        <label for="puntoPartida" title="Campo requerido"><span>*</span>Punto de Partida (dirección o código postal):</label>
         <input type="text" id="puntoPartida" name="puntoPartida" required><br><br>
 
-        <label for="puntoDestino">Punto de Destino (dirección o código postal):</label>
+        <label for="puntoDestino" title="Campo requerido"><span>*</span>Punto de Destino (dirección o código postal):</label>
         <input type="text" id="puntoDestino" name="puntoDestino" required><br><br>
         <div id="contenedorFecha">
             <div id="contenedorFechaInicio">
-                <label for="fechaInicio">Fecha de Inicio:</label>
+                <label for="fechaInicio" title="Campo requerido"><span>*</span>Fecha de Inicio:</label>
                 <input type="date" id="fechaInicio" name="fechaInicio" required><br><br>
             </div>
             <div id="contenedorFechaFin">
-                <label for="fechaFin">Fecha de Fin:</label>
+                <label for="fechaFin" title="Campo requerido"><span>*</span>Fecha de Fin:</label>
                 <input type="date" id="fechaFin" name="fechaFin" required><br><br>
             </div>
         </div>
         <div id="contenedorAutonomiayTipoCoche">
             <div id="contenedorAutonomia">
-                <label for="autonomia">Autonomía del Coche Eléctrico (en kilómetros):</label>
+                <label for="autonomia" title="Campo requerido"><span>*</span>Autonomía del Coche Eléctrico (en kilómetros):</label>
                 <input type="number" id="autonomia" name="autonomia" required><br><br>
             </div>
 
@@ -94,7 +94,7 @@
         <div id="contenedorVelocidadCargaYNumPasajeros">
             <div id="contenedorNumPasajeros">
                 <label for="numPasajeros">Número de Pasajeros:</label>
-                <input type="number" id="numPasajeros" name="numPasajeros" required><br><br>
+                <input type="number" id="numPasajeros" name="numPasajeros"><br><br>
             </div>
             <div id="contenedorVelocidadCarga">
                 <label for="velocidadCarga">Velocidad de Carga Deseada:</label>

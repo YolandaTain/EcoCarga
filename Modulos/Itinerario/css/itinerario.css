@@ -4,16 +4,19 @@
     --menu: #83A931;
     --oscuro: #344306;
     --rotulos: #000000;
-    --boton:#333;
+    --boton: #333;
     --botonHover: #1C2206;
-  }
-
-html{ /*COMPARTIDO CON NAV*/
-    font-size: 62.5%;
-    
 }
+
+html {
+    /*COMPARTIDO CON NAV*/
+    font-size: 62.5%;
+
+}
+
 /*1 rem = 10px*/
-body {/*COMPARTIDO CON NAV*/
+body {
+    /*COMPARTIDO CON NAV*/
     font-family: 'Marvel', sans-serif;
     background-color: var(--body);
     margin: 0;
@@ -21,7 +24,8 @@ body {/*COMPARTIDO CON NAV*/
     font-size: 16px;
 }
 
-#header {/*COMPARTIDO CON NAV*/
+#header {
+    /*COMPARTIDO CON NAV*/
     background-image: url("../../Nav/img/header.jpg");
     background-size: 80%;
     height: 21rem;
@@ -30,14 +34,16 @@ body {/*COMPARTIDO CON NAV*/
     background-repeat: no-repeat;
 }
 
-.header-container {/*COMPARTIDO CON NAV*/
+.header-container {
+    /*COMPARTIDO CON NAV*/
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
 }
 
-#headerLogo {/*COMPARTIDO CON NAV*/
+#headerLogo {
+    /*COMPARTIDO CON NAV*/
     width: auto;
     height: 15rem;
     padding: 2rem;
@@ -45,7 +51,8 @@ body {/*COMPARTIDO CON NAV*/
     margin-left: 3rem;
 }
 
-.header-container h1 {/*COMPARTIDO CON NAV*/
+.header-container h1 {
+    /*COMPARTIDO CON NAV*/
     color: var(--claro);
     font-size: 6rem;
     display: flex;
@@ -53,7 +60,8 @@ body {/*COMPARTIDO CON NAV*/
     justify-content: flex-start;
 }
 
-.header-container-select {/*COMPARTIDO CON NAV*/
+.header-container-select {
+    /*COMPARTIDO CON NAV*/
     width: 2000px;
     display: flex;
     position: relative;
@@ -63,24 +71,25 @@ body {/*COMPARTIDO CON NAV*/
     padding-left: 85rem;
 }
 
-#select {/*COMPARTIDO CON NAV*/
+#select {
+    /*COMPARTIDO CON NAV*/
     cursor: pointer;
 }
 
-.nav-menu ul {/*COMPARTIDO CON NAV*/
+.nav-menu ul {
+    /*COMPARTIDO CON NAV*/
     list-style-type: none;
     margin-left: 110rem;
     position: fixed;
-
 }
 
-.nav-menu li {/*COMPARTIDO CON NAV*/
-    background-color:var(--menu);
+.nav-menu li {
+    /*COMPARTIDO CON NAV*/
+    background-color: var(--menu);
     padding: 0.5rem;
     box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
     margin-right: 1rem;
     margin-bottom: 0.5rem;
-
 }
 
 .slide-in-blurred-top {
@@ -170,30 +179,34 @@ body {/*COMPARTIDO CON NAV*/
 }
 
 
-.nave-menu {/*COMPARTIDO CON NAV*/
+.nave-menu {
+    /*COMPARTIDO CON NAV*/
     display: block;
     justify-content: space-between;
 
 }
 
-#menu {/*COMPARTIDO CON NAV*/
+#menu {
+    /*COMPARTIDO CON NAV*/
     display: none;
-
 }
 
-.caja {/*COMPARTIDO CON NAV*/
+.caja {
+    /*COMPARTIDO CON NAV*/
     padding: 0.3rem;
     text-align: center;
 }
 
-.caja li a {/*COMPARTIDO CON NAV*/
+.caja li a {
+    /*COMPARTIDO CON NAV*/
     text-decoration: none;
     font-size: 4rem;
     color: var(--claro);
     padding: 1rem;
 }
 
-#footer {/*COMPARTIDO CON NAV*/
+#footer {
+    /*COMPARTIDO CON NAV*/
     color: var(--claro);
     display: flex;
     width: auto;
@@ -201,17 +214,18 @@ body {/*COMPARTIDO CON NAV*/
     padding: 1rem;
     position: relative;
     justify-content: center;
- 
 }
 
-#footer svg {/*COMPARTIDO CON NAV*/
+#footer svg {
+    /*COMPARTIDO CON NAV*/
     margin-left: 2rem;
     margin-top: -1rem;
-    width:3rem;
-    height:6.5rem;
+    width: 3rem;
+    height: 6.5rem;
 }
 
-#footer p {/*COMPARTIDO CON NAV*/
+#footer p {
+    /*COMPARTIDO CON NAV*/
     margin-left: 2rem;
     margin-top: 1.5rem;
 }
@@ -254,7 +268,6 @@ form {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
 }
 
 label {
@@ -293,5 +306,5 @@ button {
 }
 
 button:hover {
-    background-color:var(--botonHover);
+    background-color: var(--botonHover);
 }
