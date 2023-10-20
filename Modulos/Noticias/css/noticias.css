@@ -1,491 +1,447 @@
-  :root {
-  --body: #FFFDF4;
+:root {
+  --body: #fffdf4;
   --claro: #ffffff;
-  --menu: #83A931;
+  --menu: #83a931;
   --oscuro: #344306;
   --rotulos: #000000;
-  --boton:#333;
-  --botonHover: #1C2206;
+  --boton: #333;
+  --botonHover: #1c2206;
+}
+
+.carrusel {
+  position: relative;
+  width: 960px;
+  height: 400px;
+  margin: 50px auto;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.carrusel-controls {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200px;
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: 1000;
+  list-style: none;
+  text-align: center;
+}
+
+.carrusel input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.carrusel-controls label {
+  margin-bottom: 10px;
+  display: inline-block;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--rotulos);
+  transition: background-color 0.2s linear;
+}
+
+#btn-1:checked ~ .carrusel-controls label[for="btn-1"],
+#btn-2:checked ~ .carrusel-controls label[for="btn-2"],
+#btn-3:checked ~ .carrusel-controls label[for="btn-3"],
+#btn-4:checked ~ .carrusel-controls label[for="btn-4"],
+#btn-5:checked ~ .carrusel-controls label[for="btn-5"],
+#btn-6:checked ~ .carrusel-controls label[for="btn-6"],
+#btn-7:checked ~ .carrusel-controls label[for="btn-7"],
+#btn-8:checked ~ .carrusel-controls label[for="btn-8"] {
+  background-color: var(--menu);
+}
+
+/* SLIDES */
+
+.slides {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 40px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 250ms linear;
+}
+
+.slide-title {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.slide-text {
+  margin-bottom: 20px;
+}
+
+.slide-link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--claro);
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: var(--menu);
+}
+
+.slide-image {
+  max-width: 100%;
+  margin-right: 40px;
+  z-index: 1;
+}
+
+/* Slide animations */
+#btn-1:checked ~ .slides .slide:nth-child(1),
+#btn-2:checked ~ .slides .slide:nth-child(2),
+#btn-3:checked ~ .slides .slide:nth-child(3),
+#btn-4:checked ~ .slides .slide:nth-child(4),
+#btn-5:checked ~ .slides .slide:nth-child(5),
+#btn-6:checked ~ .slides .slide:nth-child(6),
+#btn-7:checked ~ .slides .slide:nth-child(7),
+#btn-8:checked ~ .slides .slide:nth-child(8) {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+#btn-1:not(:checked) ~ .slides .slide:nth-child(1),
+#btn-2:not(:checked) ~ .slides .slide:nth-child(2),
+#btn-3:not(:checked)
+  ~ .slides
+  .slide:nth-child(3)
+  #btn-4:not(:checked)
+  ~ .slides
+  .slide:nth-child(4),
+#btn-5:not(:checked) ~ .slides .slide:nth-child(5),
+#btn-6:not(:checked)
+  ~ .slides
+  .slide:nth-child(6)
+  #btn-7:not(:checked)
+  ~ .slides
+  .slide:nth-child(7),
+#btn-8:not(:checked) ~ .slides .slide:nth-child(8) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+@keyframes swap-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .carrusel {
-    position: relative;
-    width: 960px;
-    height: 400px; 
-    margin: 50px auto;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
-      0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-  }
-  
-  .carrusel-controls {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 200px;
-    text-align: center;
-    transform: translateX(-50%);
-    z-index: 1000;
-    list-style: none;
-    text-align: center;
-  }
-  
-  .carrusel input[type="radio"] {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+  50% {
+    transform: translateX(50%);
     opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .carrusel-controls label {
-    margin-bottom:10px;
-    display: inline-block;
-    border: none;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: var(--rotulos);
-    transition: background-color 0.2s linear;
-  }
-  
-  #btn-1:checked ~ .carrusel-controls label[for="btn-1"],
-  #btn-2:checked ~ .carrusel-controls label[for="btn-2"],
-  #btn-3:checked ~ .carrusel-controls label[for="btn-3"],
-  #btn-4:checked ~ .carrusel-controls label[for="btn-4"],
-  #btn-5:checked ~ .carrusel-controls label[for="btn-5"],
-  #btn-6:checked ~ .carrusel-controls label[for="btn-6"],
-  #btn-7:checked ~ .carrusel-controls label[for="btn-7"],
-  #btn-8:checked ~ .carrusel-controls label[for="btn-8"]
- {
-    background-color: var(--menu);
-  }
-  
-  /* SLIDES */
-  
-  .slides {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 40px;
-  }
-  
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: transform 250ms linear;
-  }
-  
-  .slide-title {
-    margin-bottom: 20px;
-    font-size: 36px;
-  }
-  
-  .slide-text {
-    margin-bottom: 20px;
-  }
-  
-  .slide-link {
-    display: inline-block;
-    padding: 10px 20px;
-    color: var(--claro);
-    border-radius: 3px;
-    text-decoration: none;
-    background-color: var(--menu);
-  }
-  
-  .slide-image{
-    max-width: 100%;
-    margin-right: 40px;
-    z-index: 1;
-   
   }
 
+  100% {
+    transform: translateX(100%);
+  }
+}
 
-  
-  /* Slide animations */
-  #btn-1:checked ~ .slides .slide:nth-child(1),
-  #btn-2:checked ~ .slides .slide:nth-child(2),
-  #btn-3:checked ~ .slides .slide:nth-child(3),
-  #btn-4:checked ~ .slides .slide:nth-child(4),
-  #btn-5:checked ~ .slides .slide:nth-child(5),
-  #btn-6:checked ~ .slides .slide:nth-child(6),
-  #btn-7:checked ~ .slides .slide:nth-child(7),
-  #btn-8:checked ~ .slides .slide:nth-child(8)
- {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  #btn-1:not(:checked) ~ .slides .slide:nth-child(1),
-  #btn-2:not(:checked) ~ .slides .slide:nth-child(2),
-  #btn-3:not(:checked) ~ .slides .slide:nth-child(3)
-  #btn-4:not(:checked) ~ .slides .slide:nth-child(4),
-  #btn-5:not(:checked) ~ .slides .slide:nth-child(5),
-  #btn-6:not(:checked) ~ .slides .slide:nth-child(6)
-  #btn-7:not(:checked) ~ .slides .slide:nth-child(7),
-  #btn-8:not(:checked) ~ .slides .slide:nth-child(8) 
-  {
-    animation-name: swap-out;
-    animation-duration: 300ms;
-    animation-timing-function: linear;
-  }
-  
-  @keyframes swap-out {
-    0% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  
-    50% {
-      transform: translateX(50%);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translateX(100%);
-    }
-  } 
+#fecha {
+  font-family: "Marvel", sans-serif;
+  font-size: small;
+  font-weight: bold;
+  color: rgb(50, 73, 5);
+}
 
-  .scrollable {
-    flex: 0 0 33.33%; 
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.5s ease; 
-  }
+h2 {
+  color: var(--oscuro);
+  font-size: small;
+  font-family: "Marvel", sans-serif;
+}
 
-  .scrollable {
-    padding: 10px;
-    text-align: center;  
-  }
+p {
+  color: var(--rotulos);
+}
 
-  .scrollable h2 {
-    font-size: 1.5rem;
-    font-family: 'Marvel', sans-serif;
-    margin: 10px 0;
-  }
+.texto {
+  display: flexbox;
+}
 
-  .scrollable img {
-  width: 120%;
-  }
+.cuadro-emergente {
+  display: none;
+  z-index: 0;
+  transform: translate(50%, -1%);
+  background-color: rgb(170, 225, 60);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 950px;
+  height: 200px;
+  color: var(--claro);
+  left: 10%;
+}
 
-  #fecha{  
-    font-family: 'Marvel', sans-serif;
-    font-size: small;
-    font-weight: bold; 
-    color:rgb(50, 73, 5);   
-  }
+#descripcion-noticia-popup {
+  margin: 20px;
+}
 
-  h2{
-    color: var(--oscuro);
-    font-size: small;
-    font-family: 'Marvel', sans-serif;
-    
-  }
+#cerrar {
+  margin-left: 10px;
+  margin-top: auto;
+  padding: 5px;
+  font-size: 40px;
+}
 
-  p{
-    color: var(--rotulos);    
-  }
+#titulo-noticia-popup {
+  font-size: 22px;
+  color: var(--rotulos);
+  margin-left: 100px;
+}
 
-  .texto{
-    display: flexbox;
-  }
+@font-face {
+  font-family: "Marvel";
+  src: url("ruta/a/tu/fuente-Marvel.ttf") format("truetype");
+}
 
-  .cuadro-emergente {
-    display: none;
-    z-index: 0;
-    transform: translate(50%, -1%);
-    background-color:rgb(170, 225, 60);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 950px; 
-    height: 200px; 
-    color: var(--claro);
-    left: 10%;
-  }
+.cambio-color {
+  color: rgb(170, 225, 60);
+}
 
-  #descripcion-noticia-popup {
-    margin: 20px; 
-  }
+/*video*/
+.video {
+  background-color: var(--body);
+}
 
+#fondoVideo {
+  background-color: var(--boton);
+  background-color: var(--boton);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  #cerrar{
-    margin-left: 10px;
-    margin-top:auto;
-    padding: 5px;
-    font-size:40px;
-  }
+.titulovideo {
+  margin-left: 650px;
+  color: var(--claro);
+}
 
+iframe {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: #ffffff 3px;
+  padding: 5px;
+}
 
-  #titulo-noticia-popup{
-    font-size: 22px; 
-    color: var(--rotulos); 
-    margin-left: 100px;
-  }
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Ajusta esto para controlar la relación de aspecto del video (16:9 en este ejemplo) */
+  overflow: hidden;
+}
 
-  @font-face {
-    font-family: 'Marvel';
-    src: url('ruta/a/tu/fuente-Marvel.ttf') format('truetype'); 
-  }
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: #ffffff 3px;
+  padding: 5px;
+}
 
-  .cambio-color {
-    color: rgb(170, 225, 60); 
-  }
+.tituloseccion h1 {
+  color: rgb(255, 255, 255);
+  margin-left: 250px;
+  font-family: "Marvel";
+}
 
-  /*video*/
-  .video{
-    background-color: var(--body);
-  }
+footer p {
+  color: #fff;
+}
 
-  #fondoVideo{
-    background-color: var(--boton);
-    background-color: var(--boton);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.slide-content {
+  width: 500px;
+}
 
-  .titulovideo{
-    margin-left: 650px;
-    color: var(--claro);
-  }
+.video-carousel .video-player {
+  width: 550px;
+  height: 360px;
+}
 
-  iframe{
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-    margin-left:10px;
-    margin-bottom:10px;
-    border: #ffffff 3px;
-    padding:5px;
-  }
+.slide-link {
+  margin-left: 100px;
+  margin-top: 60px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: var(--menu);
+}
 
-  .video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Ajusta esto para controlar la relación de aspecto del video (16:9 en este ejemplo) */
-    overflow: hidden;
-  }
+/* Slide animations */
+#slides_1:checked ~ .slides li:nth-child(1) {
+  transform: translateX(0);
+  opacity: 1;
+}
 
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin-top: 5px;
-    margin-left:10px;
-    margin-bottom:10px;
-    border: #ffffff 3px;
-    padding:5px;
-  }
+#slides_2:checked ~ .slides li:nth-child(2) {
+  transform: translateX(0);
+  opacity: 1;
+}
 
-  .tituloseccion h1{
-    color:rgb(255, 255, 255);
-    margin-left: 250px;
-    font-family: 'Marvel';
-  }
-  
-  footer p{
-  color:#fff
-  }
-  
-  .slide-content {
-    width: 500px;
-  }
+#slides_3:checked ~ .slides li:nth-child(3) {
+  transform: translateX(0);
+  opacity: 1;
+}
+#slides_4:checked ~ .slides li:nth-child(4) {
+  transform: translateX(0);
+  opacity: 1;
+}
 
-  .video-carousel .video-player {
-    width: 550px;
-    height: 360px;
-  }
-  
-  .slide-link {
-    margin-left: 100px;
-    margin-top: 60px;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 3px;
-    text-decoration: none;
-    background-color: var(--menu);
-  }
-    
-  /* Slide animations */
-  #slides_1:checked ~ .slides li:nth-child(1) {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  #slides_2:checked ~ .slides li:nth-child(2) {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  #slides_3:checked ~ .slides li:nth-child(3) {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  #slides_4:checked ~ .slides li:nth-child(4) {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  #slides_5:checked ~ .slides li:nth-child(5) {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  #slides_6:checked ~ .slides li:nth-child(6) {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  #slides_7:checked ~ .slides li:nth-child(7) {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  #slides_8:checked ~ .slides li:nth-child(8) {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  
-  #slides_1:not(:checked) ~ .slides li:nth-child(1),
-  #slides_2:not(:checked) ~ .slides li:nth-child(2),
-  #slides_3:not(:checked) ~ .slides li:nth-child(3),
-  #slides_4:not(:checked) ~ .slides li:nth-child(4),
-  #slides_5:not(:checked) ~ .slides li:nth-child(5),
-  #slides_6:not(:checked) ~ .slides li:nth-child(6),
-  #slides_7:not(:checked) ~ .slides li:nth-child(7),
-  #slides_8:not(:checked) ~ .slides li:nth-child(8) {
-    animation-name: swap-out;
-    animation-duration: 300ms;
-    animation-timing-function: linear;
-  }
-  /* Estilos para el contenedor principal */
-  .video-carousel {
-    display: flex;
-    width: 960px;
-    height: 400px;
-    margin: 50px auto;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-  }
-  
-  /* Estilos para la lista de videos en la zona izquierda */
-  .video-list {
-    float: left;
-    width: 400px;
-    background: #fff;
-    padding: 10px;
-    overflow: auto; /* Permite hacer scroll si hay demasiados elementos */
-  }
+#slides_5:checked ~ .slides li:nth-child(5) {
+  transform: translateX(0);
+  opacity: 1;
+}
 
-  .lista{
-  margin-top:30px;
-  }
+#slides_6:checked ~ .slides li:nth-child(6) {
+  transform: translateX(0);
+  opacity: 1;
+}
+#slides_7:checked ~ .slides li:nth-child(7) {
+  transform: translateX(0);
+  opacity: 1;
+}
 
-  .listaVideo{
-  color:#fff;
-  }
-
-  h3{
-    color:#000000;
-    background-color: #eee;
-  }
-
-  .video-list li {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    transition: background-color 0.3s;
-  }
-  
-  .video-list li.active {
-    background-color: #ffffff;
-    align-items: center; /* Centra verticalmente el contenido */
-  }
-
-  .active h3{
-    background-color:var(--menu);
-    color:#fff;
-  }
-
-  .video-list li:hover {
-    background-color: #313433;
-  }
-  
-  /* Estilos para la parte derecha (reproductor de video) */
-  .video-player {
-    width: calc(100% - 400px); /* El ancho del reproductor se ajusta automáticamente */
-    padding: 10px;
-    overflow: hidden;
-    margin-right: 10px;
-    background-color: var(--claro);
-  }
-  
-  .video-player iframe {
-    width: 500px;
-    height: 370px;
-  }
-  
-  /* Estilos para la barra divisoria en el medio (middle-border) */
-  #middle-border {
-    background-color: var(--boton);
-    height: 75%; /* Ajusta el tamaño de la barra según tus necesidades */
-    flex-grow: 1;
-    max-width: 2px;
-    z-index: 0;
-    width: 5px;
-    margin-top:50px;
-  }
-  
-  .video-list ul li {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    width:300px;
-  }
-  
-  .listaVideo.selected {
-    background-color:#c0ff39; /* Cambia esto al color que desees */
-    color: #000000; /* Cambia el color del texto si es necesario */
-  }
+#slides_8:checked ~ .slides li:nth-child(8) {
+  transform: translateX(0);
+  opacity: 1;
+}
 
 
+/* Estilos para el contenedor principal */
+.video-carousel {
+  display: flex;
+  width: 960px;
+  height: 400px;
+  margin: 50px auto;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
 
-  .video-list h3 {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin: 0;
-    color:rgb(255, 255, 255);
-    font-size:24px;
-    width:300px;
-    height:40px;
-  }
+/* Estilos para la lista de videos en la zona izquierda */
+.video-list {
+  float: left;
+  width: 400px;
+  background: #fff;
+  padding: 10px;
+  overflow: auto; /* Permite hacer scroll si hay demasiados elementos */
+}
 
-  /*ICONOS*/
+.lista {
+  margin-top: 30px;
+}
 
-  .ico{
-    margin-right:10px;
-  }
+.listaVideo {
+  color: #fff;
+}
 
-    
+h3 {
+  color: #000000;
+  background-color: #eee;
+}
 
-  
+.video-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
 
+.video-list li.active {
+  background-color: #ffffff;
+  align-items: center; /* Centra verticalmente el contenido */
+}
 
+.active h3 {
+  background-color: var(--menu);
+  color: #fff;
+}
 
+.video-list li:hover {
+  background-color: #313433;
+}
+
+/* Estilos para la parte derecha (reproductor de video) */
+.video-player {
+  width: calc(
+    100% - 400px
+  ); /* El ancho del reproductor se ajusta automáticamente */
+  padding: 10px;
+  overflow: hidden;
+  margin-right: 10px;
+  background-color: var(--claro);
+}
+
+.video-player iframe {
+  width: 500px;
+  height: 370px;
+}
+
+/* Estilos para la barra divisoria en el medio (middle-border) */
+#middle-border {
+  background-color: var(--boton);
+  height: 75%; /* Ajusta el tamaño de la barra según tus necesidades */
+  max-width: 2px;
+  width: 5px;
+  margin-top: 50px;
+}
+
+.video-list ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 300px;
+}
+
+.listaVideo.selected {
+  background-color: #c0ff39; /* Cambia esto al color que desees */
+  color: #000000; /* Cambia el color del texto si es necesario */
+}
+
+.video-list h3 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  width: 300px;
+  height: 40px;
+}
+
+/*ICONOS*/
+
+.ico {
+  margin-right: 10px;
+}
