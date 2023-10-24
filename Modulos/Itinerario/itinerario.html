@@ -52,39 +52,151 @@
             </div>
         </ul>
     </div>
-    <h1>Tu planificador de viajes</h1>
-
-    <div id="barraProgreso">
-        <label for="file">
-            <h3>Progeso de solicitud</h3>
-        </label>
-        <progress id="file" max="100" value="33">33%</progress>
-    </div>
-    <br>
-    <div>
-        <form id="miFormulario">
-            <label for="nombre" title="Campo requerido"><span>*</span>Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
-            <label for="email" title="Campo requerido"><span>*</span>Email del Usuario:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="fechaNac" title="Campo requerido"><span>*</span>Fecha de nacimiento:</label>
-            <input type="date" id="fechaNac" name="fechaNac" required><br><br>
-            <!--<div id="botonPadre">
-            <div id="boton">
-
-                <button><a href="/Modulos/Itinerario/itinerario2.html">Siguiente
-
-                    </a></button>
-
+    <h1><u>Tu planificador de viajes</u></h1>
+    <div class="formulario" id="formularioPagina1">
+        <div id="barraProgreso">
+            <div class="progresoSolicitud">
+                <label for="file">
+                    <h4>Progeso de solicitud</h4>
+                </label>
+                <p>1/3</p>
             </div>
-        </div>-->
-            <div id="botonPadre">
-                <div id="boton">
-                    <button id="siguiente-button1" type="button" onclick="siguiente('2')">Siguiente</button>
+            <progress id="file" max="100" value="33">33%</progress>
+            
+        </div>
+        <br>
+        <div>
+            <form id="miFormulario">
+                <label for="nombre" title="Campo requerido"><span>*</span>Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="email" title="Campo requerido"><span>*</span>Email del Usuario:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="fechaNac" title="Campo requerido"><span>*</span>Fecha de nacimiento:</label>
+                <input type="date" id="fechaNac" name="fechaNac" required><br><br>
+                <div id="botonPadre">
+                    <div id="boton">
+                        <button class="siguiente-boton" id="siguiente-button1" type="button"
+                            onclick="siguiente('2')">Siguiente</button>
+                    </div>
+                </div><br><br><br>
+            </form>
+        </div>
+    </div>
+    <div class="formulario" id="formularioPagina2">
+        <div id="barraProgreso">
+            <div class="progresoSolicitud">
+                <label for="file">
+                    <h4>Progeso de solicitud</h4>
+                </label>
+                <p>2/3</p>
+            </div>
+            <progress id="file" max="100" value="66">66%</progress>
+        </div>
+        <br>
+
+        <form method="get" id="miFormulario">
+            <label for="puntoPartida" title="Campo requerido"><span>*</span>Punto de Partida (dirección o código
+                postal):</label>
+            <input type="text" id="puntoPartida" name="puntoPartida" required><br><br>
+
+            <label for="puntoDestino" title="Campo requerido"><span>*</span>Punto de Destino (dirección o código
+                postal):</label>
+            <input type="text" id="puntoDestino" name="puntoDestino" required><br><br>
+            <div id="contenedorFecha">
+                <div id="contenedorFechaInicio">
+                    <label for="fechaInicio" title="Campo requerido"><span>*</span>Fecha de Inicio:</label>
+                    <input type="date" id="fechaInicio" name="fechaInicio" required><br><br>
                 </div>
-            </div><br><br><br>
+                <div id="contenedorFechaFin">
+                    <label for="fechaFin" title="Campo requerido"><span>*</span>Fecha de Fin:</label>
+                    <input type="date" id="fechaFin" name="fechaFin" required><br><br>
+                </div>
+            </div>
+            <div id="contenedorAutonomiayTipoCoche">
+                <div id="contenedorAutonomia">
+                    <label for="autonomia" title="Campo requerido"><span>*</span>Autonomía del Coche Eléctrico (en
+                        kilómetros):</label>
+                    <input type="number" id="autonomia" name="autonomia" required><br><br>
+                </div>
 
-
+                <div id="contenedorTipoCoche">
+                    <label for="tipoCoche">Tipo de Coche Eléctrico:</label>
+                    <select id="tipoCoche" name="tipoCoche" required>
+                        <option value="compacto">Compacto</option>
+                        <option value="sedán">Sedán</option>
+                        <option value="SUV">SUV</option>
+                        <option value="4x4">4x4</option>
+                        <option value="deportivo">Deportivo</option>
+                    </select><br><br>
+                </div>
+            </div>
+            <div id="contenedorVelocidadCargaYNumPasajeros">
+                <div id="contenedorNumPasajeros">
+                    <label for="numPasajeros">Número de Pasajeros:</label>
+                    <input type="number" id="numPasajeros" name="numPasajeros"><br><br>
+                </div>
+                <div id="contenedorVelocidadCarga">
+                    <label for="velocidadCarga">Velocidad de Carga Deseada:</label>
+                    <select name="velocidadCarga" id="velocidadCargaAlta">
+                        <option value="alta">Alta</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                </div>
+            </div>
+            <br><br>
+            <div id="boton">
+                <button class="siguiente-boton" id="siguiente-button2" type="button"
+                    onclick="siguiente('3')">Siguiente</button>
+            </div>
+            <br>
+            <div id="boton">
+                <button id="volver-button" type="button" onclick="volver('1')">Volver</button>
+            </div>
+        </form>
+    </div>
+    <div class="formulario" id="formularioPagina3">
+        <div id="barraProgreso">
+            <div class="progresoSolicitud">
+                <label for="file">
+                    <h4>Progeso de solicitud</h4>
+                </label>
+                <p>3/3</p>
+            </div>
+            <progress id="file" max="100" value="100">100%</progress>
+        </div>
+        <br>
+        <form method="get" id="miFormulario">
+            <div id="titulos">
+                <label>Preferencias de Actividades:</label><br><br>
+            </div>
+            <div id="contenedorChecks">
+                <div id="contenedorActividades1">
+                    <input type="checkbox" id="restaurantes" name="preferenciasActividades[]" value="restaurantes">
+                    <label for="restaurantes">Restaurantes</label><br>
+                    <input type="checkbox" id="puntosInteres" name="preferenciasActividades[]" value="puntosInteres">
+                    <label for="puntosInteres">Puntos de Interés Turístico</label><br>
+                    <input type="checkbox" id="bares" name="preferenciasActividades[]" value="bares">
+                    <label for="bares">Bares</label><br>
+                </div>
+                <div id="contenedorActividades2">
+                    <input type="checkbox" id="centrosComerciales" name="preferenciasActividades[]"
+                        value="centrosComerciales">
+                    <label for="centrosComerciales">Centros Comerciales</label><br>
+                    <input type="checkbox" id="parques" name="preferenciasActividades[]" value="parques">
+                    <label for="parques">Parques</label><br>
+                    <input type="checkbox" id="museos" name="preferenciasActividades[]" value="museos">
+                    <label for="museos">Museos</label><br>
+                    </select><br><br>
+                </div>
+            </div>
+            <div id="boton">
+                <button class="siguiente-boton" id="siguiente-button" type="button"
+                    onclick="procesoFinalizado()">Proceso finalizado</button>
+            </div>
+            <br>
+            <div id="boton">
+                <button id="volver-button3" type="button" onclick="volver('2')">Volver</button>
+            </div>
         </form>
     </div>
     <footer id="footer">
