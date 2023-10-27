@@ -8,29 +8,60 @@
   --botonHover: #1C2206;
 }
 
+.bodyHome{
+  background-image: url("../../Nav/img/mapa.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .search {
     display: flex;
-    background-color: #d2cdcd;
     padding: 2rem;
+    background-color: var(--claro);
     border:9999999999 3px solid #515151;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    margin-top: 1.2rem;
-    margin-left: 2rem;
-    width: 45%;
+    width: 95%;
     font-family: 'Marvel', sans-serif;
-    border-radius: 5px 0 0 5px; 
+    border-radius: 15px 0 0 15px;
   }
 
 
 .botonContenedor{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+}
+
+.tituloSearchContenedor {
   display: flex;
-  margin-top: 1.2rem;
-  
+  background-color: var(--claro);
+  padding: 0rem;
+  border:9999999999 3px solid #515151;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-left: 2rem;
+  width: 38.7%;
+  font-family: 'Marvel', sans-serif;
+  border-radius: 15px 15px 15px 15px;
+  justify-content: center; 
+  align-items: center;
+}
+
+#tituloSearch{
+  font-size: 3rem;
+  color: var(--oscuro);
+  padding: 2rem;
 }
 
 .componenteSearch{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    background-color: var(--claro);
+    width: 38.8%;  
+    border-radius: 15px 15px 15px 15px;       
 }
 
 #boton {
@@ -40,18 +71,19 @@
     background-color: var(--menu); /* Color de fondo del botón */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
     color: white; /* Color del texto del botón */
-    padding: 1.8rem; /* Espaciado dentro del botón */
+    padding: 2rem; /* Espaciado dentro del botón */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     width: 15rem;
     font-family: 'Marvel', sans-serif;
     font-size: 2rem; 
     outline:none;
+    border-radius: 0 15px 15px 0;
   }
 
   /* Estilo para el icono SVG */
   .search svg {
     fill: none;
-    stroke: #faf5e2; /* Cambia el color del icono a tu preferencia */
+    stroke: var(--oscuro); /* Cambia el color del icono a tu preferencia */
     stroke-width: 2;
     width: 24px;
     height: 24px;
@@ -61,19 +93,19 @@
   /* Estilo para el campo de entrada */
   #searchBar {
     border: none; /* Quita el borde predeterminado */
-    background: transparent; /* Fondo transparente para que coincida con el contenedor */
-    color: #faf5e2; /* Color del texto en el campo de entrada */
+    background-color: --claro; 
+    color: var(--boton); /* Color del texto en el campo de entrada */
     width: 100%; 
     padding: 0; 
     outline: none; /* Quita el contorno al enfocar el campo */
-
+    font-family: 'Marvel', sans-serif;
   }
   
   /* Estilo para el texto de marcador de posición en el campo de entrada */
   #searchBar::placeholder {
-    color: gray; /* Color del marcador de posición */
+    color: var(--boton); /* Color del marcador de posición */
     opacity: 0.7; /* Opacidad del marcador de posición */
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   /* Estilo para el campo de entrada cuando está enfocado */
@@ -82,38 +114,29 @@
   }
 
 .des-menu{
-    display: block;
-    justify-content: space-between;
-    
+    display: flex;
+    justify-content: space-between;   
 }
 
 #destacados{
     display: none;
 }
 
-#destacados h1{
-    margin-left: 2rem; 
-    text-decoration:  underline;
-    color:var(--oscuro);
-    font-size: 3rem;
-}
-
 .cajaD {
-  padding: 1rem;
-  margin-right: 1rem;
+  padding: 0.5rem;
   text-align: left;
+  width:60%;
 
 }
 
 .cajaD li a {
   display: flex;
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #1c1701;
   padding: 1rem;
   color:var(--oscuro);
 }
-
 
 
 .des-menu ul {
@@ -132,7 +155,9 @@
     width: 60%;  
 }
 
-
+#tituloMapa{
+  margin-left: 15rem;
+}
 
 #mapa-container{
   display:flex;
