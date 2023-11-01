@@ -33,7 +33,7 @@ body {
 
 /*.header-container {
     /*COMPARTIDO CON NAV*/
-    /*display: flex;
+/*display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -45,53 +45,66 @@ body {
     margin-left: 2rem;
 }
 
-@media (max-width:390px){
+.header-container h1 {
+    /*COMPARTIDO CON NAV*/
+    color: var(--claro);
+    font-size: 6rem;
+    margin-left: 2rem;
+}
+
+@media (max-width:768px) {
+    .header-container h1 {
+        /*COMPARTIDO CON NAV*/
+        color: var(--claro);
+        font-size: 6rem;
+        margin-left: 0rem;
+    }
+}
+
+@media (max-width:390px) {
     #headerLogo {
         /*COMPARTIDO CON NAV*/
         height: 10rem;
         margin-left: 1rem;
     }
+
     .header-container h1 {
         /*COMPARTIDO CON NAV*/
         color: var(--claro);
-        font-size: 1rem;
+        font-size: 5rem;
+        margin-left: 3rem;
     }
-
-
 }
 
-.header-container h1 {
-    /*COMPARTIDO CON NAV*/
-    color: var(--claro);
-    font-size: 6rem;
-}
+
+
 
 /*.header-container-select {
     /*COMPARTIDO CON NAV*/
-    /*width: 2000px;*/
-   /* display: flex;
+/*width: 2000px;*/
+/* display: flex;
     position: relative;
     justify-content: space-around;
     align-items: flex-end;
     margin-top: 5rem;
     padding-left: 80rem;
-}
+}*/
 
-#select {
+/*#select {
     /*COMPARTIDO CON NAV*/
-  /*  cursor: pointer;
-}
+ /* cursor: pointer;
+}*/
 
-.nav-menu ul {
+/*.nav-menu ul {*/
     /*COMPARTIDO CON NAV*/
-   /* list-style-type: none;
+/* list-style-type: none;
     margin-left: 110rem;
     position: fixed;
 }
 
 .nav-menu li {
     /*COMPARTIDO CON NAV*/
-   /* background-color: var(--menu);
+/* background-color: var(--menu);
     padding: 0.5rem;
     box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
     margin-right: 1rem;
@@ -509,5 +522,3 @@ button,
 h1 {
     font-family: Arial, Helvetica, sans-serif
 }
-
-
