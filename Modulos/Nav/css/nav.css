@@ -4,54 +4,94 @@
   --menu: #83A931;
   --oscuro: #344306;
   --rotulos: #000000;
-  --boton:#333;
+  --boton: #333;
   --botonHover: #1C2206;
+  --textomenosimportante: #818181;
 }
 
-html{
+html {
+  /*COMPARTIDO CON NAV*/
   font-size: 62.5%;
-  
+
 }
+
 /*1 rem = 10px*/
 body {
+  /*COMPARTIDO CON NAV*/
   font-family: 'Marvel', sans-serif;
   background-color: var(--body);
   font-size: 16px;
- 
 }
 
 #header {
-  background-image: url("../../Nav/img/header.jpg");
-  background-size: 80%;
+  /*COMPARTIDO CON NAV*/
+  background-image: url("/Modulos/Nav/img/header.jpg");
   height: 21rem;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#header img {
+/*.header-container {
+  /*COMPARTIDO CON NAV*/
+/*display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}*/
+
+#headerLogo {
+  /*COMPARTIDO CON NAV*/
   height: 15rem;
   margin-left: 2rem;
 }
 
-#header h1 {
+.header-container h1 {
+  /*COMPARTIDO CON NAV*/
   color: var(--claro);
   font-size: 6rem;
+  margin-left: 2rem;
 }
 
-.header-container-select {
-  width: 2000px;
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  align-items: flex-end;
-  margin-top: 5rem;
-  padding-left: 85rem;
+@media (max-width:768px) {
+  .header-container h1 {
+      /*COMPARTIDO CON NAV*/
+      color: var(--claro);
+      font-size: 6rem;
+      margin-left: 0rem;
+  }
 }
 
-#select{
-    cursor: pointer;
+@media (max-width:390px) {
+  #headerLogo {
+      /*COMPARTIDO CON NAV*/
+      height: 10rem;
+      margin-left: 1rem;
+  }
+
+  .header-container h1 {
+      /*COMPARTIDO CON NAV*/
+      color: var(--claro);
+      font-size: 5rem;
+      margin-left: 3rem;
+  }
 }
 
+.dropdown-toggle::after {
+  content: none;
+}
+
+.btn-secondary{
+  content: none;
+  background: none;
+  border: none;
+
+}
+
+.btn-secondary:hover{
+  background: none;
+}
+
+/*
 .nav-menu ul {
   list-style-type: none;
   margin-left: 105rem;
@@ -59,7 +99,7 @@ body {
   z-index:1;
 }
 
-.nav-menu li {/*COMPARTIDO CON NAV*/
+.nav-menu li {/*COMPARTIDO CON NAV
   background-color: var(--menu);
   padding: 0.5rem;
   box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
@@ -68,6 +108,7 @@ body {
   z-index: 1;
 
 }
+*/
 
 .scale-up-hor-right {
 	-webkit-animation: scale-up-hor-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
