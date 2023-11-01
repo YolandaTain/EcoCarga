@@ -20,17 +20,13 @@ body {
     /*COMPARTIDO CON NAV*/
     font-family: 'Marvel', sans-serif;
     background-color: var(--body);
-    /*margin: 0;
-    padding: 0;*/
     font-size: 16px;
 }
 
 #header {
     /*COMPARTIDO CON NAV*/
-    background-image: url("../../Nav/img/header.jpg");
-    background-size: 80%;
+    background-image: url("/Modulos/Nav/img/header.jpg");
     height: 21rem;
-    display: flex;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -45,26 +41,35 @@ body {
 
 #headerLogo {
     /*COMPARTIDO CON NAV*/
-    width: auto;
     height: 15rem;
-    padding: 2rem;
-    display: flex;
-    margin-left: 3rem;
+    margin-left: 2rem;
+}
+
+@media (max-width:390px){
+    #headerLogo {
+        /*COMPARTIDO CON NAV*/
+        height: 10rem;
+        margin-left: 1rem;
+    }
+    .header-container h1 {
+        /*COMPARTIDO CON NAV*/
+        color: var(--claro);
+        font-size: 1rem;
+    }
+
+
 }
 
 .header-container h1 {
     /*COMPARTIDO CON NAV*/
     color: var(--claro);
     font-size: 6rem;
-    display: flex;
-    position: relative;
-    justify-content: flex-start;
 }
 
-.header-container-select {
+/*.header-container-select {
     /*COMPARTIDO CON NAV*/
     /*width: 2000px;*/
-    display: flex;
+   /* display: flex;
     position: relative;
     justify-content: space-around;
     align-items: flex-end;
@@ -74,23 +79,29 @@ body {
 
 #select {
     /*COMPARTIDO CON NAV*/
-    cursor: pointer;
+  /*  cursor: pointer;
 }
 
 .nav-menu ul {
     /*COMPARTIDO CON NAV*/
-    list-style-type: none;
+   /* list-style-type: none;
     margin-left: 110rem;
     position: fixed;
 }
 
 .nav-menu li {
     /*COMPARTIDO CON NAV*/
-    background-color: var(--menu);
+   /* background-color: var(--menu);
     padding: 0.5rem;
     box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
     margin-right: 1rem;
     margin-bottom: 0.5rem;
+}*/
+
+#h1 {
+    text-align: center;
+    color: var(--rotulos);
+    margin-top: 5rem;
 }
 
 .scale-up-hor-right {
@@ -217,12 +228,6 @@ body {
     /*COMPARTIDO CON NAV*/
     margin-left: 2rem;
     margin-top: 1.5rem;
-}
-
-h1 {
-    text-align: center;
-    color: var(--rotulos);
-    margin-top: 5rem;
 }
 
 #barraProgreso {
