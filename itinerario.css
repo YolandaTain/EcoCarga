@@ -76,6 +76,20 @@ body {
     }
 }
 
+.dropdown-toggle::after {
+    content: none;
+}
+
+.btn-secondary{
+    content: none;
+    background: none;
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+.btn-secondary:hover{
+    background: none;
+}
 
 
 
