@@ -26,27 +26,18 @@ body {
   background-image: url("../../Nav/img/header.jpg");
   background-size: 80%;
   height: 21rem;
-  display: flex;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.header-container {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-
-#headerLogo {
+#header img {
   width: auto;
   height: 15rem;
   padding: 2rem;
-  display: flex;
   margin-left: 3rem;
 }
 
-.header-container h1 {
+#header h1 {
   color: var(--claro);
   font-size: 6rem;
   display: flex;
@@ -156,10 +147,6 @@ body {
 .nave-menu{
     display: block;
     justify-content: space-between;
-}
-
-#menu{
-    display: none;
 }
 
 .caja {

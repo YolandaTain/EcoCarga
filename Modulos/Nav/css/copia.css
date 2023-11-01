@@ -1,0 +1,203 @@
+:root {
+    --body: #FFFDF4;
+    --claro: #ffffff;
+    --menu: #83A931;
+    --oscuro: #344306;
+    --rotulos: #000000;
+    --boton:#333;
+    --botonHover: #1C2206;
+  }
+  
+  html{
+    font-size: 62.5%;
+    
+  }
+  /*1 rem = 10px*/
+  body {
+    font-family: 'Marvel', sans-serif;
+    background-color: var(--body);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+   
+  }
+  
+  #header {
+    background-image: url("../../Nav/img/header.jpg");
+    background-size: 80%;
+    height: 21rem;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .header-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #headerLogo {
+    width: auto;
+    height: 15rem;
+    padding: 2rem;
+    display: flex;
+    margin-left: 3rem;
+  }
+  
+  .header-container h1 {
+    color: var(--claro);
+    font-size: 6rem;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+  }
+  
+  .header-container-select {
+    width: 2000px;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 5rem;
+    padding-left: 85rem;
+  }
+  
+  #select{
+      cursor: pointer;
+  }
+  
+  .nav-menu ul {
+    list-style-type: none;
+    margin-left: 105rem;
+    position: fixed;
+    z-index:1;
+  }
+  
+  .nav-menu li {/*COMPARTIDO CON NAV*/
+    background-color: var(--menu);
+    padding: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    z-index: 1;
+  
+  }
+  
+  .scale-up-hor-right {
+      -webkit-animation: scale-up-hor-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+              animation: scale-up-hor-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  
+  @-webkit-keyframes scale-up-hor-right {
+    0% {
+      -webkit-transform: scaleX(0.4);
+              transform: scaleX(0.4);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+    }
+  }
+  @keyframes scale-up-hor-right {
+    0% {
+      -webkit-transform: scaleX(0.4);
+              transform: scaleX(0.4);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+    }
+  }
+  
+  .scale-up-hor-left {
+      -webkit-animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+              animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  
+  @-webkit-keyframes scale-up-hor-left {
+    0% {
+      -webkit-transform: scaleX(0.4);
+              transform: scaleX(0.4);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+  }
+  @keyframes scale-up-hor-left {
+    0% {
+      -webkit-transform: scaleX(0.4);
+              transform: scaleX(0.4);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+  }
+  
+  .nave-menu{
+      display: block;
+      justify-content: space-between;
+  }
+  
+  #menu{
+      display: none;
+  }
+  
+  .caja {
+    padding: 0.7rem;
+    text-align: center;
+    transform: translateX(550px);
+  }
+  
+  .caja li a {
+    text-decoration: none;
+    font-size: 4rem;
+    color: var(--claro);
+    padding: 1rem;
+  }
+  
+  #footer {
+    color: var(--claro);
+    display: flex;
+    width: auto;
+    background-color: var(--oscuro);
+    padding: 1rem;
+    position: relative;
+    justify-content: center;
+  
+  }
+  
+  #footer svg {/*COMPARTIDO CON NAV*/
+    margin-left: 2rem;
+    margin-top: -1rem;
+    width:3rem;
+    height:6.5rem;
+  }
+  
+  #footer p {/*COMPARTIDO CON NAV*/
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  
+  
+  
