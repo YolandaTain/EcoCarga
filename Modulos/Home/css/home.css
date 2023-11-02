@@ -1,4 +1,4 @@
-:root {
+  :root {
   --body: #FFFDF4;
   --claro: #ffffff;
   --menu: #83A931;
@@ -16,16 +16,15 @@
 }
 
 .search {
-    display: flex;
     padding: 2rem;
     background-color: var(--claro);
-    border:9999999999 3px solid #515151;
+    border:3px solid #515151;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    width: 95%;
+    width: 50%;
     font-family: 'Marvel', sans-serif;
     border-radius: 15px 0 0 15px;
+    margin-left: 2rem;
   }
-
 
 .botonContenedor{
   display: flex; 
@@ -35,37 +34,41 @@
 }
 
 .tituloSearchContenedor {
-  display: flex;
   background-color: var(--claro);
   padding: 0rem;
-  border:9999999999 3px solid #515151;
+  border: 3px solid #515151;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
   margin-left: 2rem;
-  width: 38.7%;
+  width: 50rem;
+  /* width: rem; */
   font-family: 'Marvel', sans-serif;
   border-radius: 15px 15px 15px 15px;
-  justify-content: center; 
-  align-items: center;
 }
 
 #tituloSearch{
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--oscuro);
-  padding: 2rem;
+  padding: 1.5rem;
+  margin-left: 1rem;
+  font-weight: bold;
 }
 
+@media (max-width:390px){
+  .tituloSearchContenedor{
+  }
+  #tituloSearch{
+    margin-left: 3rem;
+  }
+}
+
+
 .componenteSearch{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2rem;
     background-color: var(--claro);
-    width: 38.8%;  
+    width: 100rem; 
     border-radius: 15px 15px 15px 15px;       
 }
 
 #boton {
-    justify-content: center;
     border: none;
     border-radius: 0 5px 5px 0;
     background-color: var(--menu); /* Color de fondo del botón */
@@ -80,14 +83,11 @@
     border-radius: 0 15px 15px 0;
   }
 
-  /* Estilo para el icono SVG */
   .search svg {
-    fill: none;
-    stroke: var(--oscuro); /* Cambia el color del icono a tu preferencia */
-    stroke-width: 2;
+    stroke: var(--oscuro); 
     width: 24px;
     height: 24px;
-    margin-right: 10px; /* Espacio entre el icono y el campo de entrada */
+    margin-right: 10px;
   }
   
   /* Estilo para el campo de entrada */
@@ -100,7 +100,7 @@
     outline: none; /* Quita el contorno al enfocar el campo */
     font-family: 'Marvel', sans-serif;
   }
-  
+
   /* Estilo para el texto de marcador de posición en el campo de entrada */
   #searchBar::placeholder {
     color: var(--boton); /* Color del marcador de posición */
