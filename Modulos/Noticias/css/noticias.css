@@ -220,6 +220,11 @@ p {
 }
 
 .cuadro-emergente {
+  transform: translate(15%, -1%);
+  background-color: rgb(170, 225, 60);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 1760px;
+  height: 400px;
   display: none;
   transform: translate(70%, -1%);
   background-color: rgb(170, 225, 60);
@@ -238,6 +243,7 @@ p {
   margin-top: auto;
   padding: 5px;
   font-size: 40px;
+  cursor: pointer;
 }
 
 #titulo-noticia-popup {
