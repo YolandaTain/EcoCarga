@@ -145,7 +145,7 @@
 .slide-image {
   max-width: 100%;
   margin-right: 40px;
-  z-index:1;
+  z-index: 2;
 }
 
 /* Slide animations */

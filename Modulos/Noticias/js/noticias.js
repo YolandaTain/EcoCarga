@@ -38,8 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 const carrusel = document.getElementById("carrusel-noticias");
 let currentPosition = 0;
 
@@ -52,7 +50,6 @@ function mostrarNoticia(index) {
 
   carrusel.style.transform = `translateX(-${currentPosition * 100}%)`;
 }
-
 
 document.addEventListener('DOMContentLoaded', function () {
 const listaItems = document.querySelectorAll('.video-list li');
