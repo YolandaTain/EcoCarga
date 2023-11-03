@@ -1,56 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const botonesLeerMas = document.querySelectorAll(".slide-link");
-  const cuadroEmergente = document.querySelector(".cuadro-emergente");
-  const tituloEmergente = document.getElementById("titulo-noticia-popup");
-  const contenidoEmergente = document.getElementById("descripcion-noticia-popup");
-  const cerrar = document.getElementById("cerrar");
-
-  botonesLeerMas.forEach((botonLeerMas, index) => {
-    botonLeerMas.addEventListener("click", (event) => {
-      event.preventDefault();
-
-      // Obtén los datos de la diapositiva actual
-      const tituloNoticia = document.querySelectorAll(".slide-title")[index];
-      const descripcionNoticia = document.querySelectorAll(".slide-text")[index];
-
-      // Establece el contenido del título y descripción en el cuadro emergente
-      tituloEmergente.textContent = tituloNoticia.textContent;
-      contenidoEmergente.textContent = descripcionNoticia.textContent;
-
-      // Abre el cuadro emergente
-      cuadroEmergente.style.display = "block";
-
-      // Agregar la clase "cambio-color" al título para cambiar el color
-      tituloNoticia.classList.add("cambio-color");
-
-      // Restaurar el color original de otros títulos
-      const otrosTitulos = document.querySelectorAll(".slide-title.cambio-color");
-      otrosTitulos.forEach((otroTitulo) => {
-        if (otroTitulo !== tituloNoticia) {
-          otroTitulo.classList.remove("cambio-color");
-        }
-      });
-    });
-  });
-
-  cerrar.addEventListener("click", () => {
-    cuadroEmergente.style.display = "none";
-  });
-});
-
-const carrusel = document.getElementById("carrusel-noticias");
-let currentPosition = 0;
-
-function mostrarNoticia(index) {
-  if (index < 0) {
-      currentPosition = 0;
-  } else if (index >= carrusel.children.length) {
-      currentPosition = carrusel.children.length - 1;
-  }
-
-  carrusel.style.transform = `translateX(-${currentPosition * 100}%)`;
-}
-
 document.addEventListener('DOMContentLoaded', function () {
 const listaItems = document.querySelectorAll('.video-list li');
 
@@ -86,7 +33,63 @@ listaItems.forEach(function (item) {
 });
 });
 
+  // Función para cargar los datos del JSON y llenar el carrusel
+  function cargarNoticias() {
+    fetch('noticias.json') // Reemplaza 'noticias.json' con la ruta correcta a tu archivo JSON
+      .then((response) => response.json())
+      .then((data) => {
+        const slides = document.querySelectorAll('.slide');
 
+        data.forEach((noticia, index) => {
+          if (index < slides.length) {
+            const slide = slides[index];
+            const tituloElement = slide.querySelector('.slide-title');
+            const textoElement = slide.querySelector('.slide-text');
+
+            tituloElement.textContent = noticia.titulo;
+            textoElement.textContent = noticia.descripcion;
+          }
+        });
+      })
+      .catch((error) => console.error('Error al cargar noticias: ' + error));
+  }
+
+  // Llama a la función para cargar las noticias
+  cargarNoticias();
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Obtén los elementos del modal
+    const modalTitle = document.getElementById("modal-title");
+    const modalDate = document.getElementById("modal-date");
+    const modalDescription = document.getElementById("modal-description");
+    const modalImage = document.getElementById("modal-image");
+  
+    // Obtén los botones "Leer Más"
+    const buttons = document.querySelectorAll(".btn[data-bs-toggle='modal']");
+  
+    // Función para cargar los datos del JSON
+    function cargarDatosNoticia(noticiaId) {
+      fetch("noticias.json") // Reemplaza "noticias.json" con la ruta correcta a tu archivo JSON
+        .then((response) => response.json())
+        .then((data) => {
+          const noticia = data[noticiaId - 1]; // Restamos 1 para obtener el índice correcto del arreglo
+          modalTitle.textContent = noticia.titulo;
+          modalDate.textContent = noticia.fecha;
+          modalDescription.textContent = noticia.descripcion;
+          modalImage.src = `img/noticia${noticia.noticia}.jpeg`;
+          modalImage.alt = noticia.titulo;
+        })
+        .catch((error) => console.error("Error al cargar los datos:", error));
+    }
+  
+    // Agregar un evento clic a cada botón "Leer Más"
+    buttons.forEach(function (button, index) {
+      button.addEventListener("click", function () {
+        cargarDatosNoticia(index + 1);
+      });
+    });
+  });
+  
 
 
 
