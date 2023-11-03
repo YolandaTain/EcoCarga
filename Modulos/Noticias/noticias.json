@@ -4,7 +4,7 @@
     "titulo": "El fin de las ayudas a la compra de coches eléctricos amenaza con hundir las ventas un 40% en 2024",
     "fecha": "02/11/2023",
     "descripcion": "A tan solo dos meses del fin de las ayudas para la compra de coches eléctricos, el Gobierno en funciones de Pedro Sánchez aún no ha dado luz verde a la prórroga del Plan Moves III...",
-    "imagen": "img/noticia1.jpeg"
+    "imagen": "img/noticia1.jpg"
   },
   {
     "noticia": 2,
@@ -40,5 +40,19 @@
     "fecha": "31/10/2023",
     "descripcion": "El Volkswagen ID.7 Tourer se lanzará en 2024. Como la inmensa mayoría de fabricantes...",
     "imagen": "img/noticia6.jpeg"
+  },
+  {
+    "noticia": 7,
+    "titulo": "Lexus muestra el futuro de sus coches eléctricos",
+    "fecha": "26/10/2023",
+    "descripcion": "En el marco del Salón del Automóvil de Japón 2023, Lexus ha mostrado las cartas de su futuro eléctrico...",
+    "imagen": "img/noticia7.jpeg"
+  },
+  {
+    "noticia": 8,
+    "titulo": "Lexus muestra el futuro de sus coches eléctricos",
+    "fecha": "26/10/2023",
+    "descripcion": "En el marco del Salón del Automóvil de Japón 2023, Lexus ha mostrado las cartas de su futuro eléctrico...",
+    "imagen": "img/noticia8.jpeg"
   }
 ]

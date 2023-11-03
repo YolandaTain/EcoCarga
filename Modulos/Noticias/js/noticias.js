@@ -35,7 +35,7 @@ listaItems.forEach(function (item) {
 
   // Función para cargar los datos del JSON y llenar el carrusel
   function cargarNoticias() {
-    fetch('noticias.json') // Reemplaza 'noticias.json' con la ruta correcta a tu archivo JSON
+    fetch('noticias.json') 
       .then((response) => response.json())
       .then((data) => {
         const slides = document.querySelectorAll('.slide');
@@ -54,42 +54,46 @@ listaItems.forEach(function (item) {
       .catch((error) => console.error('Error al cargar noticias: ' + error));
   }
 
-  // Llama a la función para cargar las noticias
-  cargarNoticias();
+// Llama a la función para cargar las noticias
+cargarNoticias();
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Obtén los elementos del modal
-    const modalTitle = document.getElementById("modal-title");
-    const modalDate = document.getElementById("modal-date");
-    const modalDescription = document.getElementById("modal-description");
-    const modalImage = document.getElementById("modal-image");
-  
-    // Obtén los botones "Leer Más"
-    const buttons = document.querySelectorAll(".btn[data-bs-toggle='modal']");
-  
-    // Función para cargar los datos del JSON
-    function cargarDatosNoticia(noticiaId) {
-      fetch("noticias.json") // Reemplaza "noticias.json" con la ruta correcta a tu archivo JSON
-        .then((response) => response.json())
-        .then((data) => {
-          const noticia = data[noticiaId - 1]; // Restamos 1 para obtener el índice correcto del arreglo
-          modalTitle.textContent = noticia.titulo;
-          modalDate.textContent = noticia.fecha;
-          modalDescription.textContent = noticia.descripcion;
-          modalImage.src = `img/noticia${noticia.noticia}.jpeg`;
-          modalImage.alt = noticia.titulo;
-        })
-        .catch((error) => console.error("Error al cargar los datos:", error));
-    }
-  
-    // Agregar un evento clic a cada botón "Leer Más"
-    buttons.forEach(function (button, index) {
-      button.addEventListener("click", function () {
-        cargarDatosNoticia(index + 1);
-      });
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtén los elementos del modal
+  const modalTitle = document.getElementById("modal-title");
+  const modalDate = document.getElementById("modal-date");
+  const modalDescription = document.getElementById("modal-description");
+  const modalImage = document.getElementById("modal-image");
+
+  // Obtén los botones "Leer Más"
+  const buttons = document.querySelectorAll(".btn[data-bs-toggle='modal']");
+
+  // Función para cargar los datos del JSON
+  function cargarDatosNoticia(noticiaId) {
+    fetch("noticias.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const noticia = data[noticiaId - 1]; // Restamos 1 para obtener el índice correcto del arreglo
+        modalTitle.textContent = noticia.titulo;
+        modalDate.textContent = noticia.fecha;
+        modalDescription.textContent = noticia.descripcion;
+
+        // Obtén la extensión de la imagen desde el campo "imagen"
+        const imageExtension = noticia.imagen.split('.').pop().toLowerCase();
+        modalImage.src = `img/noticia${noticia.noticia}.${imageExtension}`;
+        modalImage.alt = noticia.titulo;
+      })
+      .catch((error) => console.error("Error al cargar los datos:", error));
+  }
+
+  // Agregar un evento clic a cada botón "Leer Más"
+  buttons.forEach(function (button, index) {
+    button.addEventListener("click", function () {
+      cargarDatosNoticia(index + 1);
     });
   });
-  
+});
+
+
 
 
 
