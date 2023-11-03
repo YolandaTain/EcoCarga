@@ -1,0 +1,58 @@
+ [
+  {
+    "noticia": 1,
+    "titulo": "El fin de las ayudas a la compra de coches eléctricos amenaza con hundir las ventas un 40% en 2024",
+    "fecha": "02/11/2023",
+    "descripcion": "A tan solo dos meses del fin de las ayudas para la compra de coches eléctricos, el Gobierno en funciones de Pedro Sánchez aún no ha dado luz verde a la prórroga del Plan Moves III...",
+    "imagen": "img/noticia1.jpg"
+  },
+  {
+    "noticia": 2,
+    "titulo": "Las matriculaciones de coches eléctricos suben más de un 92% respecto a 2022",
+    "fecha": "02/11/2023",
+    "descripcion": "En lo que va de año han subido un 72,9%, lo que supone una suma de 42.172 unidades matriculadas hasta octubre...",
+    "imagen": "img/noticia2.jpeg"
+  },
+  {
+    "noticia": 3,
+    "titulo": "La venta de coches crece un 18% en octubre; los eléctricos logran un récord de cuota",
+    "fecha": "01/11/2023",
+    "descripcion": "Las ventas de coches en el mes de octubre han dejado una cifra de 77.892 turismos matriculados...",
+    "imagen": "img/noticia3.jpeg"
+  },
+  {
+    "noticia": 4,
+    "titulo": "El nuevo problema de Tesla: acusan a la marca de engañar así a sus clientes",
+    "fecha": "28/10/2023",
+    "descripcion": "Tras la polémica con el Autopilot, el Departamento de Justicia de Estados Unidos ha abierto varias investigaciones...",
+    "imagen": "img/noticia4.jpeg"
+  },
+  {
+    "noticia": 5,
+    "titulo": "Lexus muestra el futuro de sus coches eléctricos",
+    "fecha": "26/10/2023",
+    "descripcion": "En el marco del Salón del Automóvil de Japón 2023, Lexus ha mostrado las cartas de su futuro eléctrico...",
+    "imagen": "img/noticia5.jpeg"
+  },
+  {
+    "noticia": 6,
+    "titulo": "La berlina eléctrica de Volkswagen se convierte en familiar",
+    "fecha": "31/10/2023",
+    "descripcion": "El Volkswagen ID.7 Tourer se lanzará en 2024. Como la inmensa mayoría de fabricantes...",
+    "imagen": "img/noticia6.jpeg"
+  },
+  {
+    "noticia": 7,
+    "titulo": "Lexus muestra el futuro de sus coches eléctricos",
+    "fecha": "26/10/2023",
+    "descripcion": "En el marco del Salón del Automóvil de Japón 2023, Lexus ha mostrado las cartas de su futuro eléctrico...",
+    "imagen": "img/noticia7.jpeg"
+  },
+  {
+    "noticia": 8,
+    "titulo": "Lexus muestra el futuro de sus coches eléctricos",
+    "fecha": "26/10/2023",
+    "descripcion": "En el marco del Salón del Automóvil de Japón 2023, Lexus ha mostrado las cartas de su futuro eléctrico...",
+    "imagen": "img/noticia8.jpeg"
+  }
+]
