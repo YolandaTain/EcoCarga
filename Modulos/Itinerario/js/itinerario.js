@@ -35,7 +35,22 @@ function mostrarFormulario(numero) {
 }
 
 function recopilarDatos() {
-    var nombre = document.getElementById("nombre").value;
+    var formulario = document.getElementById("miFormulario");
+    var formData = new FormData(formulario);
+    var nombre = formData.get("nombre");
+    var email = formData.get("email");
+    var fechaNac = formData.get("fechaNac");
+    var puntoPartida = formData.get("puntoPartida");
+    var puntoDestino = formData.get("puntoDestino");
+    var fechaInicio = formData.get("fechaInicio");
+    var fechaFin = formData.get("fechaFin");
+    var autonomia = formData.get("autonomia");
+    var tipoCoche = formData.get("tipoCoche");
+    var numPasajeros = formData.get("numPasajeros");
+    var velocidadCargaAlta = formData.get("velocidadCarga");
+    var restaurantes = formData.get("preferenciasActividades[]");
+
+    /*var nombre = document.getElementById("nombre").value;
     var email = document.getElementById("email").value;
     var fechaNac = document.getElementById("fechaNac").value;
 
@@ -53,7 +68,7 @@ function recopilarDatos() {
     var bares = document.getElementById("bares").value;
     var centrosComerciales = document.getElementById("centrosComerciales").value;
     var parques = document.getElementById("parques").value;
-    var museos = document.getElementById("museos").value;
+    var museos = document.getElementById("museos").value;*/
 
 }
 
@@ -111,6 +126,7 @@ function siguiente(numero) {
     //} else {
     //alert("Por favor, completa todos los campos requeridos.");
     //}
+    recopilarDatos();
 }
 
 function volver(numero) {
