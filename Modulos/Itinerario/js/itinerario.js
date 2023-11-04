@@ -48,7 +48,7 @@ function recopilarDatos() {
     var tipoCoche = formData.get("tipoCoche");
     var numPasajeros = formData.get("numPasajeros");
     var velocidadCargaAlta = formData.get("velocidadCarga");
-    var restaurantes = formData.get("preferenciasActividades[]");
+    var preferenciasActividades = formData.getAll("preferenciasActividades[]");
 
     /*var nombre = document.getElementById("nombre").value;
     var email = document.getElementById("email").value;
@@ -72,14 +72,14 @@ function recopilarDatos() {
 
 }
 
-function mostrarResumenModal(nombre, email, fechaNac, puntoPartida, puntoDestino, fechaInicio, fechaFin, autonomia, tipoCoche, numPasajeros, velocidadCargaAlta, restaurantes, puntosInteres, bares, centrosComerciales, parques, museos) {
+function mostrarResumenModal(nombre, email, fechaNac, puntoPartida, puntoDestino, fechaInicio, fechaFin, autonomia, tipoCoche, numPasajeros, velocidadCargaAlta, preferenciasActividades) {
     var modalBody = document.querySelector("#resumenItinerario .modal-body");
 
     // Limpia el contenido previo del modal
     modalBody.innerHTML = "";
 
     // Agrega los datos al modal
-    modalBody.innerHTML += "<strong>Nombre:</strong> " + nombre + "<br>";
+    modalBody.innerHTML = "<strong>Nombre:</strong> " + nombre + "<br>";
     modalBody.innerHTML += "<strong>Email:</strong> " + email + "<br>";
     modalBody.innerHTML += "<strong>Fecha de Nacimiento:</strong> " + fechaNac + "<br>";
 
@@ -94,12 +94,12 @@ function mostrarResumenModal(nombre, email, fechaNac, puntoPartida, puntoDestino
     modalBody.innerHTML += "<strong>Velocidad de Carga Alta:</strong> " + velocidadCargaAlta + "<br>";
 
     // Agrega los otros datos del formulario 2
-    modalBody.innerHTML += "<strong>Restaurantes:</strong> " + restaurantes + "<br>";
-    modalBody.innerHTML += "<strong>Puntos de Interés:</strong> " + puntosInteres + "<br>";
-    modalBody.innerHTML += "<strong>Bares:</strong> " + bares + "<br>";
-    modalBody.innerHTML += "<strong>Centros Comerciales:</strong> " + centrosComerciales + "<br>";
-    modalBody.innerHTML += "<strong>Parques:</strong> " + parques + "<br>";
-    modalBody.innerHTML += "<strong>Museos:</strong> " + museos + "<br>";
+    modalBody.innerHTML += "<strong>Restaurantes:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Puntos de Interés:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Bares:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Centros Comerciales:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Parques:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Museos:</strong> " + preferenciasActividades + "<br>";
 
     // Abre el modal
     var modal = new bootstrap.Modal(document.getElementById("resumenItinerario"));
