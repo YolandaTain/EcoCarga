@@ -18,6 +18,7 @@ listaItems.forEach(function (item) {
 });
 });
 
+
 document.addEventListener('DOMContentLoaded', function () {
 const listaItems = document.querySelectorAll('.video-list li');
 
