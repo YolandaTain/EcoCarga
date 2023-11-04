@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Noticias - EcoCarga</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css">
@@ -15,49 +15,50 @@
     <script src="../Noticias/js/noticias.js"></script>    
 </head>
 <body>
-  <header id="header">
-    <div class="header-container" onclick="volverHome()">
-        <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo">
-        <h1>Noticias</h1>
-    </div>
-    <div class="header-container-select">
-
-        <div id="select" onclick="desplegar()">
-            <svg xmlns="http://www.w3.org/2000/svg" id="select" width="70" height="70" viewBox="0 0 24 24"
-                fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-        </div>
-    </div>
-</header>
-<div id="menu" class="nav-menu">
-    <ul>
-        <div class="caja">
-            <li><a href="../Home/home.html">Inicio</a></li>
+  <div class="container-fluid">
+    <header id="header" class="row">
+        <div class="col-6 col-md-6 align-self-center header-container" onclick="volverHome()">
+            <div class="row">
+                <div class="col-6 col-md-6 col-lg-3 ">
+                    <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo">
+                </div>
+                <div class="col-6 col-md-6 col-lg-9  align-self-center">
+                    <h1>Noticias</h1>
+                </div>
+            </div>
         </div>
 
-        <div class="caja">
-            <li><a href="../Noticias/noticias.html">Noticias</a></li>
+        <div class="dropdown col-6 col-md-6 align-self-end">
+            <div class="row justify-content-end">
+                <button onclick="desplegar()"
+                    class="btn btn-secondary dropdown-toggle col-4 col-md-2 col-lg-1 align-self-end" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="select" width="50" height="50" viewBox="0 0 24 24"
+                        fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <ul class="dropdown-menu" id="menu">
+                <li><a class="dropdown-item" href="../Home/home.html">Inicio</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
         </div>
+      </div>
+    </header>
+   
+      <div class="apartado">
+        <div class="titulo-h1">
+          <h1 class="titulo-noticia">Nuevas Noticias</h1>
+        </div>
+      </div>
 
-        <div class="caja">
-            <li><a href="../Itinerario/itinerario.html">Itinerario</a></li>
-        </div>
-
-        <div class="caja">
-            <li><a href="../SobreNosotros/sobreNosotros.html">Sobre nosotros</a></li>
-        </div>
-    </ul>
-</div>
-<div class="apartado">
-  <div class="titulo-h1">
-  <h1 class="titulo-noticia">Nuevas Noticias</h1>
-  </div>
-</div>             
-<div class="carrusel">
-  <input type="radio" name="toggle" id="btn-1" checked>
+<div class="slider">
+   <input type="radio" name="toggle" id="btn-1" checked>
   <input type="radio" name="toggle" id="btn-2">
   <input type="radio" name="toggle" id="btn-3">
   <input type="radio" name="toggle" id="btn-4">
@@ -65,7 +66,8 @@
   <input type="radio" name="toggle" id="btn-6">
   <input type="radio" name="toggle" id="btn-7">
   <input type="radio" name="toggle" id="btn-8">
-  <div class="carrusel-controls">
+
+  <div class="slider-controls">
     <label for="btn-1"></label>
     <label for="btn-2"></label>
     <label for="btn-3"></label>
@@ -75,113 +77,107 @@
     <label for="btn-7"></label>
     <label for="btn-8"></label>
   </div>
-  <div class="slides">
-
-    <ul class="slide">
-      <li class="slide-content">
+  
+  <ul class="slides">
+    <li class="slide">
+      <div class="slide-content">
         <h2 class="slide-title"></h2>
         <p class="slide-text"></p>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Leer Más..
         </button>
-      </li>
-      <div class="slide-image">
-        <img src="../Noticias/img/noticia1.jpg" alt="Noticia 1" width="320" height="240">
       </div>
+      <p class="slide-image">
+        <img src="../Noticias/img/noticia1.jpg" alt="stuff" width="320" height="240">
+      </p>
+    </li>
+    <li class="slide">
+      <div class="slide-content">
+        <h2 class="slide-title"></h2>
+        <p class="slide-text"></p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Leer Más..
+        </button>
+      </div>
+      <p class="slide-image">
+        <img src="../Noticias/img/noticia2.jpeg" alt="stuff" width="320" height="240">
+      </p>
+    </li>
+    <li class="slide">
+      <div class="slide-content">
+        <h2 class="slide-title"></h2>
+        <p class="slide-text"></p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Leer Más..
+        </button>
+      </div>
+      <p class="slide-image">
+        <img src="../Noticias/img/noticia3.jpeg" alt="stuff" width="320" height="240">
+      </p>
+    </li>
+    <li class="slide">
+      <div class="slide-content">
+        <h2 class="slide-title"></h2>
+        <p class="slide-text"></p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Leer Más..
+        </button>
+      </div>
+      <p class="slide-image">
+        <img src="../Noticias/img/noticia4.jpeg" alt="stuff" width="320" height="240">
+      </p>
+    </li>
+    <li class="slide">
+      <div class="slide-content">
+        <h2 class="slide-title"></h2>
+        <p class="slide-text"></p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Leer Más..
+        </button>
+      </div>
+      <p class="slide-image">
+        <img src="../Noticias/img/noticia5.jpeg" alt="stuff" width="320" height="240">
+      </p>
+    </li>
+    <li class="slide">
+      <div class="slide-content">
+        <h2 class="slide-title"></h2>
+        <p class="slide-text"></p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Leer Más..
+        </button>
+      </div>
+      <p class="slide-image">
+        <img src="../Noticias/img/noticia6.jpeg" alt="stuff" width="320" height="240">
+      </p>
+    </li>
+    <li class="slide">
+      <div class="slide-content">
+        <h2 class="slide-title"></h2>
+        <p class="slide-text"></p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Leer Más..
+        </button>
+      </div>
+      <p class="slide-image">
+        <img src="../Noticias/img/noticia7.jpeg" alt="stuff" width="320" height="240">
+      </p>
+    </li>
+    <li class="slide">
+      <div class="slide-content">
+        <h2 class="slide-title"></h2>
+        <p class="slide-text"></p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Leer Más..
+        </button>
+      </div>
+      <p class="slide-image">
+        <img src="../Noticias/img/noticia8.jpeg" alt="stuff" width="320" height="240">
+      </p>
+    </li>
+  </ul>
+</div> 
 
-      <li class="slide">
-        <div class="slide-content">
-          <h2 class="slide-title"></h2>
-          <p class="slide-text"></p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Leer Más..
-          </button>
-        </div>
-        <div class="slide-image">
-          <img src="img/noticia2.jpeg" alt="Noticia 2" width="320" height="240">
-        </div>
-      </li>
-
-      <li class="slide">
-        <div class="slide-content">
-          <h2 class="slide-title"></h2>
-          <p class="slide-text"></p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Leer Más..
-          </button>
-        </div>
-        <div class="slide-image">
-          <img src="img/noticia3.jpeg" alt="Noticia 3" width="320" height="240">
-        </div>
-      </li>
-
-      <li class="slide">
-        <div class="slide-content">
-          <h2 class="slide-title"></h2>
-          <p class="slide-text"></p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Leer Más..
-          </button>
-        </div>
-        <div class="slide-image">
-          <img src="img/noticia4.jpeg" alt="Noticia 4" width="320" height="240">
-        </div>
-      </li>
-
-      <li class="slide">
-        <div class="slide-content">
-          <h2 class="slide-title"></h2>
-          <p class="slide-text"></p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Leer Más..
-          </button>
-        </div>
-        <div class="slide-image">
-          <img src="img/noticia5.jpeg" alt="Noticia 5" width="320" height="240">
-        </div>
-      </li>
-
-      <li class="slide">
-        <div class="slide-content">
-          <h2 class="slide-title"></h2>
-          <p class="slide-text"></p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Leer Más..
-          </button>
-        </div>
-        <div class="slide-image">
-          <img src="img/noticia6.jpeg" alt="Noticia 6" width="320" height="240">
-        </div>
-      </li>
-
-      <li class="slide">
-        <div class="slide-content">
-          <h2 class="slide-title"></h2>
-          <p class="slide-text"></p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Leer Más..
-          </button>  
-        </div>
-        <div class="slide-image">
-          <img src="img/noticia7.jpeg" alt="Noticia 7" width="320" height="240">
-        </div>
-      </li>
-
-      <li class="slide">
-        <div class="slide-content">
-          <h2 class="slide-title"></h2>
-          <p class="slide-text"></p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Leer Más..
-          </button>          
-        </div>
-        <div class="slide-image">
-          <img src="img/noticia8.jpeg" alt="Noticia 8" width="320" height="240">
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
       <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -202,14 +198,15 @@
   </div>
 </div>
 <br>
+
 <div class="apartado">
   <div class="titulo-h1">
-    <h1 class="titulo-noticia">Videos Relevantes</h1>
+    <h1 class="titulo-noticia">Videos Noticias</h1>
   </div>
-</div>      
+</div>
+
 <div class="video">
     <div class="carrusel" id="fondoVideo">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/OCREpzteD-U" frameborder="1" allowfullscreen></iframe>
     <div class="video-carousel">
     <div class="video-list">
     <ul class="lista">
