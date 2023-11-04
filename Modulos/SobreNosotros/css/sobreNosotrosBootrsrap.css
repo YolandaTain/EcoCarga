@@ -1,0 +1,25 @@
+:root {
+    --body: #FFFDF4;
+    --claro: #ffffff;
+    --menu: #83A931;
+    --oscuro: #344306;
+    --rotulos: #000000;
+    --boton: #333;
+    --botonHover: #1C2206;
+}
+
+html {
+    /*COMPARTIDO CON NAV*/
+    font-size: 62.5%;
+
+}
+
+/*1 rem = 10px*/
+body {
+    /*COMPARTIDO CON NAV*/
+    font-family: 'Marvel', sans-serif;
+    background-color: var(--body);
+    margin: 0;
+    padding: 0;
+}
+
