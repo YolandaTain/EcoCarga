@@ -24,7 +24,8 @@
   margin-top: 10px;
   margin-right: 100px;
   font-size: 30px;
-  margin-left: 1000px;
+  margin-left: 400px;
+  justify-content: center;
 }
 
 .titulo-h1 h1::before{
@@ -32,7 +33,7 @@
   color: #fffdfd;
   margin-right: 100px;
   font-size: 30px;
-  margin-left: 260px;
+  margin-left: 280px;
   margin-top: -10px;
   content: '';
   position: absolute;
@@ -47,82 +48,120 @@
   color:#344306;
 }
 
-.carrusel {
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Roboto, sans-serif;
+}
+
+.slider {
   position: relative;
-  width: 1400px;
-  height: 350px;
+  width: 960px;
+  height: 300px;
   margin: 50px auto;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-.carrusel-controls {
+.slider-controls {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 50%;
   width: 200px;
   text-align: center;
-  transform: translateX(-50%);
+  transform: translatex(-50%);
+  z-index: 1000;
+
   list-style: none;
   text-align: center;
-  cursor: pointer;
 }
 
-.carrusel input[type="radio"] {
+.slider input[type="radio"] {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
   width: 0;
   height: 0;
-  cursor:pointer;
 }
 
-div .carrusel-controls label {
-  margin-bottom: 10px;
+.slider-controls label {
   display: inline-block;
   border: none;
   height: 20px;
   width: 20px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: var(--rotulos);
+  background-color: #212121;
   transition: background-color 0.2s linear;
 }
 
-/* Añade estilos para los botones de 8 noticias */
-#btn-1:checked ~ .carrusel-controls label[for="btn-1"],
-#btn-2:checked ~ .carrusel-controls label[for="btn-2"],
-#btn-3:checked ~ .carrusel-controls label[for="btn-3"],
-#btn-4:checked ~ .carrusel-controls label[for="btn-4"],
-#btn-5:checked ~ .carrusel-controls label[for="btn-5"],
-#btn-6:checked ~ .carrusel-controls label[for="btn-6"],
-#btn-7:checked ~ .carrusel-controls label[for="btn-7"],
-#btn-8:checked ~ .carrusel-controls label[for="btn-8"] {
+#btn-1:checked ~ .slider-controls label[for="btn-1"] {
   background-color: var(--menu);
 }
 
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+  background-color: var(--menu);
+}
+
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  background-color:var(--menu);
+}
+
+#btn-4:checked ~ .slider-controls label[for="btn-4"] {
+  background-color:var(--menu);
+}
+#btn-5:checked ~ .slider-controls label[for="btn-5"] {
+  background-color:var(--menu);
+}
+#btn-6:checked ~ .slider-controls label[for="btn-6"] {
+  background-color:var(--menu);
+}
+#btn-7:checked ~ .slider-controls label[for="btn-7"] {
+  background-color:var(--menu);
+}
+#btn-8:checked ~ .slider-controls label[for="btn-8"] {
+  background-color:var(--menu);
+}
 /* SLIDES */
+
 .slides {
   list-style: none;
   padding: 0;
   margin: 0;
   height: 100%;
-  width: 40px;
 }
 
 .slide {
   position: absolute;
   top: 0;
   left: 0;
+  background-color: var(--claro);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px;
   width: 100%;
   height: 100%;
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translatex(-100%);
   transition: transform 250ms linear;
+}
+
+.slide-content {
+  width: 400px;
 }
 
 .slide-title {
@@ -135,32 +174,93 @@ div .carrusel-controls label {
 }
 
 
-
-.slide-image {
+.slide-image img {
   max-width: 100%;
-  margin-right: 40px;
 }
 
 /* Slide animations */
-#btn-1:checked ~ .slides > .slide:nth-child(1),
-#btn-2:checked ~ .slides > .slide:nth-child(2),
-#btn-3:checked ~ .slides > .slide:nth-child(3),
-#btn-4:checked ~ .slides > .slide:nth-child(4),
-#btn-5:checked ~ .slides > .slide:nth-child(5),
-#btn-6:checked ~ .slides > .slide:nth-child(6),
-#btn-7:checked ~ .slides > .slide:nth-child(7),
-#btn-8:checked ~ .slides > .slide:nth-child(8) {
-  transform: translateX(0);
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+  transform: translatex(0);
   opacity: 1;
 }
 
-#btn-1:not(:checked) ~ .slides .slide:nth-child(1),
-#btn-2:not(:checked) ~ .slides .slide:nth-child(2),
-#btn-3:not(:checked) ~ .slides .slide:nth-child(3),
-#btn-4:not(:checked) ~ .slides .slide:nth-child(4),
-#btn-5:not(:checked) ~ .slides .slide:nth-child(5),
-#btn-6:not(:checked) ~ .slides .slide:nth-child(6),
-#btn-7:not(:checked) ~ .slides .slide:nth-child(7),
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-4:checked ~ .slides .slide:nth-child(4) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-5:checked ~ .slides .slide:nth-child(5) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-6:checked ~ .slides .slide:nth-child(6) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-7:checked ~ .slides .slide:nth-child(7) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-8:checked ~ .slides .slide:nth-child(8) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-1:not(:checked) ~ .slides .slide:nth-child(1) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+#btn-2:not(:checked) ~ .slides .slide:nth-child(2) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+#btn-3:not(:checked) ~ .slides .slide:nth-child(3) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+#btn-4:not(:checked) ~ .slides .slide:nth-child(4) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+#btn-5:not(:checked) ~ .slides .slide:nth-child(5) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+#btn-6:not(:checked) ~ .slides .slide:nth-child(6) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+#btn-7:not(:checked) ~ .slides .slide:nth-child(7) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
 #btn-8:not(:checked) ~ .slides .slide:nth-child(8) {
   animation-name: swap-out;
   animation-duration: 300ms;
@@ -169,19 +269,20 @@ div .carrusel-controls label {
 
 @keyframes swap-out {
   0% {
-    transform: translateX(0);
+    transform: translatex(0);
     opacity: 1;
   }
 
   50% {
-    transform: translateX(50%);
+    transform: translatex(50%);
     opacity: 0;
   }
 
   100% {
-    transform: translateX(100%);
+    transform: translatex(100%);
   }
 }
+
 
 
 
@@ -209,7 +310,7 @@ p {
 
 @font-face {
   font-family: "Marvel";
-  src: url("ruta/a/tu/fuente-Marvel.ttf") format("truetype");
+  src: url("fuente-Marvel.ttf") format("truetype");
 }
 
 /*video*/
@@ -219,7 +320,7 @@ p {
 }
 
 #fondoVideo {
-  background-color:rgb(0, 0, 0);
+  background-color:var(--body);
   display: flex;
   justify-content: center;
   align-items: center;
