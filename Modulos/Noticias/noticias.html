@@ -20,7 +20,7 @@
         <div class="col-6 col-md-6 align-self-center header-container" onclick="volverHome()">
             <div class="row">
                 <div class="col-6 col-md-6 col-lg-3 ">
-                    <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo">
+                    <img src="/Modulos/Nav/img/logo.png" alt="Logo" id="headerLogo">
                 </div>
                 <div class="col-6 col-md-6 col-lg-9  align-self-center">
                     <h1>Noticias</h1>
@@ -31,7 +31,7 @@
         <div class="dropdown col-6 col-md-6 align-self-end">
             <div class="row justify-content-end">
                 <button onclick="desplegar()"
-                    class="btn btn-secondary dropdown-toggle col-4 col-md-2 col-lg-1 align-self-end" type="button"
+                    class="btn btn-secondary dropdown-toggle col-5 col-md-3 col-lg-2 align-self-end" type="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <svg xmlns="http://www.w3.org/2000/svg" id="select" width="50" height="50" viewBox="0 0 24 24"
                         fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round"
@@ -42,21 +42,23 @@
                     </svg>
                 </button>
             </div>
-            <ul class="dropdown-menu" id="menu">
-                <li><a class="dropdown-item" href="../Home/home.html">Inicio</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
         </div>
-      </div>
     </header>
-   
+    <div class="row justify-content-end">
+        <ul class="dropdown-menu col-12 col-md-5 col-lg-3" id="menu">
+            <li><a class="dropdown-item" href="../Home/home.html">Inicio</a></li>
+            <li><a class="dropdown-item" href="../Noticias/noticias.html">Noticias</a></li>
+            <li><a class="dropdown-item" href="../Itinerario/itinerario.html">Itinerario</a></li>
+            <li><a class="dropdown-item" href="../SobreNosotros/sobreNosotros.html">Sobre Nosotros</a></li>
+        </ul>
+    </div>
+   <div class="row">
       <div class="apartado">
         <div class="titulo-h1">
           <h1 class="titulo-noticia">Nuevas Noticias</h1>
         </div>
       </div>
-
+</div>
 <div class="slider">
    <input type="radio" name="toggle" id="btn-1" checked>
   <input type="radio" name="toggle" id="btn-2">
@@ -198,11 +200,12 @@
   </div>
 </div>
 <br>
-
+<div class="row">
 <div class="apartado">
   <div class="titulo-h1">
     <h1 class="titulo-noticia">Videos Noticias</h1>
   </div>
+</div>
 </div>
 
 <div class="video">
