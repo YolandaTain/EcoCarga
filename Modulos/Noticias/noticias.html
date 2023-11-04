@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Noticias - EcoCarga</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css">
@@ -15,51 +15,50 @@
     <script src="../Noticias/js/noticias.js"></script>    
 </head>
 <body>
-  <header id="header">
-    <div class="header-container" onclick="volverHome()">
-        <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo">
-        <h1>Noticias</h1>
-    </div>
-    <div class="header-container-select">
-
-        <div id="select" onclick="desplegar()">
-            <svg xmlns="http://www.w3.org/2000/svg" id="select" width="70" height="70" viewBox="0 0 24 24"
-                fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-        </div>
-    </div>
-</header>
-<div id="menu" class="nav-menu">
-    <ul>
-        <div class="caja">
-            <li><a href="../Home/home.html">Inicio</a></li>
+  <div class="container-fluid">
+    <header id="header" class="row">
+        <div class="col-6 col-md-6 align-self-center header-container" onclick="volverHome()">
+            <div class="row">
+                <div class="col-6 col-md-6 col-lg-3 ">
+                    <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo">
+                </div>
+                <div class="col-6 col-md-6 col-lg-9  align-self-center">
+                    <h1>Noticias</h1>
+                </div>
+            </div>
         </div>
 
-        <div class="caja">
-            <li><a href="../Noticias/noticias.html">Noticias</a></li>
+        <div class="dropdown col-6 col-md-6 align-self-end">
+            <div class="row justify-content-end">
+                <button onclick="desplegar()"
+                    class="btn btn-secondary dropdown-toggle col-4 col-md-2 col-lg-1 align-self-end" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="select" width="50" height="50" viewBox="0 0 24 24"
+                        fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <ul class="dropdown-menu" id="menu">
+                <li><a class="dropdown-item" href="../Home/home.html">Inicio</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
         </div>
-
-        <div class="caja">
-            <li><a href="../Itinerario/itinerario.html">Itinerario</a></li>
+      </div>
+    </header>
+   
+      <div class="apartado">
+        <div class="titulo-h1">
+          <h1 class="titulo-noticia">Nuevas Noticias</h1>
         </div>
-
-        <div class="caja">
-            <li><a href="../SobreNosotros/sobreNosotros.html">Sobre nosotros</a></li>
-        </div>
-    </ul>
-</div>
-
-<div class="apartado">
-  <div class="titulo-h1">
-  <h1 class="titulo-noticia">Nuevas Noticias</h1>
-  </div>
-</div>
+      </div>
 
 <div class="slider">
-  <input type="radio" name="toggle" id="btn-1" checked>
+   <input type="radio" name="toggle" id="btn-1" checked>
   <input type="radio" name="toggle" id="btn-2">
   <input type="radio" name="toggle" id="btn-3">
   <input type="radio" name="toggle" id="btn-4">
@@ -78,7 +77,7 @@
     <label for="btn-7"></label>
     <label for="btn-8"></label>
   </div>
-
+  
   <ul class="slides">
     <li class="slide">
       <div class="slide-content">
@@ -177,7 +176,8 @@
       </p>
     </li>
   </ul>
-</div>
+</div> 
+
       <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
