@@ -1,5 +1,20 @@
 document.addEventListener("DOMContentLoaded", inicio);
 
+var formulario;
+var formData;
+var nombre;
+var email;
+var fechaNac;
+var puntoPartida;
+var puntoDestino;
+var fechaInicio;
+var fechaFin;
+var autonomia;
+var tipoCoche;
+var numPasajeros;
+var velocidadCargaAlta;
+var preferenciasActividades;
+
 function inicio() {
     mostrarFormulario(1);
 }
@@ -35,20 +50,20 @@ function mostrarFormulario(numero) {
 }
 
 function recopilarDatos() {
-    var formulario = document.getElementById("miFormulario");
-    var formData = new FormData(formulario);
-    var nombre = formData.get("nombre");
-    var email = formData.get("email");
-    var fechaNac = formData.get("fechaNac");
-    var puntoPartida = formData.get("puntoPartida");
-    var puntoDestino = formData.get("puntoDestino");
-    var fechaInicio = formData.get("fechaInicio");
-    var fechaFin = formData.get("fechaFin");
-    var autonomia = formData.get("autonomia");
-    var tipoCoche = formData.get("tipoCoche");
-    var numPasajeros = formData.get("numPasajeros");
-    var velocidadCargaAlta = formData.get("velocidadCarga");
-    var preferenciasActividades = formData.getAll("preferenciasActividades[]");
+    formulario = document.getElementById("miFormulario");
+    formData = new FormData(formulario);
+    nombre = formData.get("nombre");
+    email = formData.get("email");
+    fechaNac = formData.get("fechaNac");
+    puntoPartida = formData.get("puntoPartida");
+    puntoDestino = formData.get("puntoDestino");
+    fechaInicio = formData.get("fechaInicio");
+    fechaFin = formData.get("fechaFin");
+    autonomia = formData.get("autonomia");
+    tipoCoche = formData.get("tipoCoche");
+    numPasajeros = formData.get("numPasajeros");
+    velocidadCargaAlta = formData.get("velocidadCarga");
+    preferenciasActividades = formData.getAll("preferenciasActividades[]");
 
     /*var nombre = document.getElementById("nombre").value;
     var email = document.getElementById("email").value;
