@@ -208,7 +208,64 @@ body {
     transform: translatex(100%);
   }
 }
+.card{
+  height: 250px;
+  width: 320px;
+}
 
+.card:hover{
+  transform: scale(1.1); 
+  transition: transform 0.2s;
+  box-shadow: 0 3px 4px 0 rgba(83, 185, 0, 0.653), 0 2px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+}
+
+#tituloMapa {
+  text-align: center;
+}
+
+#botonBanner {
+  border: none;
+  background-color: var(--menu);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 12rem;
+  height: 4rem;
+  font-family: 'Marvel', sans-serif;
+  font-size: 2rem;
+  outline: none;
+}
+
+#botonBanner a {
+  text-decoration: none;
+  color: var(--claro);
+  margin-bottom: 15px;
+}
+
+.titulo{
+  text-align: center;
+}
+
+.card img{
+  object-fit: cover;
+}
+
+.card-body a{
+margin-left: 90px;
+width: 8rem;
+height: 4rem;
+background-color: var(--rotulos);
+color:#fff
+}
+
+.card-body a:hover{
+  margin-left: 90px;
+  background-color: var(--menu);
+  color:#fff
+  }
 
 #fecha {
   font-family: "Marvel", sans-serif;
@@ -333,52 +390,31 @@ h3 {
   height: 40px;
 }
 
+.slide-content button{
+  background-color: var(--rotulos);
+  height: 30px;
+  width: 80px;
+  font-size: 15px;
+}
+
+.slide-content img{
+  width: 300px;
+  height: 170px;
+}
+
+#targets{
+  background-color: var(--boton);
+}
+
+.slide-content button:hover{
+  background-color: var(--menu);
+  height: 30px;
+  width: 80px;
+}
+
 .ico {
   margin-right: 10px;
 }
-
-/* Estilos para el carrusel */
-#carouselExampleControls {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.carousel-inner {
-  text-align: center;
-}
-
-.carousel-item {
-  min-height: 300px;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  font-size: 30px;
-}
-
-/* Personaliza los estilos de las diapositivas si es necesario */
-.carousel-item img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Cambia los estilos de los controles de navegación si es necesario */
-.carousel-control-prev-icon::before {
-  content: '←';
-}
-
-.carousel-control-next-icon::before {
-  content: '→';
-}
-
 
 @media (max-width: 768px) {
   .apartado{

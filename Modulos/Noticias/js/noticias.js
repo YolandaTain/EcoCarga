@@ -94,7 +94,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+var currentSlide = 1;
+var totalSlides = 8; // Cambia esto al número total de noticias en tu carrusel
+var slideInterval = 50000; // 10 segundos en milisegundos
 
+function changeSlide() {
+  if (currentSlide < totalSlides) {
+    currentSlide++;
+  } else {
+    currentSlide = 1;
+  }
+  var radioId = "btn-" + currentSlide;
+  document.getElementById(radioId).checked = true;
+}
+
+setInterval(changeSlide, slideInterval);
 
 
 
