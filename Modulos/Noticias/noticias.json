@@ -1,4 +1,4 @@
- [
+[
   {
     "noticia": 1,
     "titulo": "El fin de las ayudas a la compra de coches eléctricos amenaza con hundir las ventas un 40% en 2024",
@@ -8,51 +8,51 @@
   },
   {
     "noticia": 2,
-    "titulo": "Las matriculaciones de coches eléctricos suben más de un 92% respecto a 2022",
-    "fecha": "02/11/2023",
-    "descripcion": "En lo que va de año han subido un 72,9%, lo que supone una suma de 42.172 unidades matriculadas hasta octubre...",
-    "imagen": "img/noticia2.jpeg"
+    "titulo": "Nuevo avance en la tecnología de baterías de grafeno para vehículos eléctricos",
+    "fecha": "03/11/2023",
+    "descripcion": "Científicos de todo el mundo han logrado un importante avance en la tecnología de baterías de grafeno, lo que podría llevar a una mayor autonomía y tiempos de carga más cortos para vehículos eléctricos...",
+    "imagen": "img/noticia2.jpg"
   },
   {
     "noticia": 3,
-    "titulo": "La venta de coches crece un 18% en octubre; los eléctricos logran un récord de cuota",
-    "fecha": "01/11/2023",
-    "descripcion": "Las ventas de coches en el mes de octubre han dejado una cifra de 77.892 turismos matriculados...",
-    "imagen": "img/noticia3.jpeg"
+    "titulo": "Tesla anuncia su nuevo modelo de automóvil eléctrico asequible",
+    "fecha": "04/11/2023",
+    "descripcion": "El fabricante de automóviles eléctricos Tesla ha revelado su último modelo, que tiene como objetivo hacer que los vehículos eléctricos sean más asequibles para el público en general...",
+    "imagen": "img/noticia3.jpg"
   },
   {
     "noticia": 4,
-    "titulo": "El nuevo problema de Tesla: acusan a la marca de engañar así a sus clientes",
-    "fecha": "28/10/2023",
-    "descripcion": "Tras la polémica con el Autopilot, el Departamento de Justicia de Estados Unidos ha abierto varias investigaciones...",
-    "imagen": "img/noticia4.jpeg"
+    "titulo": "Europa acelera la instalación de estaciones de carga para vehículos eléctricos",
+    "fecha": "05/11/2023",
+    "descripcion": "La Unión Europea ha anunciado un ambicioso plan para acelerar la instalación de estaciones de carga para vehículos eléctricos en toda la región, como parte de su estrategia de movilidad sostenible...",
+    "imagen": "img/noticia4.jpg"
   },
   {
     "noticia": 5,
-    "titulo": "Lexus muestra el futuro de sus coches eléctricos",
-    "fecha": "26/10/2023",
-    "descripcion": "En el marco del Salón del Automóvil de Japón 2023, Lexus ha mostrado las cartas de su futuro eléctrico...",
-    "imagen": "img/noticia5.jpeg"
+    "titulo": "Nuevas regulaciones de emisiones para vehículos pesados en EE. UU.",
+    "fecha": "06/11/2023",
+    "descripcion": "Los Estados Unidos están implementando regulaciones más estrictas sobre las emisiones de vehículos pesados, lo que podría impulsar la adopción de camiones eléctricos en el país...",
+    "imagen": "img/noticia5.jpg"
   },
   {
     "noticia": 6,
-    "titulo": "La berlina eléctrica de Volkswagen se convierte en familiar",
-    "fecha": "31/10/2023",
-    "descripcion": "El Volkswagen ID.7 Tourer se lanzará en 2024. Como la inmensa mayoría de fabricantes...",
-    "imagen": "img/noticia6.jpeg"
+    "titulo": "Aumento de la inversión en investigación de celdas de combustible de hidrógeno",
+    "fecha": "07/11/2023",
+    "descripcion": "Varias empresas están invirtiendo fuertemente en la investigación de celdas de combustible de hidrógeno como una alternativa a los vehículos eléctricos con baterías, con la esperanza de superar algunas de las limitaciones actuales...",
+    "imagen": "img/noticia6.jpg"
   },
   {
     "noticia": 7,
-    "titulo": "Lexus muestra el futuro de sus coches eléctricos",
-    "fecha": "26/10/2023",
-    "descripcion": "En el marco del Salón del Automóvil de Japón 2023, Lexus ha mostrado las cartas de su futuro eléctrico...",
-    "imagen": "img/noticia7.jpeg"
+    "titulo": "El crecimiento de la infraestructura de carga en China impulsa las ventas de vehículos eléctricos",
+    "fecha": "08/11/2023",
+    "descripcion": "China está viendo un rápido crecimiento en la infraestructura de carga para vehículos eléctricos, lo que ha llevado a un aumento significativo en las ventas de automóviles eléctricos en el país...",
+    "imagen": "img/noticia7.jpg"
   },
   {
     "noticia": 8,
-    "titulo": "Lexus muestra el futuro de sus coches eléctricos",
-    "fecha": "26/10/2023",
-    "descripcion": "En el marco del Salón del Automóvil de Japón 2023, Lexus ha mostrado las cartas de su futuro eléctrico...",
-    "imagen": "img/noticia8.jpeg"
+    "titulo": "El transporte público eléctrico gana terreno en las principales ciudades del mundo",
+    "fecha": "09/11/2023",
+    "descripcion": "Las principales ciudades de todo el mundo están invirtiendo en sistemas de transporte público eléctrico, incluidos autobuses y trenes eléctricos, como parte de sus esfuerzos por reducir la contaminación y las emisiones...",
+    "imagen": "img/noticia8.jpg"
   }
 ]
