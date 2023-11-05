@@ -32,8 +32,8 @@
   }
 
   /* Con esto consigo que el padding sea cero de la barra de navegación pero el botón con más padding */
-  .agrupar{
-    padding:0rem;
+  .agrupar {
+    padding: 0rem;
   }
 
   .tituloSearchContenedor {
@@ -60,7 +60,7 @@
       margin-left: 3rem;
     }
   }
-  
+
   #tituloSearch {
     font-size: 2.5rem;
     color: var(--body);
@@ -115,7 +115,7 @@
     font-size: 2rem;
     border-radius: 0 15px 15px 0;
     padding: 1.5rem;
-  
+
   }
 
   .search svg {
@@ -146,29 +146,40 @@
     font-size: 2rem;
   }
 
-  .card{
+  .card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
- 
+  @media(max-width:768px) {
+    .card {
+      margin-bottom: 1rem;
+    }
+  }
 
-  .card h5{
+  @media(max-width:390px) {
+    .card {
+      margin-bottom: 1rem;
+    }
+  }
+
+
+  .card h5 {
     font-size: 3rem;
     font-weight: bold;
 
   }
 
-  .card p{
+  .card p {
     font-size: 2rem;
 
   }
 
-  .btn{
+  .btn {
     background-color: var(--menu);
     color: var(--body)
   }
-  
-  .resultado{
+
+  .resultado {
     background-color: var(--claro);
     padding: 0.5rem;
     box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
@@ -181,15 +192,15 @@
     text-align: left;
   }
 
-  @media(max-width:768px){
-    .resultado{
+  @media(max-width:768px) {
+    .resultado {
       font-size: 2rem;
       width: 70rem;
     }
   }
 
-  @media(max-width:390px){
-    .resultado{
+  @media(max-width:390px) {
+    .resultado {
       font-size: 2rem;
     }
   }
