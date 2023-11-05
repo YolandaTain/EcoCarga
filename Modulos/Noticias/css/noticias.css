@@ -337,6 +337,49 @@ h3 {
   margin-right: 10px;
 }
 
+/* Estilos para el carrusel */
+#carouselExampleControls {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-inner {
+  text-align: center;
+}
+
+.carousel-item {
+  min-height: 300px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 30px;
+}
+
+/* Personaliza los estilos de las diapositivas si es necesario */
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Cambia los estilos de los controles de navegación si es necesario */
+.carousel-control-prev-icon::before {
+  content: '←';
+}
+
+.carousel-control-next-icon::before {
+  content: '→';
+}
+
+
 @media (max-width: 768px) {
   .apartado{
     position: relative;
@@ -419,6 +462,16 @@ h3 {
   max-width: 2px;
   width: 5px;
   margin-top: 40px;
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.carousel-item {
+  margin-right: 0;
+  flex: 0 0 33.333333%;
+  display: block;
 }
 }
 
