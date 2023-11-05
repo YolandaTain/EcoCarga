@@ -23,3 +23,11 @@ body {
     padding: 0;
 }
 
+.container{
+    font-size: 2.5rem;
+}
+
+#h1{
+    font-size: 4rem;
+    font-weight: bold;
+}

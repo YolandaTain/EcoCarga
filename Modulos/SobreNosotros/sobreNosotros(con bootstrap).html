@@ -1,188 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nosotros</title>
     <!--Css y js personal del apartado-->
-    <link rel="stylesheet" type="text/css" href="./css/sobreNosotrosBootrsrap.css">
-    <script href="./js/sobreNosotrosBootstap.js" ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/sobreNosotrosBootrsrap.css"
+    />
+    <script href="./js/sobreNosotrosBootstap.js"></script>
     <!--Esilo de fuente-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marvel&display=swap"
+      rel="stylesheet"
+    />
     <!--Bootstrap-->
-    <link rel="stylesheet" href="../bootStrap/css/bootstrap.min.css">
-    <script src="../bootStrap/js/bootstrap.bundle.min.js"></script> 
+    <link rel="stylesheet" href="../bootStrap/css/bootstrap.min.css" />
+    <script src="../bootStrap/js/bootstrap.bundle.min.js"></script>
     <!--Nav y Header son los faltantes-->
-    <link rel="stylesheet" href="../Nav/css/nav.css">
-    <script href="../Nav/js/nav.js" ></script> 
-
-</head>
-<body>
+    <link rel="stylesheet" href="../Nav/css/nav.css" />
+    <script href="../Nav/js/nav.js"></script>
+  </head>
+  <body>
     <!--HEADER-->
     <div class="container-fluid">
-        <header id="header" class="row">
-            <div class="col-6 col-md-6 align-self-center header-container" onclick="volverHome()">
-                <div class="row">
-                    <div class="col-6 col-md-6 col-lg-3 ">
-                        <img src="/Modulos/Nav/img/logo.png" alt="Logo" id="headerLogo">
-                    </div>
-                    <div class="col-6 col-md-6 col-lg-9  align-self-center">
-                        <h1>Itinerario</h1>
-                    </div>
-                </div>
+      <header id="header" class="row">
+        <div
+          class="col-6 col-md-6 align-self-center header-container"
+          onclick="volverHome()"
+        >
+          <div class="row">
+            <div class="col-6 col-md-6 col-lg-3">
+              <img src="../Nav/img/logo.png" alt="Logo" id="headerLogo" />
             </div>
-
-            <div class="dropdown col-6 col-md-6 align-self-end">
-                <div class="row justify-content-end">
-                    <button onclick="desplegar()"
-                        class="btn btn-secondary dropdown-toggle col-5 col-md-3 col-lg-2 align-self-end" type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" id="select" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
+            <div class="col-6 col-md-6 col-lg-9 align-self-center">
+              <h1>Sobre Nosotros</h1>
             </div>
-        </header>
-
-        <!--MENU-->
-        <div class="row justify-content-end">
-            <ul class="dropdown-menu col-12 col-md-5 col-lg-3" id="menu">
-                <li><a class="dropdown-item" href="../Home/home.html">Inicio</a></li>
-                <li><a class="dropdown-item" href="../Noticias/noticias.html">Noticias</a></li>
-                <li><a class="dropdown-item" href="../Itinerario/itinerario.html">Itinerario</a></li>
-                <li><a class="dropdown-item" href="../SobreNosotros/sobreNosotros.html">Sobre Nosotros</a></li>
-            </ul>
+          </div>
         </div>
 
-        <!--Objetivos de la web y descripcion-->
-        <div>
-            <h1>EcoCarga</h1>
-            <p>¡Bienvenidos a <b>EcoCarga</b> , tu compañero de viaje para explorar España de una manera más ecológica 
-                y emocionante! Nos apasiona la movilidad sostenible y estamos aquí para hacerte descubrir la belleza de este 
-                país, todo mientras cuidas del medio ambiente. 
-            </p>
-            <p>
-                <b>¿Te gustaría planear un viaje en coche eléctrico por España?</b> Con EcoCarga, es más fácil que nunca. Nuestra 
-                plataforma te permite crear itinerarios personalizados en función de los puntos de carga en toda España. 
-                Imagina recorrer la impresionante costa mediterránea, explorar pueblos encantadores en la sierra o descubrir 
-                la riqueza cultural de las ciudades. Con EcoCarga, puedes hacerlo de manera ecológica y sin preocupaciones.
-            </p>
-            <p> 
-                Descubre los puntos de carga más convenientes y crea itinerarios adaptados a tus preferencias, ya sea un viaje 
-                corto de fin de semana o una aventura de varios días, en EcoCarga, encontrarás toda la información que necesitas 
-                para que tu viaje sea inolvidable.
-            </p>   
-            <p>    
-                Acompáñanos en esta emocionante travesía hacia un turismo más sostenible. Con EcoCarga, descubrir España es 
-                más que un viaje, es una experiencia que contribuye al futuro de nuestro planeta.
-            </p>
-            <hr>
+        <div class="dropdown col-6 col-md-6 align-self-end">
+          <div class="row justify-content-end">
+            <button
+              onclick="desplegar()"
+              class="btn btn-secondary dropdown-toggle col-4 col-md-2 col-lg-1 align-self-end"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="select"
+                width="50"
+                height="50"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#faf5e2"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
         </div>
-        <br>
+      </header>
 
-        <!--Opiniones/reseñas (?)-->
+      <!--Menu-->
+      <div class="row justify-content-end">
+        <ul class="dropdown-menu col-12 col-md-4 col-lg-3" id="menu">
+          <li><a class="dropdown-item" href="/Home/home.html">Inicio</a></li>
+          <li>
+            <a class="dropdown-item" href="../Noticias/noticias.html"
+              >Noticias</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="../Itinerario/itinerario.html"
+              >Itinerario</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="../SobreNosotros/sobreNosotros.html"
+              >Sobre Nosotros</a
+            >
+          </li>
+        </ul>
+      </div>
 
-        <!--Miembros del equipo-->
-        <!--Yoli-->
-        <div>
+      <br />
+
+      <!--Objetivos de la web y descripcion-->
+      <div class="container">
+        <h1 id="h1">EcoCarga</h1>
+        <p>
+          ¡Bienvenidos a <b>EcoCarga</b> , tu compañero de viaje para explorar
+          España de una manera más ecológica y emocionante! Nos apasiona la
+          movilidad sostenible y estamos aquí para hacerte descubrir la belleza
+          de este país, todo mientras cuidas del medio ambiente.
+        </p>
+        <p>
+          <b>¿Te gustaría planear un viaje en coche eléctrico por España?</b>
+          Con EcoCarga, es más fácil que nunca. Nuestra plataforma te permite
+          crear itinerarios personalizados en función de los puntos de carga en
+          toda España. Imagina recorrer la impresionante costa mediterránea,
+          explorar pueblos encantadores en la sierra o descubrir la riqueza
+          cultural de las ciudades. Con EcoCarga, puedes hacerlo de manera
+          ecológica y sin preocupaciones.
+        </p>
+        <p>
+          Descubre los puntos de carga más convenientes y crea itinerarios
+          adaptados a tus preferencias, ya sea un viaje corto de fin de semana o
+          una aventura de varios días, en EcoCarga, encontrarás toda la
+          información que necesitas para que tu viaje sea inolvidable.
+        </p>
+        <p>
+          Acompáñanos en esta emocionante travesía hacia un turismo más
+          sostenible. Con EcoCarga, descubrir España es más que un viaje, es una
+          experiencia que contribuye al futuro de nuestro planeta.
+        </p>
+        <hr />
+      </div>
+      <br />
+
+      <!--Opiniones/reseñas (?)-->
+
+      <!--Miembros del equipo-->
+
+      <div class="container">
+        <div class="row">
+          <!--Yoli-->
+          <div class="col 1">
             <div>
-                <img src="./img/yoli.jpg" alt="yoli">
+              <img src="./img/yoli.jpg" alt="yoli" />
             </div>
             <div>
-                <h3>Yolanda Tain</h3>
-                <h4>Jefa de equipo</h4>
-                <p>Yolanda Tain, nuestra líder en EcoCarga, es una apasionada de la movilidad sostenible en España. 
-                    Con su visión y experiencia, dirige nuestro equipo hacia un futuro más verde y limpio. 
-                    <br> <br>
-                    Puedes contartar a traves de este correo: 
-                    <a href="mailto:yolandataingut@gmail.com">yolandataingut@gmail.com</a>
-                </p>
-                <hr>
+              <h3>Yolanda Tain</h3>
+              <h4>Jefa de equipo</h4>
+              <p>
+                Yolanda Tain, nuestra líder en EcoCarga, es una apasionada de la
+                movilidad sostenible en España. Con su visión y experiencia,
+                dirige nuestro equipo hacia un futuro más verde y limpio. <br />
+                <br />
+                Puedes contartar a traves de este correo:
+                <a href="mailto:yolandataingut@gmail.com"
+                  >yolandataingut@gmail.com</a
+                >
+              </p>
+              <hr />
             </div>
+          </div>
+          <br />
+          <!--Jorge-->
+          <div class="col 2">
+            <div>
+              <img src="./img/jorge.jpg" alt="jorge" />
+            </div>
+            <div>
+              <h3>Jorge Marimon</h3>
+              <h4>Analista</h4>
+              <p>
+                Jorge Marimon, nuestro analista principal, es un experto en
+                datos y análisis. Su agudeza y conocimiento guían nuestro equipo
+                hacia una toma de decisiones más informada. Al igual que Yolanda
+                tiene una vision de un futuro mas sostenible. <br /><br />
+                Puedes contartar a traves de este correo:
+                <a href="mailto:jorgemarimon88@gmail.com"
+                  >jorgemarimon88@gmail.com</a
+                >
+              </p>
+              <hr />
+            </div>
+          </div>
         </div>
-        <br>
-        <!--Jorge-->
-        <div>
+      </div>
+
+      <br />
+      <div class="container">
+        <div class="row"> 
+            <!--Ronnie-->
+          <div class="col 1">
             <div>
-                <img src="./img/jorge.jpg" alt="jorge">
+              <img src="./img/ronnie.jpg" alt="ronnie" />
             </div>
             <div>
-                <h3>Jorge Marimon</h3>
-                <h4>Analista</h4>
-                <p>Jorge Marimon, nuestro analista principal, es un experto en datos y análisis. Su agudeza 
-                    y conocimiento guían nuestro equipo hacia una toma de decisiones más informada. Al igual que Yolanda 
-                    tiene una vision de un futuro mas sostenible.
-                    <br><br>
-                    Puedes contartar a traves de este correo: 
-                    <a href="mailto:jorgemarimon88@gmail.com">jorgemarimon88@gmail.com</a>
-                </p>
-                <hr>
+              <h3>Rolando Cuberas</h3>
+              <h4>Programador</h4>
+              <p>
+                Rolando Cuberas, nuestro programador principal, es un experto en
+                desarrollo de software. Su experiencia y habilidades lideran
+                nuestro equipo hacia soluciones tecnológicas de vanguardia.
+              </p>
+              <hr />
             </div>
-        </div>
-        <br>
-        <!--Ronnie-->
-        <div>
+          </div>
+          <br />
+          <!--Vero-->
+          <div class="col 2">
             <div>
-                <img src="./img/ronnie.jpg" alt="ronnie">    
-            </div>
-            <div>
-                <h3>Rolando Cuberas</h3>
-                <h4>Programador</h4>
-                <p>Rolando Cuberas, nuestro programador principal, es un experto en desarrollo 
-                    de software. Su experiencia y habilidades lideran nuestro equipo hacia soluciones tecnológicas de vanguardia.
-                </p>
-                <hr>
-            </div>
-        </div>
-        <br>
-        <!--Vero-->
-        <div>
-            <div>
-                <img src="./img/vero.jpg" alt="vero">
+              <img src="./img/vero.jpg" alt="vero" />
             </div>
             <div>
               <h3>Veronika Tryhubyak</h3>
-            <h4>Programadora</h4>
-            <p>Veronika Tryhubyak, miembro destacado de nuestro equipo, es una apasionada por la tecnología y una experta en programación y diseño. 
-                Su dedicación y conocimiento son motores clave en la creación de soluciones tecnológicas innovadoras.
-            </p>
-            </div>                   
+              <h4>Programadora</h4>
+              <p>
+                Veronika Tryhubyak, miembro destacado de nuestro equipo, es una
+                apasionada por la tecnología y una experta en programación y
+                diseño. Su dedicación y conocimiento son motores clave en la
+                creación de soluciones tecnológicas innovadoras.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
+      <br />
     </div>
-    <br>
-    <hr>
+
+    <hr />
 
     <!--FAQ-->
-    <div>
-
-    </div>
+    <div></div>
     <!--Footer-->
     <div id="wrapper">
-        <footer id="footer">
-            <svg fill="#FFFDF4" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 367.467 367.467" xml:space="preserve">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <g>
-                        <path
-                            d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z">
-                        </path>
-                        <path
-                            d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z">
-                        </path>
-                    </g>
-                </g>
-            </svg>
-            <p>Todos los derechos reservados</p>
-        </footer>
+      <footer id="footer">
+        <svg
+          fill="#FFFDF4"
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 367.467 367.467"
+          xml:space="preserve"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <g>
+              <path
+                d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z"
+              ></path>
+              <path
+                d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+        <p>Todos los derechos reservados</p>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
