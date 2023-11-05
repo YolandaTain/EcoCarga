@@ -95,6 +95,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showSlide(slideIndex) {
+  slides.forEach((slide, index) => {
+    slide.style.transform = index === slideIndex ? 'translateX(0)' : 'translateX(-100%)';
+    slide.style.opacity = index === slideIndex ? '1' : '0';
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 10000); // Cambiar de diapositiva cada 10 segundos
+
 
 
   

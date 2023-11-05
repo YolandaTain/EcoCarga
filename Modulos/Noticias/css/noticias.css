@@ -134,6 +134,7 @@ body {
   height: 100%;
 }
 
+
 .slide {
   position: absolute;
   top: 0;
@@ -208,6 +209,7 @@ body {
     transform: translatex(100%);
   }
 }
+
 .card{
   height: 250px;
   width: 320px;
