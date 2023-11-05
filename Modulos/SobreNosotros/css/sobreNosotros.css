@@ -32,4 +32,11 @@ body {
     font-weight: bold;
 }
 
-    
+#h3{
+    font-size: 4rem;
+}
+
+#h4{
+    font-size: 3rem;
+    font-style: italic;
+}
