@@ -91,6 +91,7 @@ body {
     color: var(--rotulos);
     margin-top: 3rem;
     font-size: 5rem;
+    font-family: math;
 }
 
 @media (max-width:768px) {
@@ -253,26 +254,27 @@ body {
     margin-bottom: -3rem;
 }
 
-.progresoSolicitud h4{
+.progresoSolicitud h4 {
     margin-left: 7rem;
 }
 
-@media (max-width:768px){
-    .progresoSolicitud h4{
+@media (max-width:768px) {
+    .progresoSolicitud h4 {
         margin-left: 4rem;
     }
 }
 
-@media (max-width:390px){
-    .progresoSolicitud h4{
+@media (max-width:390px) {
+    .progresoSolicitud h4 {
         margin-left: 2rem;
     }
-    .progresoSolicitud p{
+
+    .progresoSolicitud p {
         margin-right: 1rem;
     }
 }
 
-.progress{
+.progress {
     padding: 0rem;
 }
 
@@ -309,12 +311,8 @@ form label {
     margin-bottom: 10px;
     font-weight: bold;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     border-radius: 10px;
-    /* Ajusta el valor para hacer los bordes más redondeados */
-    box-shadow: 0 0 10px rgba(17, 3, 3, 0.35);
-    /* Ajusta el valor de difuminado */
-    background: radial-gradient(rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.612));
 }
 
 input[type="text"],

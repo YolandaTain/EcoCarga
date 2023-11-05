@@ -1,28 +1,17 @@
 document.addEventListener("DOMContentLoaded", inicio);
 
-var formulario;
-var formData;
-var nombre;
-var email;
-var fechaNac;
-var puntoPartida;
-var puntoDestino;
-var fechaInicio;
-var fechaFin;
-var autonomia;
-var tipoCoche;
-var numPasajeros;
-var velocidadCargaAlta;
-var preferenciasActividades;
-
+//Sirve para que, de inicio, se muestre el formulario 1, ya que el 2 y el 3
+//están escondidos inicialmente
 function inicio() {
     mostrarFormulario(1);
 }
 
+//Si pinchas en la imagen superior izquierda, vuelves al home
 function volverHome() {
     window.open("/Modulos/Home/home.html", "_self");
 }
 
+//Se utiliza para el menú desplegable de la derecha
 function desplegar() {
     var menu = document.getElementById("menu");
     if (menu.style.display === "block") {
@@ -36,6 +25,7 @@ function desplegar() {
     }
 }
 
+//Permite que se avance al siguiente formulario
 function mostrarFormulario(numero) {
     // Oculta todos los formularios
     var formularios = document.querySelectorAll(".formulario");
@@ -49,101 +39,128 @@ function mostrarFormulario(numero) {
 
 }
 
-function recopilarDatos() {
-    formulario = document.getElementById("miFormulario");
-    formData = new FormData(formulario);
-    nombre = formData.get("nombre");
-    email = formData.get("email");
-    fechaNac = formData.get("fechaNac");
-    puntoPartida = formData.get("puntoPartida");
-    puntoDestino = formData.get("puntoDestino");
-    fechaInicio = formData.get("fechaInicio");
-    fechaFin = formData.get("fechaFin");
-    autonomia = formData.get("autonomia");
-    tipoCoche = formData.get("tipoCoche");
-    numPasajeros = formData.get("numPasajeros");
-    velocidadCargaAlta = formData.get("velocidadCarga");
-    preferenciasActividades = formData.getAll("preferenciasActividades[]");
+//Recoge los datos introducidos por el usuario en el formulario 1
+function recopilarDatosFormulario1() {
+    var formulario1 = document.getElementById("miFormulario1");
+    var formData = new FormData(formulario1);
+    var nombre = formData.get("nombre");
+    var email = formData.get("email");
+    var fechaNac = formData.get("fechaNac");
 
-    /*var nombre = document.getElementById("nombre").value;
-    var email = document.getElementById("email").value;
-    var fechaNac = document.getElementById("fechaNac").value;
-
-    var puntoPartida = document.getElementById("puntoPartida").value;
-    var puntoDestino = document.getElementById("puntoDestino").value;
-    var fechaInicio = document.getElementById("fechaInicio").value;
-    var fechaFin = document.getElementById("fechaFin").value;
-    var autonomia = document.getElementById("autonomia").value;
-    var tipoCoche = document.getElementById("tipoCoche").value;
-    var numPasajeros = document.getElementById("numPasajeros").value;
-    var velocidadCargaAlta = document.getElementById("velocidadCargaAlta").value;
-
-    var restaurantes = document.getElementById("restaurantes").value;
-    var puntosInteres = document.getElementById("puntosInteres").value;
-    var bares = document.getElementById("bares").value;
-    var centrosComerciales = document.getElementById("centrosComerciales").value;
-    var parques = document.getElementById("parques").value;
-    var museos = document.getElementById("museos").value;*/
-
+    return {
+        nombre: nombre,
+        email: email,
+        fechaNac: fechaNac,
+    };
 }
 
-function mostrarResumenModal(nombre, email, fechaNac, puntoPartida, puntoDestino, fechaInicio, fechaFin, autonomia, tipoCoche, numPasajeros, velocidadCargaAlta, preferenciasActividades) {
-    var modalBody = document.querySelector("#resumenItinerario .modal-body");
+//Recoge los datos introducidos por el usuario en el formulario 2
+function recopilarDatosFormulario2() {
+    var formulario2 = document.getElementById("miFormulario2");
+    var formData = new FormData(formulario2);
+    var puntoPartida = formData.get("puntoPartida");
+    var puntoDestino = formData.get("puntoDestino");
+    var fechaInicio = formData.get("fechaInicio");
+    var fechaFin = formData.get("fechaFin");
+    var autonomia = formData.get("autonomia");
+    var tipoCoche = formData.get("tipoCoche");
+    var numPasajeros = formData.get("numPasajeros");
+    var velocidadCargaAlta = formData.get("velocidadCarga");
+
+    return {
+        puntoPartida: puntoPartida,
+        puntoDestino: puntoDestino,
+        fechaInicio: fechaInicio,
+        fechaFin: fechaFin,
+        autonomia: autonomia,
+        tipoCoche: tipoCoche,
+        numPasajeros: numPasajeros,
+        velocidadCargaAlta: velocidadCargaAlta,
+    };
+}
+
+//Recoge los datos introducidos por el usuario en el formulario 3
+function recopilarDatosFormulario3() {
+    var formulario3 = document.getElementById("miFormulario3");
+    var formData = new FormData(formulario3);
+    var preferencias = document.querySelectorAll("input[name='preferenciasActividades[]']:checked");
+    var preferenciasText = [];
+
+    //Introduce en el array anterior las elecciones del usuario.
+    for (var i = 0; i < preferencias.length; i++) {
+        preferenciasText.push(preferencias[i].value);
+    }
+
+    return {
+        preferenciasActividades: preferenciasText,
+    };
+}
+
+//Añade al modal todos los datos recopilados
+function mostrarResumenModal() {
+    var datosFormulario1 = recopilarDatosFormulario1();
+    var datosFormulario2 = recopilarDatosFormulario2();
+    var datosFormulario3 = recopilarDatosFormulario3();
 
     // Limpia el contenido previo del modal
+    var modalBody = document.querySelector("#resumenItinerario .modal-body");
     modalBody.innerHTML = "";
 
     // Agrega los datos al modal
-    modalBody.innerHTML = "<strong>Nombre:</strong> " + nombre + "<br>";
-    modalBody.innerHTML += "<strong>Email:</strong> " + email + "<br>";
-    modalBody.innerHTML += "<strong>Fecha de Nacimiento:</strong> " + fechaNac + "<br>";
-
-    // Agrega los otros datos del formulario 1
-    modalBody.innerHTML += "<strong>Punto de Partida:</strong> " + puntoPartida + "<br>";
-    modalBody.innerHTML += "<strong>Punto de Destino:</strong> " + puntoDestino + "<br>";
-    modalBody.innerHTML += "<strong>Fecha de Inicio:</strong> " + fechaInicio + "<br>";
-    modalBody.innerHTML += "<strong>Fecha de Fin:</strong> " + fechaFin + "<br>";
-    modalBody.innerHTML += "<strong>Autonomía del Coche:</strong> " + autonomia + "<br>";
-    modalBody.innerHTML += "<strong>Tipo de Coche:</strong> " + tipoCoche + "<br>";
-    modalBody.innerHTML += "<strong>Número de Pasajeros:</strong> " + numPasajeros + "<br>";
-    modalBody.innerHTML += "<strong>Velocidad de Carga Alta:</strong> " + velocidadCargaAlta + "<br>";
+    modalBody.innerHTML = "<strong>Nombre:</strong> " + datosFormulario1.nombre + "<br>";
+    modalBody.innerHTML += "<strong>Email:</strong> " + datosFormulario1.email + "<br>";
+    modalBody.innerHTML += "<strong>Fecha de Nacimiento:</strong> " + datosFormulario1.fechaNac + "<br>";
 
     // Agrega los otros datos del formulario 2
-    modalBody.innerHTML += "<strong>Restaurantes:</strong> " + preferenciasActividades + "<br>";
-    modalBody.innerHTML += "<strong>Puntos de Interés:</strong> " + preferenciasActividades + "<br>";
-    modalBody.innerHTML += "<strong>Bares:</strong> " + preferenciasActividades + "<br>";
-    modalBody.innerHTML += "<strong>Centros Comerciales:</strong> " + preferenciasActividades + "<br>";
-    modalBody.innerHTML += "<strong>Parques:</strong> " + preferenciasActividades + "<br>";
-    modalBody.innerHTML += "<strong>Museos:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Punto de Partida:</strong> " + datosFormulario2.puntoPartida + "<br>";
+    modalBody.innerHTML += "<strong>Punto de Destino:</strong> " + datosFormulario2.puntoDestino + "<br>";
+    modalBody.innerHTML += "<strong>Fecha de Inicio:</strong> " + datosFormulario2.fechaInicio + "<br>";
+    modalBody.innerHTML += "<strong>Fecha de Fin:</strong> " + datosFormulario2.fechaFin + "<br>";
+    modalBody.innerHTML += "<strong>Autonomía del Coche:</strong> " + datosFormulario2.autonomia + "<br>";
+    modalBody.innerHTML += "<strong>Tipo de Coche:</strong> " + datosFormulario2.tipoCoche + "<br>";
+    modalBody.innerHTML += "<strong>Número de Pasajeros:</strong> " + datosFormulario2.numPasajeros + "<br>";
+    modalBody.innerHTML += "<strong>Velocidad de Carga Alta:</strong> " + datosFormulario2.velocidadCargaAlta + "<br>";
+
+    // Agrega los otros datos del formulario 3
+    modalBody.innerHTML += "<strong>Preferencias de Actividades:</strong> " + datosFormulario3.preferenciasActividades.join(', ') + "<br>";
 
     // Abre el modal
     var modal = new bootstrap.Modal(document.getElementById("resumenItinerario"));
     modal.show();
-
-    var botonSiguiente1 = document.getElementById("siguiente-button1");
-    botonSiguiente1.addEventListener("click", recopilarDatos);
-    var botonSiguiente2 = document.getElementById("siguiente-button2");
-    botonSiguiente2.addEventListener("click", recopilarDatos);
-    var botonSiguiente3 = document.getElementById("siguiente-button3");
-    botonSiguiente3.addEventListener("click", recopilarDatos);
 }
 
-
+//Se organiza la recopilación de datos por formulario y permite avanzar al siguiente
 function siguiente(numero) {
-    var formulario = document.getElementById("formularioPagina" + numero);
-    //var formulario2 = document.getElementById('miFormulario');
-    //if (formulario2.checkValidity()) {
-    if (formulario) {
-        mostrarFormulario(numero);
-    } else {
-        alert("No hay más formularios disponibles.");
+
+    if (numero === "1") {
+        // Llama a la función para recopilar los datos del formulario 1
+        recopilarDatosFormulario1();
+    } else if (numero === "2") {
+        // Llama a la función para recopilar los datos del formulario 2
+        recopilarDatosFormulario2();
+    } else if (numero === "3") {
+        // Llama a la función para recopilar los datos del formulario 3
+        recopilarDatosFormulario3();
     }
-    //} else {
-    //alert("Por favor, completa todos los campos requeridos.");
-    //}
-    recopilarDatos();
+    /*var formulario1 = document.getElementById("miFormulario1");*/
+    var formulario = document.getElementById("formularioPagina" + numero);
+    var formulario2 = document.getElementById('miFormulario2');
+    var formulario3 = document.getElementById('miFormulario3');
+
+    //Verifica que se han rellenado los campos obligatorios
+    /*if (formulario1.checkValidity()) {*/
+        if (formulario) {
+            mostrarFormulario(numero);
+        } else {
+            alert("No hay más formularios disponibles.");
+        }
+    /*} else {
+        alert("Por favor, completa todos los campos requeridos.");
+    }*/
+
 }
 
+//Permite volver al formulario anterior
 function volver(numero) {
     if (numero > 0) {
         mostrarFormulario(numero);
@@ -151,15 +168,3 @@ function volver(numero) {
         alert("No puedes retroceder más.");
     }
 }
-
-function procesoFinalizado() {
-    alert("Itinerario enviado, disfrute!")
-    window.open("/Modulos/Home/home.html", "_self");
-}
-
-
-
-
-
-
-
