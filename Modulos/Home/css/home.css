@@ -1,60 +1,77 @@
   :root {
-  --body: #FFFDF4;
-  --claro: #ffffff;
-  --menu: #83A931;
-  --oscuro: #344306;
-  --rotulos: #000000;
-  --boton:#333;
-  --botonHover: #1C2206;
-}
-
-.bodyHome{
-  background-image: url("../../Nav/img/mapa.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-.search {
-    padding: 2rem;
-    background-color: var(--claro);
-    border:3px solid #515151;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    width: 50%;
-    font-family: 'Marvel', sans-serif;
-    border-radius: 15px 0 0 15px;
-    margin-left: 2rem;
+    --body: #FFFDF4;
+    --claro: #ffffff;
+    --menu: #83A931;
+    --oscuro: #344306;
+    --rotulos: #000000;
+    --boton: #333;
+    --botonHover: #1C2206;
   }
 
-.botonContenedor{
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 15px 15px 0;
-}
+  .bodyHome {
+    background-image: url("../../Nav/img/mapa.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 
-.tituloSearchContenedor {
-  background-color: var(--claro);
-  padding: 0rem;
-  border: 3px solid #515151;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  margin-left: 2rem;
-  width: 50rem;
-  /* width: rem; */
-  font-family: 'Marvel', sans-serif;
-  border-radius: 15px 15px 15px 15px;
-}
+  .search {
+    color: var(--oscuro);
+    background-color: var(--claro);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    font-family: 'Marvel', sans-serif;
+    border-radius: 15px 0 0 15px;
+    /* margin-left: 2rem;
+    width: 50rem; */
+    border-radius: 15px 15px 15px 15px;
+  }
 
-#tituloSearch{
-  font-size: 2.5rem;
-  color: var(--oscuro);
-  padding: 1.5rem;
-  margin-left: 1rem;
-  font-weight: bold;
-}
+  .botonContenedor {
+    border-radius: 0 15px 15px 0;
+  }
 
-@media (max-width:390px){
+  /* Con esto consigo que el padding sea cero de la barra de navegación pero el botón con más padding */
+  .agrupar{
+    padding:0rem;
+  }
+
+  .tituloSearchContenedor {
+    background-color: var(--oscuro);
+    padding: 0rem;
+    border: 3px solid #515151;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 50rem;
+    font-family: 'Marvel', sans-serif;
+    border-radius: 15px 15px 15px 15px;
+  }
+
+  .tituloSearchContenedor svg {
+    margin-left: 5rem;
+    color: var(--body);
+  }
+
+  .tituloSearchContenedor h1 {
+    margin-left: 5rem;
+  }
+
+  @media(max-width:768px) {
+    .tituloSearchContenedor svg {
+      margin-left: 3rem;
+    }
+  }
+  
+
+  #tituloSearch {
+    font-size: 2.5rem;
+    color: var(--body);
+    margin-left: 6rem;
+  }
+
+  /*
+@media (max-width:391px){
   .tituloSearchContenedor{
+    width: 30rem;
   }
   #tituloSearch{
     margin-left: 3rem;
@@ -62,155 +79,194 @@
 }
 
 
-.componenteSearch{
-    background-color: var(--claro);
-    width: 100rem; 
-    border-radius: 15px 15px 15px 15px;       
+@media (max-width: 768px){
+  .tituloSearchContenedor{
+    margin: 0rem;
+  }
+  .search{
+    margin: 2rem;
+  }
 }
+*/
+  @media (max-width:391px) {
+    /* .tituloSearchContenedor{
+    margin: 0.5rem;
+  }
+  #searchBar{
+    font-size: 0rem;
+  }
+  .search{
+    width: 23rem;
+  }
+  */
+  }
 
-#boton {
+  #boton {
     border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: var(--menu); /* Color de fondo del botón */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    color: white; /* Color del texto del botón */
-    padding: 2rem; /* Espaciado dentro del botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    width: 15rem;
+    background-color: var(--menu);
+    /* Color de fondo del botón */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    color: white;
+    /* Color del texto del botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
     font-family: 'Marvel', sans-serif;
-    font-size: 2rem; 
-    outline:none;
+    font-size: 2rem;
     border-radius: 0 15px 15px 0;
+    padding: 1.5rem;
+  
   }
 
   .search svg {
-    stroke: var(--oscuro); 
+    color: var(--oscuro);
     width: 24px;
     height: 24px;
-    margin-right: 10px;
   }
-  
+
+  @media (min-width: 1440px) {
+    .search svg {
+      margin-left: 2.5rem;
+    }
+  }
+
   /* Estilo para el campo de entrada */
   #searchBar {
-    border: none; /* Quita el borde predeterminado */
-    background-color: --claro; 
-    color: var(--boton); /* Color del texto en el campo de entrada */
-    width: 100%; 
-    padding: 0; 
-    outline: none; /* Quita el contorno al enfocar el campo */
+    background-color: --claro;
+    color: var(--oscuro);
     font-family: 'Marvel', sans-serif;
+    font-size: 2rem;
   }
 
   /* Estilo para el texto de marcador de posición en el campo de entrada */
   #searchBar::placeholder {
-    color: var(--boton); /* Color del marcador de posición */
-    opacity: 0.7; /* Opacidad del marcador de posición */
+    color: var(--oscuro);
+    /* Color del marcador de posición */
+    opacity: 0.7;
+    /* Opacidad del marcador de posición */
     font-size: 2rem;
   }
-  
-  /* Estilo para el campo de entrada cuando está enfocado */
-  #searchBar:focus {
-    border-bottom: 2px solid #faf5e2; /* Agrega una línea de fondo cuando está enfocado */
+
+  .card img{
+    width: 50rem;
+    height: 25rem;
   }
 
-.des-menu{
+  .card h5{
+    font-size: 3rem;
+
+  }
+
+  .card p{
+    font-size: 2rem;
+
+  }
+
+
+  .des-menu {
     display: flex;
-    justify-content: space-between;   
-}
+    justify-content: space-between;
+  }
 
-#destacados{
+  #destacados {
     display: none;
-}
+  }
 
-.cajaD {
-  padding: 0.5rem;
-  text-align: left;
-  width:60%;
+  .cajaD {
+    padding: 0.5rem;
+    text-align: left;
+    width: 60%;
 
-}
+  }
 
-.cajaD li a {
-  display: flex;
-  text-decoration: none;
-  font-size: 3rem;
-  color: #1c1701;
-  padding: 1rem;
-  color:var(--oscuro);
-}
-
-
-.des-menu ul {
-    list-style-type: none;
-    
+  .cajaD li a {
+    display: flex;
+    text-decoration: none;
+    font-size: 3rem;
+    color: #1c1701;
+    padding: 1rem;
+    color: var(--oscuro);
   }
 
 
-.des-menu li {/*COMPARTIDO CON NAV*/
+  .des-menu ul {
+    list-style-type: none;
+
+  }
+
+
+  .des-menu li {
+    /*COMPARTIDO CON NAV*/
     background-color: #FAF5E2;
     padding: 0.5rem;
     box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
     margin-right: 1rem;
     margin-bottom: 0.5rem;
     border-radius: 60px;
-    width: 60%;  
-}
+    width: 60%;
+  }
 
-#tituloMapa{
-  margin-left: 15rem;
-}
+  #tituloMapa {
+    margin-left: 15rem;
+  }
 
-#mapa-container{
-  display:flex;
-  justify-content: center;
+  #mapa-container {
+    display: flex;
+    justify-content: center;
 
-  -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
-  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
-  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
-  background-color: var(--blanco);
-  padding: 2rem;
-  border-radius: 1rem;
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.46);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
 
-  background-color: var(--boton);
+    background-color: var(--boton);
 
-  margin-left: 15rem;
-  margin-right: 15rem;
-}
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
 
-#mapa-container img{
-  border-radius: 1rem;
-}
+  #mapa-container img {
+    border-radius: 1rem;
+  }
 
-.bannerItinerario{
-  display:block;
-}
+  .bannerItinerario {
+    display: block;
+  }
 
-.bannerItinerario h1{
-  font-size: 5rem;
-  text-align: center;
-  font-weight: 400;
-}
+  .bannerItinerario h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 400;
+  }
 
-#botonBanner{
-  display: flex;
-  margin-bottom: 1rem;
-  margin-top: -6.9rem;
-  margin-left: 72.5rem;
-  justify-content: center;
-  border: none;
-  background-color: var(--menu); /* Color de fondo del botón */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  color: white; /* Color del texto del botón */
-  padding: 1.8rem; /* Espaciado dentro del botón */
-  border-radius: 5px; /* Bordes redondeados solo en la parte derecha */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  width: 15rem;
-  font-family: 'Marvel', sans-serif;
-  font-size: 2rem; 
-  outline:none;
-}
+  #botonBanner {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-top: -6.9rem;
+    margin-left: 72.5rem;
+    justify-content: center;
+    border: none;
+    background-color: var(--menu);
+    /* Color de fondo del botón */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    color: white;
+    /* Color del texto del botón */
+    padding: 1.8rem;
+    /* Espaciado dentro del botón */
+    border-radius: 5px;
+    /* Bordes redondeados solo en la parte derecha */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    width: 15rem;
+    font-family: 'Marvel', sans-serif;
+    font-size: 2rem;
+    outline: none;
+  }
 
-#botonBanner a{
-  text-decoration: none;
-  color:var(--claro);
-}
-
+  #botonBanner a {
+    text-decoration: none;
+    color: var(--claro);
+  }

@@ -272,7 +272,12 @@ body {
     }
 }
 
+.progress{
+    padding: 0rem;
+}
+
 form {
+    position: relative;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.7);
@@ -304,7 +309,7 @@ form label {
     margin-bottom: 10px;
     font-weight: bold;
     text-align: center;
-    font-size: 2.1rem;
+    font-size: 1.5rem;
     border-radius: 10px;
     /* Ajusta el valor para hacer los bordes más redondeados */
     box-shadow: 0 0 10px rgba(17, 3, 3, 0.35);
@@ -433,8 +438,9 @@ input:focus {
 }
 
 #contenedorChecks {
-    display: flex;
+
     font-size: 80%;
+
 }
 
 #contenedorActividades1 {

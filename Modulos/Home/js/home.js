@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", init);
+
+var dataset;
+
+function init(){
+
+    fetch('/json/data.json')
+        .then((response) => response.json())
+        .then((data) => {
+            dataset = data.puntosCarga;
+            getData();
+        });
+}
+
+
+function getData(){
+    
+
+
+}
+
 function resultado(){
     var menu = document.getElementById("destacados");
 
@@ -8,7 +29,6 @@ function resultado(){
         menu.style.display = "block";
     }
 }
-
 
 
 

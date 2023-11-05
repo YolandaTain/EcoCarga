@@ -1,0 +1,355 @@
+{
+    "puntosCarga": [
+      {
+        "direccion": "Calle Alhambra",
+        "numeroDireccion": "123",
+        "codigoPostal": "29001",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida Palmeras",
+        "numeroDireccion": "45",
+        "codigoPostal": "41001",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle Playa de la Victoria",
+        "numeroDireccion": "7",
+        "codigoPostal": "11002",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de la Ribera",
+        "numeroDireccion": "89",
+        "codigoPostal": "18001",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle del Pilar",
+        "numeroDireccion": "30",
+        "codigoPostal": "29010",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de Andalucía",
+        "numeroDireccion": "15",
+        "codigoPostal": "41002",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle Nueva",
+        "numeroDireccion": "42",
+        "codigoPostal": "11003",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de los Tristes",
+        "numeroDireccion": "17",
+        "codigoPostal": "18002",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Avenida de la Playa",
+        "numeroDireccion": "21",
+        "codigoPostal": "29020",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Calle de la Giralda",
+        "numeroDireccion": "60",
+        "codigoPostal": "41003",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle de las Flores",
+        "numeroDireccion": "11",
+        "codigoPostal": "11004",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de la Alhambra",
+        "numeroDireccion": "27",
+        "codigoPostal": "18003",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle Alameda",
+        "numeroDireccion": "8",
+        "codigoPostal": "29030",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de las Delicias",
+        "numeroDireccion": "33",
+        "codigoPostal": "41004",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle Real",
+        "numeroDireccion": "19",
+        "codigoPostal": "11005",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Calle Alhambra Sur",
+        "numeroDireccion": "55",
+        "codigoPostal": "29005",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de la Constitución",
+        "numeroDireccion": "12",
+        "codigoPostal": "41010",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle de la Palma",
+        "numeroDireccion": "28",
+        "codigoPostal": "11010",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de los Alamos",
+        "numeroDireccion": "7",
+        "codigoPostal": "18010",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle San Andrés",
+        "numeroDireccion": "14",
+        "codigoPostal": "29015",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de la Libertad",
+        "numeroDireccion": "22",
+        "codigoPostal": "41015",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle Mayor",
+        "numeroDireccion": "39",
+        "codigoPostal": "11015",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de la Montaña",
+        "numeroDireccion": "8",
+        "codigoPostal": "18015",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle Alfonso XII",
+        "numeroDireccion": "17",
+        "codigoPostal": "29025",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de los Remedios",
+        "numeroDireccion": "30",
+        "codigoPostal": "41020",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle de las Ramblas",
+        "numeroDireccion": "21",
+        "codigoPostal": "11020",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de las Flores",
+        "numeroDireccion": "9",
+        "codigoPostal": "18020",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle de los Pinos",
+        "numeroDireccion": "11",
+        "codigoPostal": "29035",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de la Palmera",
+        "numeroDireccion": "18",
+        "codigoPostal": "41025",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle San Miguel",
+        "numeroDireccion": "23",
+        "codigoPostal": "11025",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Calle Granada Norte",
+        "numeroDireccion": "34",
+        "codigoPostal": "29015",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de la Constitución Sur",
+        "numeroDireccion": "7",
+        "codigoPostal": "41020",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle de la Alameda",
+        "numeroDireccion": "16",
+        "codigoPostal": "11030",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de la Sierra",
+        "numeroDireccion": "25",
+        "codigoPostal": "18030",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle del Sol",
+        "numeroDireccion": "19",
+        "codigoPostal": "29030",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de los Pajaritos",
+        "numeroDireccion": "12",
+        "codigoPostal": "41030",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle de los Cipreses",
+        "numeroDireccion": "43",
+        "codigoPostal": "11035",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de la Alameda",
+        "numeroDireccion": "11",
+        "codigoPostal": "18035",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle Marqués de Larios",
+        "numeroDireccion": "4",
+        "codigoPostal": "29040",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de las Palmeras",
+        "numeroDireccion": "27",
+        "codigoPostal": "41035",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle del Mar",
+        "numeroDireccion": "20",
+        "codigoPostal": "11040",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de la Montaña",
+        "numeroDireccion": "6",
+        "codigoPostal": "18040",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle de los Naranjos",
+        "numeroDireccion": "31",
+        "codigoPostal": "29045",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de los Castillejos",
+        "numeroDireccion": "14",
+        "codigoPostal": "41040",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle de las Tres Cruces",
+        "numeroDireccion": "8",
+        "codigoPostal": "11045",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de las Flores",
+        "numeroDireccion": "21",
+        "codigoPostal": "18045",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle de la Mariposa",
+        "numeroDireccion": "15",
+        "codigoPostal": "29050",
+        "ciudad": "Málaga",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Avenida de los Tilos",
+        "numeroDireccion": "28",
+        "codigoPostal": "41045",
+        "ciudad": "Sevilla",
+        "tipoCarga": "normal"
+      },
+      {
+        "direccion": "Calle de la Gacela",
+        "numeroDireccion": "19",
+        "codigoPostal": "11050",
+        "ciudad": "Cádiz",
+        "tipoCarga": "alta"
+      },
+      {
+        "direccion": "Paseo de la Primavera",
+        "numeroDireccion": "10",
+        "codigoPostal": "18050",
+        "ciudad": "Granada",
+        "tipoCarga": "normal"
+      }
+    ]
+  }
+  

@@ -1,5 +1,20 @@
 document.addEventListener("DOMContentLoaded", inicio);
 
+var formulario;
+var formData;
+var nombre;
+var email;
+var fechaNac;
+var puntoPartida;
+var puntoDestino;
+var fechaInicio;
+var fechaFin;
+var autonomia;
+var tipoCoche;
+var numPasajeros;
+var velocidadCargaAlta;
+var preferenciasActividades;
+
 function inicio() {
     mostrarFormulario(1);
 }
@@ -34,6 +49,86 @@ function mostrarFormulario(numero) {
 
 }
 
+function recopilarDatos() {
+    formulario = document.getElementById("miFormulario");
+    formData = new FormData(formulario);
+    nombre = formData.get("nombre");
+    email = formData.get("email");
+    fechaNac = formData.get("fechaNac");
+    puntoPartida = formData.get("puntoPartida");
+    puntoDestino = formData.get("puntoDestino");
+    fechaInicio = formData.get("fechaInicio");
+    fechaFin = formData.get("fechaFin");
+    autonomia = formData.get("autonomia");
+    tipoCoche = formData.get("tipoCoche");
+    numPasajeros = formData.get("numPasajeros");
+    velocidadCargaAlta = formData.get("velocidadCarga");
+    preferenciasActividades = formData.getAll("preferenciasActividades[]");
+
+    /*var nombre = document.getElementById("nombre").value;
+    var email = document.getElementById("email").value;
+    var fechaNac = document.getElementById("fechaNac").value;
+
+    var puntoPartida = document.getElementById("puntoPartida").value;
+    var puntoDestino = document.getElementById("puntoDestino").value;
+    var fechaInicio = document.getElementById("fechaInicio").value;
+    var fechaFin = document.getElementById("fechaFin").value;
+    var autonomia = document.getElementById("autonomia").value;
+    var tipoCoche = document.getElementById("tipoCoche").value;
+    var numPasajeros = document.getElementById("numPasajeros").value;
+    var velocidadCargaAlta = document.getElementById("velocidadCargaAlta").value;
+
+    var restaurantes = document.getElementById("restaurantes").value;
+    var puntosInteres = document.getElementById("puntosInteres").value;
+    var bares = document.getElementById("bares").value;
+    var centrosComerciales = document.getElementById("centrosComerciales").value;
+    var parques = document.getElementById("parques").value;
+    var museos = document.getElementById("museos").value;*/
+
+}
+
+function mostrarResumenModal(nombre, email, fechaNac, puntoPartida, puntoDestino, fechaInicio, fechaFin, autonomia, tipoCoche, numPasajeros, velocidadCargaAlta, preferenciasActividades) {
+    var modalBody = document.querySelector("#resumenItinerario .modal-body");
+
+    // Limpia el contenido previo del modal
+    modalBody.innerHTML = "";
+
+    // Agrega los datos al modal
+    modalBody.innerHTML = "<strong>Nombre:</strong> " + nombre + "<br>";
+    modalBody.innerHTML += "<strong>Email:</strong> " + email + "<br>";
+    modalBody.innerHTML += "<strong>Fecha de Nacimiento:</strong> " + fechaNac + "<br>";
+
+    // Agrega los otros datos del formulario 1
+    modalBody.innerHTML += "<strong>Punto de Partida:</strong> " + puntoPartida + "<br>";
+    modalBody.innerHTML += "<strong>Punto de Destino:</strong> " + puntoDestino + "<br>";
+    modalBody.innerHTML += "<strong>Fecha de Inicio:</strong> " + fechaInicio + "<br>";
+    modalBody.innerHTML += "<strong>Fecha de Fin:</strong> " + fechaFin + "<br>";
+    modalBody.innerHTML += "<strong>Autonomía del Coche:</strong> " + autonomia + "<br>";
+    modalBody.innerHTML += "<strong>Tipo de Coche:</strong> " + tipoCoche + "<br>";
+    modalBody.innerHTML += "<strong>Número de Pasajeros:</strong> " + numPasajeros + "<br>";
+    modalBody.innerHTML += "<strong>Velocidad de Carga Alta:</strong> " + velocidadCargaAlta + "<br>";
+
+    // Agrega los otros datos del formulario 2
+    modalBody.innerHTML += "<strong>Restaurantes:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Puntos de Interés:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Bares:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Centros Comerciales:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Parques:</strong> " + preferenciasActividades + "<br>";
+    modalBody.innerHTML += "<strong>Museos:</strong> " + preferenciasActividades + "<br>";
+
+    // Abre el modal
+    var modal = new bootstrap.Modal(document.getElementById("resumenItinerario"));
+    modal.show();
+
+    var botonSiguiente1 = document.getElementById("siguiente-button1");
+    botonSiguiente1.addEventListener("click", recopilarDatos);
+    var botonSiguiente2 = document.getElementById("siguiente-button2");
+    botonSiguiente2.addEventListener("click", recopilarDatos);
+    var botonSiguiente3 = document.getElementById("siguiente-button3");
+    botonSiguiente3.addEventListener("click", recopilarDatos);
+}
+
+
 function siguiente(numero) {
     var formulario = document.getElementById("formularioPagina" + numero);
     //var formulario2 = document.getElementById('miFormulario');
@@ -43,9 +138,10 @@ function siguiente(numero) {
     } else {
         alert("No hay más formularios disponibles.");
     }
-    //} //else {
+    //} else {
     //alert("Por favor, completa todos los campos requeridos.");
     //}
+    recopilarDatos();
 }
 
 function volver(numero) {

@@ -46,7 +46,7 @@
             </div>
         </header>
         <div class="row justify-content-end">
-            <ul class="dropdown-menu col-12 col-md- col-lg-3" id="menu">
+            <ul class="dropdown-menu col-12 col-md-5 col-lg-3" id="menu">
                 <li><a class="dropdown-item" href="../Home/home.html">Inicio</a></li>
                 <li><a class="dropdown-item" href="../Noticias/noticias.html">Noticias</a></li>
                 <li><a class="dropdown-item" href="../Itinerario/itinerario.html">Itinerario</a></li>
@@ -77,11 +77,11 @@
             <div class="row justify-content-center">
                 <div class="col-10">
                     <form id="miFormulario">
-                        <label for="nombre" title="Campo requerido"><span>*</span>Nombre completo:</label>
+                        <label title="Campo requerido"><span>*</span>Nombre completo:</label>
                         <input type="text" id="nombre" name="nombre" required><br><br>
-                        <label for="email" title="Campo requerido"><span>*</span>Email del Usuario:</label>
+                        <label title="Campo requerido"><span>*</span>Email del Usuario:</label>
                         <input type="email" id="email" name="email" required><br><br>
-                        <label for="fechaNac" title="Campo requerido"><span>*</span>Fecha de nacimiento:</label>
+                        <label title="Campo requerido"><span>*</span>Fecha de nacimiento:</label>
                         <input type="date" id="fechaNac" name="fechaNac" required><br><br>
                         <div id="botonPadre">
                             <div id="boton">
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <br><br>
+        <br>
         <div class="row justify-content-center formulario" id="formularioPagina2">
             <div class="progresoSolicitud row justify-content-between">
                 <label for="file" class="col-6 col-lg-3">
@@ -114,7 +114,7 @@
             <div class="row justify-content-center">
                 <div class="col-10">
                     <form method="get" id="miFormulario">
-                        <label for="puntoPartida" title="Campo requerido"><span>*</span>Punto de Partida (dirección o
+                        <label title="Campo requerido"><span>*</span>Punto de Partida (dirección o
                             código
                             postal):</label>
                         <input type="text" id="puntoPartida" name="puntoPartida" required><br><br>
@@ -178,7 +178,7 @@
                 </div>
             </div>
         </div>
-        <br><br>
+        <br>
         <div class="row justify-content-center formulario" id="formularioPagina3">
             <div class="progresoSolicitud row justify-content-between">
                 <label for="file" class="col-6 col-lg-3">
@@ -225,8 +225,8 @@
                             </div>
                         </div>
                         <div id="boton">
-                            <button class="siguiente-boton" id="siguiente-button" type="button"
-                                onclick="procesoFinalizado()">Proceso finalizado</button>
+                            <button class="siguiente-boton" id="siguiente-button3" type="button" data-bs-toggle="modal"
+                                data-bs-target="#resumenItinerario" onclick="mostrarResumenModal()">Proceso finalizado</button>
                         </div>
                         <br>
                         <div id="boton">
@@ -259,6 +259,24 @@
                 <p>Todos los derechos reservados</p>
             </div>
         </footer>
+        <div class="modal fade" id="resumenItinerario" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Resumen de tus elecciones</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Guardar cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
