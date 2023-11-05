@@ -94,40 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Obtén una referencia a los elementos relevantes
-const slider = document.querySelector('.slider');
-const slides = slider.querySelector('.slides');
-const prevButton = slider.querySelector('.carousel-arrow.prev');
-const nextButton = slider.querySelector('.carousel-arrow.next');
-
-// Establece un índice para llevar un seguimiento de la diapositiva actual
-let currentIndex = 0;
-
-// Agrega un event listener al botón "Anterior" para retroceder
-prevButton.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateSlide();
-  }
-});
-
-// Agrega un event listener al botón "Siguiente" para avanzar
-nextButton.addEventListener('click', () => {
-  if (currentIndex < slides.children.length - 1) {
-    currentIndex++;
-    updateSlide();
-  }
-});
-
-// Función para actualizar la diapositiva actual
-function updateSlide() {
-  // Calcula el desplazamiento basado en el ancho de las diapositivas
-  const slideWidth = slider.offsetWidth;
-  const offset = -currentIndex * slideWidth;
-
-  // Aplica la transformación para desplazar las diapositivas
-  slides.style.transform = `translateX(${offset}px)`;
-}
 
 
 
