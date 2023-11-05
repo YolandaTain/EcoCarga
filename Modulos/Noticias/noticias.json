@@ -11,48 +11,48 @@
     "titulo": "Nuevo avance en la tecnología de baterías de grafeno para vehículos eléctricos",
     "fecha": "03/11/2023",
     "descripcion": "Científicos de todo el mundo han logrado un importante avance en la tecnología de baterías de grafeno, lo que podría llevar a una mayor autonomía y tiempos de carga más cortos para vehículos eléctricos...",
-    "imagen": "img/noticia2.jpg"
+    "imagen": "img/noticia2.jpeg"
   },
   {
     "noticia": 3,
     "titulo": "Tesla anuncia su nuevo modelo de automóvil eléctrico asequible",
     "fecha": "04/11/2023",
     "descripcion": "El fabricante de automóviles eléctricos Tesla ha revelado su último modelo, que tiene como objetivo hacer que los vehículos eléctricos sean más asequibles para el público en general...",
-    "imagen": "img/noticia3.jpg"
+    "imagen": "img/noticia3.jpeg"
   },
   {
     "noticia": 4,
     "titulo": "Europa acelera la instalación de estaciones de carga para vehículos eléctricos",
     "fecha": "05/11/2023",
     "descripcion": "La Unión Europea ha anunciado un ambicioso plan para acelerar la instalación de estaciones de carga para vehículos eléctricos en toda la región, como parte de su estrategia de movilidad sostenible...",
-    "imagen": "img/noticia4.jpg"
+    "imagen": "img/noticia4.jpeg"
   },
   {
     "noticia": 5,
     "titulo": "Nuevas regulaciones de emisiones para vehículos pesados en EE. UU.",
     "fecha": "06/11/2023",
     "descripcion": "Los Estados Unidos están implementando regulaciones más estrictas sobre las emisiones de vehículos pesados, lo que podría impulsar la adopción de camiones eléctricos en el país...",
-    "imagen": "img/noticia5.jpg"
+    "imagen": "img/noticia5.jpeg"
   },
   {
     "noticia": 6,
     "titulo": "Aumento de la inversión en investigación de celdas de combustible de hidrógeno",
     "fecha": "07/11/2023",
     "descripcion": "Varias empresas están invirtiendo fuertemente en la investigación de celdas de combustible de hidrógeno como una alternativa a los vehículos eléctricos con baterías, con la esperanza de superar algunas de las limitaciones actuales...",
-    "imagen": "img/noticia6.jpg"
+    "imagen": "img/noticia6.jpeg"
   },
   {
     "noticia": 7,
     "titulo": "El crecimiento de la infraestructura de carga en China impulsa las ventas de vehículos eléctricos",
     "fecha": "08/11/2023",
     "descripcion": "China está viendo un rápido crecimiento en la infraestructura de carga para vehículos eléctricos, lo que ha llevado a un aumento significativo en las ventas de automóviles eléctricos en el país...",
-    "imagen": "img/noticia7.jpg"
+    "imagen": "img/noticia7.jpeg"
   },
   {
     "noticia": 8,
     "titulo": "El transporte público eléctrico gana terreno en las principales ciudades del mundo",
     "fecha": "09/11/2023",
     "descripcion": "Las principales ciudades de todo el mundo están invirtiendo en sistemas de transporte público eléctrico, incluidos autobuses y trenes eléctricos, como parte de sus esfuerzos por reducir la contaminación y las emisiones...",
-    "imagen": "img/noticia8.jpg"
+    "imagen": "img/noticia8.jpeg"
   }
 ]

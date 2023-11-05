@@ -227,6 +227,20 @@ body {
 
 #botonBanner {
   border: none;
+  background-color: var(--rotulos);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 12rem;
+  height: 4rem;
+  font-family: 'Marvel', sans-serif;
+  font-size: 2rem;
+  outline: none;
+}
+
+#botonBanner:hover {
+  border: none;
   background-color: var(--menu);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: white;
@@ -244,6 +258,7 @@ body {
   color: var(--claro);
   margin-bottom: 15px;
 }
+
 
 .titulo{
   text-align: center;
@@ -307,6 +322,7 @@ footer p {
 .video-carousel .video-player {
   width: 600px;
   height: 400px;
+  background-color: var(--claro);
 }
 
 /* Estilos para el contenedor principal */
