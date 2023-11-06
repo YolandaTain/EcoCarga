@@ -60,7 +60,7 @@ p {
 .opinion{
     background-color: #b2cc748c;
     box-shadow: 0px 0px 3px 0px rgba(92, 92, 92, 0.75);
-    border-radius: 10%;
+    border-radius: 20px;
     padding: 1rem;
 }
 
@@ -71,4 +71,21 @@ p {
 .col {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.accordion-body{
+    background-color: #d7eca654;
+}
+    
+/*
+.boton{
+    background-color: var(--oscuro);
+    color: var(--body);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.boton:hover{
+    transform: scale(1.1);
+    background-color: #83A931;
 }
