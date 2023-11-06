@@ -131,35 +131,37 @@ function mostrarResumenModal() {
 
 //Se organiza la recopilación de datos por formulario y permite avanzar al siguiente
 function siguiente(numero) {
-
-    if (numero === "1") {
-        // Llama a la función para recopilar los datos del formulario 1
-        recopilarDatosFormulario1();
-    } else if (numero === "2") {
-        // Llama a la función para recopilar los datos del formulario 2
-        recopilarDatosFormulario2();
-    } else if (numero === "3") {
-        // Llama a la función para recopilar los datos del formulario 3
-        recopilarDatosFormulario3();
-    }
-    /*var formulario1 = document.getElementById("miFormulario1");*/
-    var formulario = document.getElementById("formularioPagina" + numero);
+    var formulario = document.getElementById("miFormulario1");
     var formulario2 = document.getElementById('miFormulario2');
     var formulario3 = document.getElementById('miFormulario3');
 
-    //Verifica que se han rellenado los campos obligatorios
-    /*if (formulario1.checkValidity()) {*/
-        if (formulario) {
+    if (numero === "2") {
+        // Llama a la función para recopilar los datos del formulario 1
+        recopilarDatosFormulario1();
+        if (formulario.checkValidity()) {
             mostrarFormulario(numero);
         } else {
-            alert("No hay más formularios disponibles.");
+            alert("Por favor, completa todos los campos requeridos.");
         }
-    /*} else {
-        alert("Por favor, completa todos los campos requeridos.");
-    }*/
+    } else if (numero === "3") {
+        // Llama a la función para recopilar los datos del formulario 2
+        recopilarDatosFormulario2();
+        if (formulario2.checkValidity()) {
+            mostrarFormulario(numero);
+        } else {
+            alert("Por favor, completa todos los campos requeridos.");
+        }
+    } else if (numero === "3") {
+        // Llama a la función para recopilar los datos del formulario 3
+        recopilarDatosFormulario3();
 
+        if (formulario3.checkValidity()) {
+            mostrarFormulario(numero);
+        } else {
+            alert("Por favor, completa todos los campos requeridos.");
+        }
+    }
 }
-
 //Permite volver al formulario anterior
 function volver(numero) {
     if (numero > 0) {
