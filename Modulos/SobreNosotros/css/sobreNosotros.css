@@ -23,113 +23,52 @@ body {
     padding: 0;
 }
 
-#wrapperSN{
-    flex: 1;
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
-.miembro{
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 10%;
-    margin-right: 20%;
+.container{
+    font-size: 2.5rem;
+}
+
+#h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+#h3{
     font-size: 4rem;
 }
 
-#nombre{
-    font-size: 4rem;
-    margin:0;
-    margin-left: 5%;
-    color: var(--oscuro);
-}
-
-#posision{
-    margin-left: 5%;
+#h4{
     font-size: 3rem;
-    margin:0;
-    margin-left: 5%;
-    color: var(--oscuro);
+    font-style: italic;
 }
 
-p{
+p {
     text-align: justify;
 }
 
-#info{
-    margin-left: 5%;
-    margin-right: 10%;
-    font-size: 2.5rem;
+#opiniones {
+    font-size: 2rem;
 }
 
-#imagen{
-    border-radius: 40rem;
-    width: 25rem;
+.opinion{
+    background-color: #3443063d;
+    border-radius: 10%;
+    padding: 1rem;
 }
 
-#titulodesc{
-    display: flex;
-    color: var(--oscuro);
-    font-size: 6rem;
-    margin:0;
-    margin-right: 10%;
-    margin-left: 10%;
-}
-#descipcion{
-    margin-right: 10%;
-    margin-left: 10%;
-    color: var(--oscuro);
-    font-size: 2.5rem;
+.opinion:hover{
+    transform: scale(1.1);
 }
 
-#correo{
-    color: var(--oscuro);
+.col {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-hr{
-    border-top: 3px double var(--rotulos);
-    margin-left: 9%;
-    margin-right: 9%;
-}
-
-#separador{
-    border-top: 3px double var(--rotulos);
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-#faq{
-    margin-right: 10%;
-    margin-left: 10%;
-    margin-bottom: 0;
-    -webkit-box-shadow: 0px 0px 3px 1px rgba(52,67,6,1);
-    -moz-box-shadow: 0px 0px 3px 1px rgba(52,67,6,1);
-    box-shadow: 0px 0px 3px 1px rgba(52,67,6,1);
-}
-
-#titulofaq{
-    color: var(--oscuro);
-    font-size: 4rem; 
-    display: flex;
-    justify-content: start;
-    margin: 5%;
-    margin-bottom: 0;
-}
-
-#preguntasfaq{
-    margin-right: 10%;
-    margin-left: 10%;
-    margin-top: 0;
-    -webkit-box-shadow: 0px 0px 3px 1px rgba(52,67,6,1);
-    -moz-box-shadow: 0px 0px 3px 1px rgba(52,67,6,1);
-    box-shadow: 0px 0px 3px 1px rgba(52,67,6,1);
-}
-
-#pregunta{
-    color: var(--oscuro);
-    font-size: 2rem; 
-    display: flex;
-    justify-content: start;
-    
-}
-
-
-    

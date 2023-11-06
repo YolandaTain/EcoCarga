@@ -94,41 +94,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Obtén una referencia a los elementos relevantes
-const slider = document.querySelector('.slider');
-const slides = slider.querySelector('.slides');
-const prevButton = slider.querySelector('.carousel-arrow.prev');
-const nextButton = slider.querySelector('.carousel-arrow.next');
 
-// Establece un índice para llevar un seguimiento de la diapositiva actual
-let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
 
-// Agrega un event listener al botón "Anterior" para retroceder
-prevButton.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateSlide();
-  }
-});
-
-// Agrega un event listener al botón "Siguiente" para avanzar
-nextButton.addEventListener('click', () => {
-  if (currentIndex < slides.children.length - 1) {
-    currentIndex++;
-    updateSlide();
-  }
-});
-
-// Función para actualizar la diapositiva actual
-function updateSlide() {
-  // Calcula el desplazamiento basado en el ancho de las diapositivas
-  const slideWidth = slider.offsetWidth;
-  const offset = -currentIndex * slideWidth;
-
-  // Aplica la transformación para desplazar las diapositivas
-  slides.style.transform = `translateX(${offset}px)`;
+function showSlide(slideIndex) {
+  slides.forEach((slide, index) => {
+    slide.style.transform = index === slideIndex ? 'translateX(0)' : 'translateX(-100%)';
+    slide.style.opacity = index === slideIndex ? '1' : '0';
+  });
 }
 
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 10000); // Cambiar de diapositiva cada 10 segundos
 
 
 

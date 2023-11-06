@@ -1,4 +1,42 @@
-function resultado(){
+document.addEventListener("DOMContentLoaded", init);
+
+var dataset;
+
+function init() {
+
+    fetch('./json/data.json')
+        .then((response) => response.json())
+        .then((data) => {
+            dataset = data.puntosCarga;
+        });
+}
+
+
+function getData() {
+    var resultadoBusqueda = document.querySelector('input').value;
+    document.getElementById("resultadosBusqueda").innerHTML = ""
+    var resultados = document.getElementById("resultadosBusqueda");
+
+    dataset.forEach(element => {
+        if (resultadoBusqueda == element.codigoPostal) {
+            var div = document.createElement("div");
+            div.textContent = " Dirección: " + element.direccion + ", " + element.numeroDireccion
+                + " | Ciudad: " + element.ciudad + " | Código Postal: " + element.codigoPostal + " | Tipo Carga: " + element.tipoCarga;
+            
+            // Añadir una clase al elemento div
+            div.classList.add("resultado");
+            div.classList.add("col-10");
+            div.classList.add("col-md-8");
+            div.classList.add("col-lg-6")
+            
+            resultados.appendChild(div);
+        }
+
+    });
+}
+
+
+function resultado() {
     var menu = document.getElementById("destacados");
 
     if (menu.style.display === "block") {
@@ -8,7 +46,6 @@ function resultado(){
         menu.style.display = "block";
     }
 }
-
 
 
 
