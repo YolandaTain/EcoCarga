@@ -57,23 +57,18 @@ p {
     font-size: 2rem;
 }
 
+.opinion{
+    background-color: #3443063d;
+    border-radius: 10%;
+    padding: 1rem;
+}
+
+.opinion:hover{
+    transform: scale(1.1);
+}
+
 .col {
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.accordion{
-    font-size: 2rem;
-}
-
-.accordion-header{
-    font-size: 2rem;
-}
-
-.accordion-button{
-    font-size: 4rem;
-}
-
-#text{
-    font-size: 2rem;
-}
