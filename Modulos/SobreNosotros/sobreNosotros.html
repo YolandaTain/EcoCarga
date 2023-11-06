@@ -24,6 +24,11 @@
     <!--Nav y Header son los faltantes-->
     <script src="../Nav/js/nav.js"></script>
     <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css" />
+    <!--SVG-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
 
   <body>
@@ -132,9 +137,66 @@
       <br />
 
       <!--Opiniones/reseñas (?)-->
+      <div class="container" id="opiniones">
+        <div>
+          <h1 id="h1"><u>Reseñas de nuestros usuarios:</u></h1>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col 1">
+            <span class="material-symbols-outlined"
+              >star star star star star</span
+            >
+            <p>
+              "¡Esta página es increíble! Encontré toda la información que
+              necesitaba de manera rápida y sencilla."
+            </p>
+          </div>
+          <div class="col 2">
+            <span class="material-symbols-outlined"
+              >star star star star star</span
+            >
+            <p>
+              "Me sorprendió lo bien organizada que está la página. Todo está en
+              su lugar y es muy intuitiva."
+            </p>
+          </div>
+          <div class="col 3">
+            <span class="material-symbols-outlined"
+              >star star star star star</span
+            >
+            <p>
+              "El equipo detrás de esta página hace un gran trabajo respondiendo
+              a las preguntas de los usuarios y brindando soporte."
+            </p>
+          </div>
+          <div class="col 4">
+            <span class="material-symbols-outlined"
+              >star star star star star</span
+            >
+            <p>
+              "Esta página ha mejorado mi vida en muchos sentidos. ¡Gracias por
+              proporcionar información valiosa!"
+            </p>
+          </div>
+          <div class="col 5">
+            <span class="material-symbols-outlined"
+              >star star star star star</span
+            >
+            <p>
+              "La página es muy amigable para dispositivos móviles. Puedo
+              acceder a ella desde mi smartphone sin problemas."
+            </p>
+          </div>
+        </div>
+        <hr />
+      </div>
 
-      <!--Miembros del equipo-->
+      <br />
+      <!--Miembros del equipo Yoli y Jorge-->
       <div class="container">
+        <h1 id="h1"><u>Conoce a nuestro equipo:</u></h1>
+        <br />
         <div class="row">
           <!--Yoli-->
           <div class="col 1">
@@ -150,9 +212,8 @@
             <p>
               <b>Yolanda Tain</b>, nuestra líder en EcoCarga, es una apasionada
               de la movilidad sostenible en España. Con su visión y experiencia,
-              dirige nuestro equipo hacia un futuro más verde y limpio. <br />
-              <br />
-              <br />
+              dirige nuestro equipo hacia un futuro más verde y limpio.
+              <br /><br /><br />
               Puedes contartar a traves de este correo:
               <a href="mailto:yolandataingut@gmail.com"
                 >yolandataingut@gmail.com</a
@@ -186,6 +247,10 @@
             <hr />
           </div>
         </div>
+      </div>
+
+      <div class="container">
+        <br />
         <div class="row">
           <!--Ronnie-->
           <div class="col 1">
@@ -196,7 +261,7 @@
                 alt="ronnie"
               />
             </div>
-            <h3 id="h3">Rolando Cuberas</h3>
+            <h3 id="h3">Ronaldo Cuberas</h3>
             <h4 id="h4">Programador</h4>
             <p>
               <b>Rolando Cuberas</b>, nuestro programador principal, es un
@@ -206,7 +271,10 @@
               Tiene un curriculum muy amplio con trabajos realizados para
               empresas como google, amazon, etc.
               <br />
+              Puedes contartar a traves de este correo:
+              <a href="mailto:ronnietoon25@gmail.com">ronnietoon25@gmail.com</a>
             </p>
+
             <hr />
           </div>
           <br />
@@ -217,7 +285,7 @@
               <img
                 class="rounded-circle img-thumbnail"
                 src="./img/vero.jpg"
-                alt="vero"
+                alt="jorge"
               />
             </div>
             <h3 id="h3">Veronika Tryhubyak</h3>
@@ -226,19 +294,100 @@
               <b>Veronika Tryhubyak</b>, miembro destacado de nuestro equipo, es
               una apasionada por la tecnología y una experta en programación y
               diseño. Su dedicación y conocimiento son motores clave en la
-              creación de soluciones tecnológicas innovadoras. <br />
-              Además destaca como diseñadora.
+              creación de soluciones tecnológicas innovadoras. <br /><br />
+              Puedes contartar a traves de este correo:
+              <a href="mailto:vtr0003@alu.medac.es">vtr0003@alu.medac.es</a>
             </p>
             <hr />
           </div>
         </div>
-        <br />
       </div>
-      <hr />
 
+      <hr />
       <!--FAQ-->
-      <div>
-        <!--<h1>FAQ</h1>-->
+      <div class="container">
+        <h1 id="h1"><u>FAQs</u></h1>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                Accordion Item #1
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                first item's accordion body.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Accordion Item #2
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                second item's accordion body. Let's imagine this being filled
+                with some actual content.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                Accordion Item #3
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                third item's accordion body. Nothing more exciting happening
+                here in terms of content, but just filling up the space to make
+                it look, at least at first glance, a bit more representative of
+                how this would look in a real-world application.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <hr />
