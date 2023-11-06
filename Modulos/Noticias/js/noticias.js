@@ -95,22 +95,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
 
-function showSlide(slideIndex) {
-  slides.forEach((slide, index) => {
-    slide.style.transform = index === slideIndex ? 'translateX(0)' : 'translateX(-100%)';
-    slide.style.opacity = index === slideIndex ? '1' : '0';
-  });
+function cambiarCarrusel() {
+  let inputActual = document.querySelector('input[name="toggle"]:checked');
+  let siguienteInput = inputActual.nextElementSibling || document.querySelector('input[name="toggle"]');
+
+  if (!siguienteInput) {
+      // Si no hay siguiente input, regresar al primer input
+      siguienteInput = document.querySelector('input[name="toggle"]');
+  }
+
+  siguienteInput.click(); // Simula un clic en el siguiente botón de control
 }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
+// Cambia automáticamente el carrusel cada 20 segundos
+setInterval(cambiarCarrusel, 6000); // 20000 milisegundos = 20 segundos
 
-setInterval(nextSlide, 10000); // Cambiar de diapositiva cada 10 segundos
 
 
 
