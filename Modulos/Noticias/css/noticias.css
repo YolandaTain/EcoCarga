@@ -550,6 +550,11 @@ h3 {
   border-left:  30px  solid  #344306; 
 }
 
+#targets{
+  background-color: var(--boton);
+  margin-top: 15px;
+}
+
 }
 
 @media (max-width: 480px) {
