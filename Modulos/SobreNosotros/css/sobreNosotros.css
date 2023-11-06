@@ -62,3 +62,18 @@ p {
     margin-right: 10px;
 }
 
+.accordion{
+    font-size: 2rem;
+}
+
+.accordion-header{
+    font-size: 2rem;
+}
+
+.accordion-button{
+    font-size: 4rem;
+}
+
+#text{
+    font-size: 2rem;
+}
