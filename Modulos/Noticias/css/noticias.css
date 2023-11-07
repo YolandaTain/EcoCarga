@@ -330,7 +330,7 @@ footer p {
 }
 
 .video-carousel .video-player {
-  width: 200px;
+  width: 180px;
   height: 400px;
   background-color: var(--claro);
 }
@@ -360,10 +360,23 @@ footer p {
   margin-top: 30px;
 }
 
+.active:hover{
+  transform: scale(1.05);
+}
+
 .listaVideo {
   color: #fff;
   align-items: center;
   justify-content: center;
+  background-color: #c0ff39; /* Cambia esto al color que desees */
+  color: #000000; /* Cambia el color del texto si es necesario */
+  border: 1px solid #000000; /* Agrega un borde alrededor del botón */
+  border-radius: 4px; /* Redondea las esquinas del botón */
+  padding: 10px 20px; /* Añade espacio interno para el contenido */
+  display: inline-block; /* Hace que el botón sea un elemento en línea */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  text-align: center; /* Centra el texto horizontalmente */
+  text-decoration: none; /* Quita el subrayado por defecto de los enlaces (si es un enlace) */
 }
 
 
@@ -638,7 +651,7 @@ h3 {
   .video-player iframe {
     width: 280px;
     height: 170px;
-    transform: translate(-140px, 180px);
+    transform: translate(-160px, 180px);
   }
 
   .video-list h3 {
@@ -690,10 +703,9 @@ h3 {
 
   .video-list {
     transform: translate(120px, 0px);
-    width: 400px;
+    width: 300px;
     background: #fff;
     padding: 10px;
-    width: 500px;
     background: #fff;
     padding: 10px;
     margin-left: -70px;
@@ -724,8 +736,13 @@ h3 {
     width: 600px;
    
   }
+
   li .active{
     width: 100px;
+  }
+
+  .active:hover{
+    transform: scale(1.05);
   }
   }
 

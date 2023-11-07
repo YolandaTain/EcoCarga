@@ -96,20 +96,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+let currentSlide = 1; // Inicialmente, estamos en el botón btn-1
+
 function cambiarCarrusel() {
-  let inputActual = document.querySelector('input[name="toggle"]:checked');
-  let siguienteInput = inputActual.nextElementSibling || document.querySelector('input[name="toggle"]');
-
-  if (!siguienteInput) {
-      // Si no hay siguiente input, regresar al primer input
-      siguienteInput = document.querySelector('input[name="toggle"]');
+  // Obtén el botón de control actual
+  const currentInput = document.querySelector(`#btn-${currentSlide}`);
+  
+  // Simula un clic en el botón de control actual
+  if (currentInput) {
+    currentInput.click();
   }
-
-  siguienteInput.click(); // Simula un clic en el siguiente botón de control
+  
+  currentSlide++;
+  if (currentSlide > 8) {
+    currentSlide = 1; // Vuelve al botón btn-1 cuando llegues a btn-8
+  }
 }
 
 // Cambia automáticamente el carrusel cada 20 segundos
-setInterval(cambiarCarrusel, 6000); // 20000 milisegundos = 20 segundos
+setInterval(cambiarCarrusel, 4000); // milisegundos
+
 
 
 
