@@ -261,6 +261,36 @@ body {
   margin-bottom: 15px;
 }
 
+#modal-image{
+  margin-left: 80px;
+}
+
+#modal-date{
+  margin-left: 200px;
+  color:#c0ff39;
+}
+
+#modal-title{
+  font-size: 2rem;
+  color:#c0ff39;
+ 
+  
+}
+#modal-description{
+  font-size: 2rem;
+  color:#eee;
+  
+}
+
+.btn-close{
+  background-color: #eee;
+}
+
+.modal-content{
+
+  background-color: #242222;
+  
+}
 
 .titulo{
   text-align: center;
@@ -365,11 +395,10 @@ footer p {
 }
 
 .listaVideo {
-  color: #fff;
   align-items: center;
   justify-content: center;
-  background-color: #c0ff39; /* Cambia esto al color que desees */
-  color: #000000; /* Cambia el color del texto si es necesario */
+  color: #c0ff39; /* Cambia esto al color que desees */
+  background-color: #000000; /* Cambia el color del texto si es necesario */
   border: 1px solid #000000; /* Agrega un borde alrededor del botón */
   border-radius: 4px; /* Redondea las esquinas del botón */
   padding: 10px 20px; /* Añade espacio interno para el contenido */
@@ -393,12 +422,12 @@ h3 {
 }
 
 .active h3 {
-  background-color: var(--menu);
+  background-color: var(--rotulos);
   color: #fff;
 }
 
 .video-list h3:hover {
-  background-color: #313433;
+  background-color: var(--menu);
 }
 
 .video-player iframe {
@@ -418,8 +447,8 @@ h3 {
 }
 
 .listaVideo.selected {
-  background-color: #c0ff39; /* Cambia esto al color que desees */
-  color: #000000; /* Cambia el color del texto si es necesario */
+  color: #c0ff39; /* Cambia esto al color que desees */
+  background-color: #000000; /* Cambia el color del texto si es necesario */
 }
 
 .video-list h3 {
@@ -744,6 +773,20 @@ h3 {
   .active:hover{
     transform: scale(1.05);
   }
+  
+#modal-image{
+  margin-left: 10px;
+}
+
+#modal-date{
+  margin-left: 150px;
+  color:#c0ff39;
+}
+
+#modal-title{
+  font-size: 2rem;
+  
+}
   }
 
   @font-face {
