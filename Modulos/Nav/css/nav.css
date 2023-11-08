@@ -192,7 +192,7 @@ body {
   }
 }
 
-@media (max-width:390px) {
+@media (max-width:576px) {
   #footer svg {
       /*COMPARTIDO CON NAV*/
       width: 3rem;
@@ -215,7 +215,7 @@ body {
   }
 }
 
-@media (max-width:390px) {
+@media (max-width:576px) {
   #footer p {
       /*COMPARTIDO CON NAV*/
       margin-top: 1rem;

@@ -41,13 +41,12 @@
     padding: 1rem;
     border: 3px solid #515151;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 60rem;
+    width: 250rem;
     font-family: 'Marvel', sans-serif;
-    border-radius: 15px 15px 15px 15px;
   }
 
   .tituloSearchContenedor svg {
-    margin-left: 5rem;
+    margin-left: 16rem;
     color: var(--body);
   }
 
@@ -57,9 +56,16 @@
 
   @media(max-width:768px) {
     .tituloSearchContenedor svg {
-      margin-left: 3rem;
+      margin-left: 5rem;
     }
   }
+
+  @media(max-width:768px) {
+    .tituloSearchContenedor svg {
+      margin-left: 5rem;
+    }
+  }
+
 
   #tituloSearch {
     font-size: 2.5rem;
@@ -151,7 +157,7 @@
   }
 
   .card img{
-    height: 200px;
+    height: 250px;
   }
 
   @media(max-width:768px) {
@@ -160,7 +166,7 @@
     }
   }
 
-  @media(max-width:390px) {
+  @media(max-width:576px) {
     .card {
       margin-bottom: 1rem;
     }
@@ -202,7 +208,7 @@
     }
   }
 
-  @media(max-width:390px) {
+  @media(max-width:576px) {
     .resultado {
       font-size: 2rem;
     }
@@ -220,13 +226,28 @@
 
   #botonBanner {
     border: none;
+    background-color: var(--rotulos);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 12rem;
+    height: 4rem;
+    font-family: 'Marvel', sans-serif;
+    font-size: 2rem;
+    outline: none;
+  }
+
+  
+  #botonBanner:hover {
+    border: none;
     background-color: var(--menu);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     color: white;
-    padding: 1.8rem;
     border-radius: 5px;
     cursor: pointer;
-    width: 15rem;
+    width: 12rem;
+    height: 4rem;
     font-family: 'Marvel', sans-serif;
     font-size: 2rem;
     outline: none;
@@ -235,6 +256,6 @@
   #botonBanner a {
     text-decoration: none;
     color: var(--claro);
+    margin-bottom: 15px;
   }
-
  
