@@ -16,6 +16,7 @@ listaItems.forEach(function (item) {
         }
     });
 });
+
 });
 
 
@@ -93,6 +94,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+
+let currentSlide = 1; // Inicialmente, estamos en el botón btn-1
+
+function cambiarCarrusel() {
+  // Obtén el botón de control actual
+  const currentInput = document.querySelector(`#btn-${currentSlide}`);
+  
+  // Simula un clic en el botón de control actual
+  if (currentInput) {
+    currentInput.click();
+  }
+  
+  currentSlide++;
+  if (currentSlide > 8) {
+    currentSlide = 1; // Vuelve al botón btn-1 cuando llegues a btn-8
+  }
+}
+
+// Cambia automáticamente el carrusel cada 20 segundos
+setInterval(cambiarCarrusel, 4000); // milisegundos
 
 
 

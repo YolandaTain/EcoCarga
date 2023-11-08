@@ -23,6 +23,14 @@ body {
     padding: 0;
 }
 
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 24;
+    color: rgb(255, 255, 119);
+  }
 .container{
     font-size: 2.5rem;
 }
@@ -32,4 +40,52 @@ body {
     font-weight: bold;
 }
 
+#h3{
+    font-size: 4rem;
+}
+
+#h4{
+    font-size: 3rem;
+    font-style: italic;
+}
+
+p {
+    text-align: justify;
+}
+
+#opiniones {
+    font-size: 2rem;
+}
+
+.opinion{
+    background-color: #b2cc748c;
+    box-shadow: 0px 0px 3px 0px rgba(92, 92, 92, 0.75);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.opinion:hover{
+    transform: scale(1.1);
+}
+
+.col {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.accordion-body{
+    background-color: #d7eca654;
+}
     
+/*
+.boton{
+    background-color: var(--oscuro);
+    color: var(--body);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.boton:hover{
+    transform: scale(1.1);
+    background-color: #83A931;
+}

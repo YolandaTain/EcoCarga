@@ -4,65 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nosotros</title>
-    <!--Css y js personal del apartado-->
-    <link
-      rel="stylesheet" type="text/css" href="./css/sobreNosotros.css"/>
-    <script href="./js/sobreNosotros.js"></script>
     <!--Esilo de fuente-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marvel&display=swap"
+      rel="stylesheet"
     />
     <!--Bootstrap-->
-    <link rel="stylesheet" href="../bootStrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link
+      rel="stylesheet"
+      href="../bootstrap/css/bootstrap-utilities.min.css"
+    />
     <script src="../bootStrap/js/bootstrap.bundle.min.js"></script>
     <!--Nav y Header son los faltantes-->
     <script src="../Nav/js/nav.js"></script>
-    <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css" />
+    <!--SVG-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--Css y js personal del apartado-->
+    <link rel="stylesheet" type="text/css" href="./css/sobreNosotros.css" />
+    <script href="./js/sobreNosotros.js"></script>
   </head>
-
-
 
   <body>
     <!--HEADER-->
     <div class="container-fluid">
-        <header id="header" class="row">
-            <div class="col-6 col-md-6 align-self-center header-container" onclick="volverHome()">
-                <div class="row">
-                    <div class="col-6 col-md-6 col-lg-3 ">
-                        <img src="/Modulos/Nav/img/logo.png" alt="Logo" id="headerLogo">
-                    </div>
-                    <div class="col-6 col-md-6 col-lg-9  align-self-center">
-                        <h1>Sobre Nosotros</h1>
-                    </div>
-                </div>
+      <header id="header" class="row">
+        <div
+          class="col-6 col-md-6 align-self-center header-container"
+          onclick="volverHome()"
+        >
+          <div class="row">
+            <div class="col-6 col-md-6 col-lg-3">
+              <img src="/Modulos/Nav/img/logo.png" alt="Logo" id="headerLogo" />
             </div>
-
-
-            <div class="dropdown col-6 col-md-6 align-self-end">
-                <div class="row justify-content-end">
-                    <button onclick="desplegar()"
-                        class="btn btn-secondary dropdown-toggle col-4 col-md-2 col-lg-1 align-self-end" type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" id="select" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="#faf5e2" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
+            <div class="col-6 col-md-6 col-lg-9 align-self-center">
+              <h1>Sobre Nosotros</h1>
             </div>
-        </header>
-        <div class="row justify-content-end">
-            <ul class="dropdown-menu col-12 col-md-4 col-lg-3" id="menu">
-                <li><a class="dropdown-item" href="../Home/home.html">Inicio</a></li>
-                <li><a class="dropdown-item" href="../Noticias/noticias.html">Noticias</a></li>
-                <li><a class="dropdown-item" href="../Itinerario/itinerario.html">Itinerario</a></li>
-                <li><a class="dropdown-item" href="../SobreNosotros/sobreNosotros.html">Sobre Nosotros</a></li>
-            </ul>
+          </div>
         </div>
+
+        <div class="dropdown col-6 col-md-6 align-self-end">
+          <div class="row justify-content-end">
+            <button
+              onclick="desplegar()"
+              class="btn btn-secondary dropdown-toggle col-4 col-md-2 col-lg-1 align-self-end"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="select"
+                width="50"
+                height="50"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#faf5e2"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!--MENU-->
+      <div class="row justify-content-end">
+        <ul class="dropdown-menu col-12 col-md-4 col-lg-3" id="menu">
+          <li><a class="dropdown-item" href="../Home/home.html">Inicio</a></li>
+          <li>
+            <a class="dropdown-item" href="../Noticias/noticias.html"
+              >Noticias</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="../Itinerario/itinerario.html"
+              >Itinerario</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="../SobreNosotros/sobreNosotros.html"
+              >Sobre Nosotros</a
+            >
+          </li>
+        </ul>
+      </div>
 
       <br />
 
@@ -99,126 +136,395 @@
       </div>
       <br />
 
-      <!--Opiniones/reseñas (?)-->
-
-      <!--Miembros del equipo-->
-
+      <!--Miembros del equipo Yoli y Jorge-->
       <div class="container">
+        <h1 id="h1"><u>Conoce a nuestro equipo:</u></h1>
+        <br />
         <div class="row">
           <!--Yoli-->
           <div class="col 1">
             <div>
-              <img class="" src="./img/yoli.jpg" alt="yoli" />
+              <img
+                class="rounded-circle img-thumbnail"
+                src="./img/yoli.jpg"
+                alt="yoli"
+              />
             </div>
-            <div>
-              <h3>Yolanda Tain</h3>
-              <h4>Jefa de equipo</h4>
-              <p>
-                Yolanda Tain, nuestra líder en EcoCarga, es una apasionada de la
-                movilidad sostenible en España. Con su visión y experiencia,
-                dirige nuestro equipo hacia un futuro más verde y limpio. <br />
-                <br />
-                Puedes contartar a traves de este correo:
-                <a href="mailto:yolandataingut@gmail.com"
-                  >yolandataingut@gmail.com</a
-                >
-              </p>
-              <hr />
-            </div>
+            <h3 id="h3">Yolanda Tain</h3>
+            <h4 id="h4">Jefa de equipo</h4>
+            <p>
+              <b>Yolanda Tain</b>, nuestra líder en EcoCarga, es una apasionada
+              de la movilidad sostenible en España. Con su visión y experiencia,
+              dirige nuestro equipo hacia un futuro más verde y limpio.
+              <br /><br /><br />
+              Puedes contartar a traves de este correo:
+              <a href="mailto:yolandataingut@gmail.com"
+                >yolandataingut@gmail.com</a
+              >
+            </p>
+            <hr />
           </div>
+          <br />
           <br />
           <!--Jorge-->
           <div class="col 2">
             <div>
-              <img src="./img/jorge.jpg" alt="jorge" />
+              <img
+                class="rounded-circle img-thumbnail"
+                src="./img/jorge.jpg"
+                alt="jorge"
+              />
             </div>
-            <div>
-              <h3>Jorge Marimon</h3>
-              <h4>Analista</h4>
-              <p>
-                Jorge Marimon, nuestro analista principal, es un experto en
-                datos y análisis. Su agudeza y conocimiento guían nuestro equipo
-                hacia una toma de decisiones más informada. Al igual que Yolanda
-                tiene una vision de un futuro mas sostenible. <br /><br />
-                Puedes contartar a traves de este correo:
-                <a href="mailto:jorgemarimon88@gmail.com"
-                  >jorgemarimon88@gmail.com</a
-                >
-              </p>
-              <hr />
-            </div>
+            <h3 id="h3">Jorge Marimon</h3>
+            <h4 id="h4">Analista</h4>
+            <p>
+              <b>Jorge Marimon</b>, nuestro analista principal, es un experto en
+              datos y análisis. Su agudeza y conocimiento guían nuestro equipo
+              hacia una toma de decisiones más informada. Al igual que Yolanda
+              tiene una vision de un futuro mas sostenible. <br /><br />
+              Puedes contartar a traves de este correo:
+              <a href="mailto:jorgemarimon88@gmail.com"
+                >jorgemarimon88@gmail.com</a
+              >
+            </p>
+            <hr />
           </div>
         </div>
       </div>
 
-      <br />
       <div class="container">
+        <br />
         <div class="row">
           <!--Ronnie-->
           <div class="col 1">
             <div>
-              <img src="./img/ronnie.jpg" alt="ronnie" />
+              <img
+                class="rounded-circle img-thumbnail"
+                src="./img/ronnie.jpg"
+                alt="ronnie"
+              />
             </div>
-            <div>
-              <h3>Rolando Cuberas</h3>
-              <h4>Programador</h4>
-              <p>
-                Rolando Cuberas, nuestro programador principal, es un experto en
-                desarrollo de software. Su experiencia y habilidades lideran
-                nuestro equipo hacia soluciones tecnológicas de vanguardia.
-              </p>
-              <hr />
-            </div>
+            <h3 id="h3">Ronaldo Cuberas</h3>
+            <h4 id="h4">Programador</h4>
+            <p>
+              <b>Rolando Cuberas</b>, nuestro programador principal, es un
+              experto en desarrollo de software. Su experiencia y habilidades
+              lideran nuestro equipo hacia soluciones tecnológicas de
+              vanguardia. <br />
+              Tiene un curriculum muy amplio con trabajos realizados para
+              empresas como google, amazon, etc.
+              <br />
+              Puedes contartar a traves de este correo:
+              <a href="mailto:ronnietoon25@gmail.com">ronnietoon25@gmail.com</a>
+            </p>
+
+            <hr />
           </div>
+          <br />
           <br />
           <!--Vero-->
           <div class="col 2">
             <div>
-              <img src="./img/vero.jpg" alt="vero" />
+              <img
+                class="rounded-circle img-thumbnail"
+                src="./img/vero.jpg"
+                alt="jorge"
+              />
             </div>
-            <div>
-              <h3>Veronika Tryhubyak</h3>
-              <h4>Programadora</h4>
-              <p>
-                Veronika Tryhubyak, miembro destacado de nuestro equipo, es una
-                apasionada por la tecnología y una experta en programación y
-                diseño. Su dedicación y conocimiento son motores clave en la
-                creación de soluciones tecnológicas innovadoras.
-              </p>
+            <h3 id="h3">Veronika Tryhubyak</h3>
+            <h4 id="h4">Programadora</h4>
+            <p>
+              <b>Veronika Tryhubyak</b>, miembro destacado de nuestro equipo, es
+              una apasionada por la tecnología y una experta en programación y
+              diseño. Su dedicación y conocimiento son motores clave en la
+              creación de soluciones tecnológicas innovadoras. <br /><br />
+              Puedes contartar a traves de este correo:
+              <a href="mailto:vtr0003@alu.medac.es">vtr0003@alu.medac.es</a>
+            </p>
+            <hr />
+          </div>
+        </div>
+        <hr />
+      </div>
+      <!--Opiniones/reseñas (?)-->
+      <div class="container" id="opiniones">
+        <div>
+          <h1 id="h1"><u>Reseñas de nuestros usuarios:</u></h1>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col 1 opinion mb-3">
+            <span class="material-symbols-outlined"
+              >star star star star star</span
+            >
+            <p>
+              "¡Esta página es increíble! Encontré toda la información que
+              necesitaba de manera rápida y sencilla."
+            </p>
+          </div>
+          <br>
+          <div class="col 2 opinion mb-3">
+            <span class="material-symbols-outlined"
+              >star star star star star_half</span
+            >
+            <p>
+              "Me sorprendió lo bien organizada que está la página. Todo está en
+              su lugar y es muy intuitiva."
+            </p>
+          </div>
+          <br>
+          <div class="col 3 opinion mb-3">
+            <span class="material-symbols-outlined"
+              >star star star star star</span
+            >
+            <p>
+              "El equipo detrás de esta página hace un gran trabajo brindando soporte
+              a sus usuarios."
+            </p>
+          </div>
+          <br>
+          <div class="col 4 opinion mb-3">
+            <span class="material-symbols-outlined"
+              >star star star star star</span
+            >
+            <p>
+              "Esta página ha mejorado mi vida en muchos sentidos. Gracias por
+              proporcionar información valiosa."
+            </p>
+          </div>
+          <br><br>
+          <div class="col 5 opinion mb-3">
+            <span class="material-symbols-outlined"
+              >star star star star star</span
+            >
+            <p>
+              "La página es muy amigable para dispositivos móviles. Puedo
+              acceder a ella desde mi smartphone sin problemas."
+            </p>
+          </div>
+        </div>
+        <br>
+        <!--
+          <div class="text-center">
+          <button class="boton" id="formulario" title="Añade tu reseña">Añade tu reseña</button>
+        </div>
+        -->
+      </div>
+
+      <hr />
+      <!--FAQ-->
+      <div class="container">
+        <h1 id="h1"><u>FAQs</u></h1>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+              ¿Qué servicios ofrece esta plataforma web de estaciones de carga de coches eléctricos?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Nuestra plataforma proporciona información detallada sobre las estaciones de carga, 
+                como ubicaciones, disponibilidad, tipos de conectores y tarifas. También ofrecemos 
+                herramientas de planificación de viajes para ayudarte a encontrar rutas con paradas en 
+                estaciones de carga.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+              ¿Cómo puedo agregar una nueva estación de carga a la plataforma?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Si tienes información sobre una estación de carga que no está en nuestra 
+                plataforma, puedes sugerir su inclusión a traves de los correos electronicos de cualquiera del equipo 
+                proporcionando detalles como la ubicación, tipos de conectores y horarios de operación.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+              ¿Cómo puedo planificar un viaje en coche eléctrico usando su plataforma?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Nuestra plataforma ofrece una herramienta de planificación de viajes que te permite rellenar un 
+                itinerario el cual te enviara a tu correo tu ruta mas precisa segun los datos que has rellenado.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour"
+              >
+              ¿Cómo se mantiene actualizada la información de las estaciones de carga en la plataforma?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Actualizamos continuamente la información de las estaciones de carga a través de fuentes confiables 
+                y la retroalimentación de la comunidad de usuarios.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFive"
+                aria-expanded="false"
+                aria-controls="flush-collapseFive"
+              >
+              ¿Ofrecen información sobre estaciones de carga en otros países?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFive"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                No, de momento la plataforma se basa de las estaciones que hay en España, pero a futuro es posible una expancion.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseSix"
+                aria-expanded="false"
+                aria-controls="flush-collapseSix"
+              >
+              ¿Cuál es el costo de cargar mi coche eléctrico en estas estaciones?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseSix"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                El costo de la carga puede variar según la estación y el proveedor de servicios. 
+                Te proporcionamos información sobre tarifas cuando esté disponible.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseSeven"
+                aria-expanded="false"
+                aria-controls="flush-collapseSeven"
+              >
+              ¿Es necesario registrarse en el sitio para usar el servicio?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseSeven"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                No, no es necesario registrarse para buscar estaciones de carga.
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <br />
-    </div>
 
-    <hr />
+      <hr />
 
-    <!--FAQ-->
-    <div></div>
-    <!--Footer-->
-    <footer id="footer" class="row justify-content-center">
+      <!--Footer-->
+      <footer id="footer" class="row justify-content-center">
         <div class="col-1 col-md-1 col-lg-1 align-self-center">
-            <svg fill="#FFFDF4" height="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 367.467 367.467" xml:space="preserve">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <g>
-                        <path
-                            d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z">
-                        </path>
-                        <path
-                            d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z">
-                        </path>
-                    </g>
-                </g>
-            </svg>
+          <svg
+            fill="#FFFDF4"
+            height="64px"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 367.467 367.467"
+            xml:space="preserve"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <path
+                  d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z"
+                ></path>
+                <path
+                  d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z"
+                ></path>
+              </g>
+            </g>
+          </svg>
         </div>
         <div class="col-6 col-md-4 col-lg-2 align-self-center">
-            <p>Todos los derechos reservados</p>
+          <p>Todos los derechos reservados</p>
         </div>
-    </footer>
-</div>
+      </footer>
+    </div>
   </body>
 </html>
