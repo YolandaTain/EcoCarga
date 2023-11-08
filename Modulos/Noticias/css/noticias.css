@@ -9,6 +9,7 @@
 }
 
 .apartado{
+  margin-left: -20px;
   position: relative;
   background-color: #000000;
   height: 60px;
@@ -35,7 +36,7 @@
   color: #fffdfd;
   margin-right: 100px;
   font-size: 30px;
-  margin-left: 280px;
+  margin-left: 290px;
   margin-top: -10px;
   content: '';
   position: absolute;
@@ -163,9 +164,17 @@ body {
   margin-bottom: 20px;
 }
 
+.card-img-top{
+  margin-top:5px;
+  border-radius: 15px 50px 30px;
+  border-style: groove;
+}
 
 .slide-image img {
   max-width: 100%;
+  border-radius: 15px 50px 30px; 
+  border: #123f0a;
+  border-style: groove;
 }
 
 /* Slide animations */
@@ -210,6 +219,8 @@ body {
   }
 }
 
+
+
 .card{
   height: 250px;
   width: 320px;
@@ -225,6 +236,9 @@ body {
 
 #tituloMapa {
   text-align: center;
+  box-shadow:
+  3px 3px rgb(167, 161, 161),
+  -1em 0 0.4em olive;
 }
 
 #botonBanner {
@@ -239,6 +253,7 @@ body {
   font-family: 'Marvel', sans-serif;
   font-size: 2rem;
   outline: none;
+  transform: translate(0px, 20px);
 }
 
 #botonBanner:hover {
@@ -263,37 +278,54 @@ body {
 
 #modal-image{
   margin-left: 80px;
+  border: #123f0a;
+  border-style: groove;
+  border-radius: 15px 50px 30px;
 }
 
 #modal-date{
   margin-left: 200px;
-  color:#c0ff39;
+  color:#123f0a;
+  font-size: 2.5rem;
 }
 
 #modal-title{
-  font-size: 2rem;
-  color:#c0ff39;
+  font-size: 2.5rem;
+  color:#123f0a;
+  transform:translate(0px, 10px);
+  font-weight: bold;
  
   
 }
 #modal-description{
   font-size: 2rem;
-  color:#eee;
+  color:#676161;
   
+}
+
+.btn.btn-secondary{
+  color:#123f0a;
+  font-size:2rem;
 }
 
 .btn-close{
   background-color: #eee;
+  transform:translate(0px, -30px )
 }
 
 .modal-content{
 
-  background-color: #242222;
+  background-color: #e0d8d8;
   
 }
 
-.titulo{
+.titulo h1{
   text-align: center;
+  font-weight: bold;
+  color:#123f0a;
+  box-shadow:
+  3px 3px rgb(167, 161, 161),
+  -1em 0 0.4em olive;
 }
 
 .card img{
@@ -400,7 +432,7 @@ footer p {
   color: #c0ff39; /* Cambia esto al color que desees */
   background-color: #000000; /* Cambia el color del texto si es necesario */
   border: 1px solid #000000; /* Agrega un borde alrededor del botón */
-  border-radius: 4px; /* Redondea las esquinas del botón */
+  border-radius: 15px; /* Redondea las esquinas del botón */
   padding: 10px 20px; /* Añade espacio interno para el contenido */
   display: inline-block; /* Hace que el botón sea un elemento en línea */
   cursor: pointer; /* Cambia el cursor al pasar por encima */
@@ -532,7 +564,8 @@ h3 {
   .slide-image img {
     max-width: 80%;
     max-height: 80%;
-    margin-left:60px ;
+    margin-left:60px;
+    border-radius: 15px 50px 30px; 
   }
 
   .video-carousel {
@@ -585,7 +618,7 @@ h3 {
     color: #fffdfd;
     margin-right: 0px;
     font-size: 30px;
-    margin-left: 210px;
+    margin-left: 230px;
     margin-top: -10px;
     content: '';
     position: absolute;
@@ -726,6 +759,10 @@ h3 {
    
   }
   
+  .card-img-top{
+    border-radius: 15px 50px 30px;
+  }
+
   .slide-content {
     width: 320px;
   }
@@ -787,6 +824,11 @@ h3 {
   font-size: 2rem;
   
 }
+
+.slide-image img {
+border-radius: 15px;
+}
+
   }
 
   @font-face {

@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Obtén la extensión de la imagen desde el campo "imagen"
         const imageExtension = noticia.imagen.split('.').pop().toLowerCase();
-        modalImage.src = `img/noticia${noticia.noticia}.${imageExtension}`;
+        modalImage.src = `img/imagen_${noticia.noticia}.${imageExtension}`;
         modalImage.alt = noticia.titulo;
       })
       .catch((error) => console.error("Error al cargar los datos:", error));
