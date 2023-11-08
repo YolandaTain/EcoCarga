@@ -65,7 +65,7 @@
 
             <div class="tituloSearchContenedor col-10 justify-content-center">
                 <div class="row">
-                    <div class="col-1 col-md-1 col-lg-1 align-self-center" >
+                    <div class="col-1 col-md-1 col-lg-1 align-self-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plug" width="34"
                             height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFDF4" fill="none"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -103,13 +103,45 @@
 
                     <button id="boton" type="button" class="botonContenedor col-4" onclick="getData()">BUSCAR</button>
                 </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="ModalCenterF" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-contentF">
+                        <div class="modal-header">
+                            <h5 class="modal-titleF" id="exampleModalLongTitle">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-bodyF">
+                            ...
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-
-        </div>
-
-        <!--
+            <!--
         <div id="destacados" class="des-menu">
             </h1>
             <ul>
@@ -174,85 +206,85 @@
         </div>
         <br><br><br><br><br>
 -->
-        <br><br>
-        <div class="row justify-content-center" id="resultadosBusqueda">
-        </div>
+            <br><br>
+            <div class="row justify-content-center" id="resultadosBusqueda">
+            </div>
 
-        <br><br>
-        <h1 id="tituloMapa">EXPLORA TUS PUNTOS DE CARGA</h1>
-        <hr>
-        <br><br>
-        <div class="row justify-content-around card-deck">
-            <div class="card col-10 col-md-7 col-lg-3">
-                <div class="row">
-                    <img class="card-img-top col-12" src="img/gas1.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Calle Alhambra 123</h5>
-                        <p class="card-text">Málaga 29001</p>
-                        <a href="https://www.google.com/maps/" target="_blank" class="btn btn-light"
-                            style="padding: 1rem; width: 10rem; font-size: 1.5rem;">Google Maps</a>
+            <br><br>
+            <h1 id="tituloMapa">EXPLORA TUS PUNTOS DE CARGA</h1>
+            <hr>
+            <br><br>
+            <div class="row justify-content-around card-deck">
+                <div class="card col-10 col-md-7 col-lg-3">
+                    <div class="row">
+                        <img class="card-img-top col-12" src="img/gas1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Calle Alhambra 123</h5>
+                            <p class="card-text">Málaga 29001</p>
+                            <a href="https://www.google.com/maps/" target="_blank" class="btn btn-light"
+                                style="padding: 1rem; width: 10rem; font-size: 1.5rem;">Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-10 col-md-7 col-lg-3">
+                    <div class="row">
+                        <img class="card-img-top col-12" src="img/gas2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Avenida Palmeras 45</h5>
+                            <p class="card-text">Sevilla 41001</p>
+                            <a href="https://www.google.com/maps/" target="_blank" class="btn btn-light"
+                                style="padding: 1rem; width: 10rem; font-size: 1.5rem;">Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-10 col-md-7 col-lg-3">
+                    <div class="row">
+                        <img class="card-img-top col-12" src="img/gas3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Calle Playa de la Victoria 7</h5>
+                            <p class="card-text">Cádiz 11002</p>
+                            <a href="https://www.google.com/maps/" target="_blank" class="btn btn-light"
+                                style="padding: 1rem; width: 10rem; font-size: 1.5rem;">Google Maps</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="card col-10 col-md-7 col-lg-3">
-                <div class="row">
-                    <img class="card-img-top col-12" src="img/gas2.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Avenida Palmeras 45</h5>
-                        <p class="card-text">Sevilla 41001</p>
-                        <a href="https://www.google.com/maps/" target="_blank" class="btn btn-light"
-                            style="padding: 1rem; width: 10rem; font-size: 1.5rem;">Google Maps</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card col-10 col-md-7 col-lg-3">
-                <div class="row">
-                    <img class="card-img-top col-12" src="img/gas3.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Calle Playa de la Victoria 7</h5>
-                        <p class="card-text">Cádiz 11002</p>
-                        <a href="https://www.google.com/maps/" target="_blank" class="btn btn-light"
-                            style="padding: 1rem; width: 10rem; font-size: 1.5rem;">Google Maps</a>
-                    </div>
-                </div>
+            <br><br>
+            <hr>
+            <br>
+            <div class="row justify-content-center">
+                <h1 id="tituloMapa">¿Quieres crear un itinerario de viaje?</h1>
+                <br>
+                <br>
+                <button class="col-1" id="botonBanner"><a href="../Itinerario/itinerario.html"
+                        target="_blank"><span>+</span>INFO</a></button>
             </div>
         </div>
-        <br><br>
+        <br>
         <hr>
         <br>
-        <div class="row justify-content-center">
-            <h1 id="tituloMapa">¿Quieres crear un itinerario de viaje?</h1>
-            <br>
-            <br>
-            <button class="col-1" id="botonBanner"><a href="../Itinerario/itinerario.html"
-                    target="_blank"><span>+</span>INFO</a></button>
-          </div>
-    </div>
-    <br>
-    <hr>
-    <br>
-    <footer id="footer" class="row justify-content-center">
-        <div class="col-1 col-md-1 col-lg-1 align-self-center">
-            <svg fill="#FFFDF4" height="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 367.467 367.467" xml:space="preserve">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <g>
-                        <path
-                            d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z">
-                        </path>
-                        <path
-                            d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z">
-                        </path>
+        <footer id="footer" class="row justify-content-center">
+            <div class="col-1 col-md-1 col-lg-1 align-self-center">
+                <svg fill="#FFFDF4" height="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 367.467 367.467" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g>
+                            <path
+                                d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z">
+                            </path>
+                            <path
+                                d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z">
+                            </path>
+                        </g>
                     </g>
-                </g>
-            </svg>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2 align-self-center">
-            <p>Todos los derechos reservados</p>
-        </div>
-    </footer>
+                </svg>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 align-self-center">
+                <p>Todos los derechos reservados</p>
+            </div>
+        </footer>
     </div>
 </body>
 
