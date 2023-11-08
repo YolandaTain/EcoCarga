@@ -234,6 +234,9 @@ body {
 
 #tituloMapa {
   text-align: center;
+  box-shadow:
+  3px 3px rgb(167, 161, 161),
+  -1em 0 0.4em olive;
 }
 
 #botonBanner {
@@ -248,6 +251,7 @@ body {
   font-family: 'Marvel', sans-serif;
   font-size: 2rem;
   outline: none;
+  transform: translate(0px, 20px);
 }
 
 #botonBanner:hover {
@@ -313,8 +317,13 @@ body {
   
 }
 
-.titulo{
+.titulo h1{
   text-align: center;
+  font-weight: bold;
+  color:#123f0a;
+  box-shadow:
+  3px 3px rgb(167, 161, 161),
+  -1em 0 0.4em olive;
 }
 
 .card img{
