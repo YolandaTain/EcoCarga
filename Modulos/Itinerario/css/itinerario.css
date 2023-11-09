@@ -366,27 +366,40 @@ button:hover {
     background-color: var(--botonHover);
 }
 
-.btn-secondary{
+.btn-secondary {
     margin-bottom: 1.75rem;
 }
 
-.btn-secondary2 {
-    background-color: #0d6efd;
+.btn-secondary2,.btn-primary {
+    background-color: #344306;
     font-size: 2rem;
     color: white;
 }
 
-.btn-secondary2:hover{
-    background-color: #0b5ed7;
+.btn-secondary2:hover, .btn-primary:hover {
+    background-color: #1d2603;
     color: white;
 }
 
-.btn-primary{
+.btn-primary {
     font-size: 2rem;
 }
 
-#resumen{
+#resumen {
     font-weight: bold;
 }
 
+#modal-content {
+    font-size: 2.5rem;
+    padding: 2rem;
+    font-weight: bold;
+}
 
+.modal-footer2 {
+    text-align: center;
+}
+
+.btn-aceptar {
+    background-color: #344306 !important;
+    color: #ffffff;
+}

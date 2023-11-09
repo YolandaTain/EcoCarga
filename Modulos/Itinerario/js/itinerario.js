@@ -127,7 +127,7 @@ function siguiente(numero) {
     var checkFecha = validarFechaNac();
     //Tengo que comprobar que no inicia el viaje después de cuando lo acaba.
     var checkFechaInicioyFin = validarFechaInicioyFin();
-    
+
     if (checkEmail && checkFecha) {
         if (numero === "2") {
             // Llama a la función para recopilar los datos del formulario 1
@@ -135,7 +135,8 @@ function siguiente(numero) {
             if (formulario.checkValidity()) {
                 mostrarFormulario(numero);
             } else {
-                alert("Por favor, completa todos los campos requeridos.");
+                mostrarModalError("Por favor, completa todos los campos requeridos.")
+                //alert("Por favor, completa todos los campos requeridos.");
             }
         } else if (checkFechaInicioyFin) {
             if (numero === "3") {
@@ -144,7 +145,8 @@ function siguiente(numero) {
                 if (formulario2.checkValidity()) {
                     mostrarFormulario(numero);
                 } else {
-                    alert("Por favor, completa todos los campos requeridos.");
+                    mostrarModalError("Por favor, completa todos los campos requeridos.")
+                    //alert("Por favor, completa todos los campos requeridos.");
                 }
             } else if (numero === "3") {
                 // Llama a la función para recopilar los datos del formulario 3
@@ -153,7 +155,8 @@ function siguiente(numero) {
                 if (formulario3.checkValidity()) {
                     mostrarFormulario(numero);
                 } else {
-                    alert("Por favor, completa todos los campos requeridos.");
+                    mostrarModalError("Por favor, completa todos los campos requeridos.")
+                    //alert("Por favor, completa todos los campos requeridos.");
                 }
             }
         }
@@ -168,20 +171,20 @@ function volver(numero) {
     }
 }
 
+function mostrarModalError(mensaje) {
+    var modalErrorMessage = document.getElementById("modalErrorMessage");
+    modalErrorMessage.innerText = mensaje;
+
+    var myModal = new bootstrap.Modal(document.querySelector('.bd-example-modal-sm'));
+    myModal.show();
+}
+
 function validarEmail() {
     var email = document.getElementById("email").value;
     var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    var modalBody = document.querySelector("#modalAlerta .modal-content");
-    modalBody.innerHTML = "";
-    modalBody.innerHTML += "<strong>Preferencias de Actividades:</strong> " + datosFormulario3.preferenciasActividades.join(', ') + "<br>";
-
-    // Abre el modal
-    var modal = new bootstrap.Modal(document.getElementById("modalAlerta"));
-    modal.show();
-
-
     if (regex.test(email) == false) {
-        alert("Email no válido. Por favor, introduce un email válido.");
+        //alert("Email no válido. Por favor, introduce un email válido.");
+        mostrarModalError("Email no válido. Por favor, introduce un email válido.");
     } else {
         return true
     }
@@ -192,7 +195,8 @@ function validarFechaNac() {
     var fechaNacObj = new Date(fechaNac);
     var fechaActual = new Date();
     if (fechaNacObj > fechaActual) {
-        alert("Esta fecha no es posible")
+        mostrarModalError("La fecha introducida no es posible")
+        //alert("Esta fecha no es posible")
     } else {
         return true
     }
@@ -204,7 +208,8 @@ function validarFechaInicioyFin() {
     var fechaInicioObj = new Date(fechaInicio)
     var fechaFinObj = new Date(fechaFin)
     if (fechaInicioObj > fechaFinObj) {
-        alert("La fecha de inicio no puede ser posterior a la fecha de finalización")
+        mostrarModalError("La fecha de inicio no puede ser posterior a la fecha de finalización")
+        //alert("La fecha de inicio no puede ser posterior a la fecha de finalización")
     } else {
         return true
     }
