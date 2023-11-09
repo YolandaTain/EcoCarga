@@ -9,6 +9,8 @@
     <script src="../bootStrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/itinerario.css">
     <script src="js/itinerario.js"></script>
+    <script src="../Nav/js/nav.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
@@ -53,11 +55,15 @@
                 <li><a class="dropdown-item" href="../SobreNosotros/sobreNosotros.html">Sobre Nosotros</a></li>
             </ul>
         </div>
-        <div class="encabezado row justify-content-center">
-            <h1 id="h1" class="col-10 col-md-6 align-self-center">Tu planificador de viajes</h1>
-        </div>
 
-        <br>
+        <div class="row justify-content-center">
+            <div class="apartado col-12 titulo-h1">
+                <div class="titulo-h1">
+                        <h1>Tu planificador de viajes</h1>
+                </div>
+            </div>
+        </div>
+        <br><br>
         <div class="row justify-content-center formulario" id="formularioPagina1">
             <div class="progresoSolicitud row justify-content-between">
                 <label for="file" class="col-6 col-lg-3">
@@ -274,7 +280,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" style="font-size: 20px" onclick="volverHome()">Aceptar</button>
+                        <button type="button" class="btn btn-primary" style="font-size: 20px"
+                            onclick="volverHome()">Aceptar</button>
                     </div>
                 </div>
             </div>

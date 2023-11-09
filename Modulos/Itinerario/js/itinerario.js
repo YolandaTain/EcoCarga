@@ -11,20 +11,6 @@ function volverHome() {
     window.open("/Modulos/Home/home.html", "_self");
 }
 
-//Se utiliza para el menú desplegable de la derecha
-function desplegar() {
-    var menu = document.getElementById("menu");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-        menu.classList.remove("scale-up-hor-right");
-        menu.classList.add("scale-up-hor-left");
-    } else {
-        menu.style.display = "block";
-        menu.classList.remove("scale-up-hor-left");
-        menu.classList.add("scale-up-hor-right");
-    }
-}
-
 //Permite que se avance al siguiente formulario
 function mostrarFormulario(numero) {
     // Oculta todos los formularios
@@ -134,7 +120,7 @@ function siguiente(numero) {
     var formulario = document.getElementById("miFormulario1");
     var formulario2 = document.getElementById('miFormulario2');
     var formulario3 = document.getElementById('miFormulario3');
-
+    validarEmail();
     if (numero === "2") {
         // Llama a la función para recopilar los datos del formulario 1
         recopilarDatosFormulario1();
@@ -168,5 +154,14 @@ function volver(numero) {
         mostrarFormulario(numero);
     } else {
         alert("No puedes retroceder más.");
+    }
+}
+
+function validarEmail() {
+    var email = document.getElementById("email").value;
+    var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if (regex.test(email)==false) {
+        alert("Email no válido. Por favor, introduce un email válido.");
     }
 }
