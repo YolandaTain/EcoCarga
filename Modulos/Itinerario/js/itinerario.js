@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", inicio);
-
+var comprobarEmail = false
+var comprobarFecha = false
 //Sirve para que, de inicio, se muestre el formulario 1, ya que el 2 y el 3
 //están escondidos inicialmente
 function inicio() {
@@ -117,35 +118,44 @@ function mostrarResumenModal() {
 
 //Se organiza la recopilación de datos por formulario y permite avanzar al siguiente
 function siguiente(numero) {
+
     var formulario = document.getElementById("miFormulario1");
     var formulario2 = document.getElementById('miFormulario2');
     var formulario3 = document.getElementById('miFormulario3');
-    validarEmail();
-    validarFechaNac()
-    if (numero === "2") {
-        // Llama a la función para recopilar los datos del formulario 1
-        recopilarDatosFormulario1();
-        if (formulario.checkValidity()) {
-            mostrarFormulario(numero);
-        } else {
-            alert("Por favor, completa todos los campos requeridos.");
-        }
-    } else if (numero === "3") {
-        // Llama a la función para recopilar los datos del formulario 2
-        recopilarDatosFormulario2();
-        if (formulario2.checkValidity()) {
-            mostrarFormulario(numero);
-        } else {
-            alert("Por favor, completa todos los campos requeridos.");
-        }
-    } else if (numero === "3") {
-        // Llama a la función para recopilar los datos del formulario 3
-        recopilarDatosFormulario3();
+    //Tengo que comprobar que la fecha y email son correctos antes de que me permita pasar al siguiente formulario, así que los englobo en variables y hago el condicional.
+    var checkEmail = validarEmail();
+    var checkFecha = validarFechaNac();
+    //Tengo que comprobar que no inicia el viaje después de cuando lo acaba.
+    var checkFechaInicioyFin = validarFechaInicioyFin();
+    
+    if (checkEmail && checkFecha) {
+        if (numero === "2") {
+            // Llama a la función para recopilar los datos del formulario 1
+            recopilarDatosFormulario1();
+            if (formulario.checkValidity()) {
+                mostrarFormulario(numero);
+            } else {
+                alert("Por favor, completa todos los campos requeridos.");
+            }
+        } else if (checkFechaInicioyFin) {
+            if (numero === "3") {
+                // Llama a la función para recopilar los datos del formulario 2
+                recopilarDatosFormulario2();
+                if (formulario2.checkValidity()) {
+                    mostrarFormulario(numero);
+                } else {
+                    alert("Por favor, completa todos los campos requeridos.");
+                }
+            } else if (numero === "3") {
+                // Llama a la función para recopilar los datos del formulario 3
+                recopilarDatosFormulario3();
 
-        if (formulario3.checkValidity()) {
-            mostrarFormulario(numero);
-        } else {
-            alert("Por favor, completa todos los campos requeridos.");
+                if (formulario3.checkValidity()) {
+                    mostrarFormulario(numero);
+                } else {
+                    alert("Por favor, completa todos los campos requeridos.");
+                }
+            }
         }
     }
 }
@@ -161,16 +171,42 @@ function volver(numero) {
 function validarEmail() {
     var email = document.getElementById("email").value;
     var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var modalBody = document.querySelector("#modalAlerta .modal-content");
+    modalBody.innerHTML = "";
+    modalBody.innerHTML += "<strong>Preferencias de Actividades:</strong> " + datosFormulario3.preferenciasActividades.join(', ') + "<br>";
 
-    if (regex.test(email)==false) {
+    // Abre el modal
+    var modal = new bootstrap.Modal(document.getElementById("modalAlerta"));
+    modal.show();
+
+
+    if (regex.test(email) == false) {
         alert("Email no válido. Por favor, introduce un email válido.");
+    } else {
+        return true
     }
 }
 
-function validarFechaNac(){
-    var fechaNac=document.getElementById("fechaNac").value;
-    var fecha=new Date().toLocaleDateString();
-    if(fechaNac.getTime()>fecha.getTime()){
+function validarFechaNac() {
+    var fechaNac = document.getElementById("fechaNac").value;
+    var fechaNacObj = new Date(fechaNac);
+    var fechaActual = new Date();
+    if (fechaNacObj > fechaActual) {
         alert("Esta fecha no es posible")
+    } else {
+        return true
     }
 }
+
+function validarFechaInicioyFin() {
+    var fechaInicio = document.getElementById("fechaInicio").value
+    var fechaFin = document.getElementById("fechaFin").value
+    var fechaInicioObj = new Date(fechaInicio)
+    var fechaFinObj = new Date(fechaFin)
+    if (fechaInicioObj > fechaFinObj) {
+        alert("La fecha de inicio no puede ser posterior a la fecha de finalización")
+    } else {
+        return true
+    }
+}
+
