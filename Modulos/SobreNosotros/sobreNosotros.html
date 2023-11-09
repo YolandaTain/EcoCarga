@@ -12,13 +12,13 @@
       rel="stylesheet"
     />
     <!--Bootstrap-->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
     <link
       rel="stylesheet"
       href="../bootstrap/css/bootstrap-utilities.min.css"
     />
     <script src="../bootStrap/js/bootstrap.bundle.min.js"></script>
-    <!--Nav y Header son los faltantes-->
+    <!--Nav y Header-->
     <script src="../Nav/js/nav.js"></script>
     <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css" />
     <!--SVG-->
@@ -123,9 +123,8 @@
         </p>
         <p>
           Descubre los puntos de carga más convenientes y crea itinerarios
-          adaptados a tus preferencias, ya sea un viaje corto de fin de semana o
-          una aventura de varios días, en EcoCarga, encontrarás toda la
-          información que necesitas para que tu viaje sea inolvidable.
+          adaptados a tus preferencias y necesidades. En EcoCarga encontrarás
+          toda la información que necesitas para que tu viaje sea inolvidable.
         </p>
         <p>
           Acompáñanos en esta emocionante travesía hacia un turismo más
@@ -192,6 +191,7 @@
         </div>
       </div>
 
+      <!--Miembros del equipo Ronnie y Vero-->
       <div class="container">
         <br />
         <div class="row">
@@ -246,7 +246,8 @@
         </div>
         <hr />
       </div>
-      <!--Opiniones/reseñas (?)-->
+
+      <!--Reseñas de usuarios-->
       <div class="container" id="opiniones">
         <div>
           <h1 id="h1"><u>Reseñas de nuestros usuarios:</u></h1>
@@ -255,67 +256,75 @@
         <div class="row">
           <div class="col 1 opinion mb-3">
             <span class="material-symbols-outlined"
-              >star star star star star</span
+              >star star star star star_half</span
             >
+            <p>30/09/2023</p>
             <p>
               "¡Esta página es increíble! Encontré toda la información que
               necesitaba de manera rápida y sencilla."
             </p>
           </div>
-          <br>
+          <br />
           <div class="col 2 opinion mb-3">
             <span class="material-symbols-outlined"
               >star star star star star_half</span
             >
+            <p>12/10/2023</p>
             <p>
               "Me sorprendió lo bien organizada que está la página. Todo está en
               su lugar y es muy intuitiva."
             </p>
           </div>
-          <br>
+          <br />
           <div class="col 3 opinion mb-3">
             <span class="material-symbols-outlined"
               >star star star star star</span
             >
+            <p>23/10/2023</p>
             <p>
-              "El equipo detrás de esta página hace un gran trabajo brindando soporte
-              a sus usuarios."
+              "El equipo detrás de esta página hace un gran trabajo brindando
+              soporte a sus usuarios."
             </p>
           </div>
-          <br>
+          <br />
           <div class="col 4 opinion mb-3">
             <span class="material-symbols-outlined"
               >star star star star star</span
             >
+            <p>04/11/2023</p>
             <p>
               "Esta página ha mejorado mi vida en muchos sentidos. Gracias por
               proporcionar información valiosa."
             </p>
           </div>
-          <br><br>
+          <br /><br />
           <div class="col 5 opinion mb-3">
             <span class="material-symbols-outlined"
-              >star star star star star</span
+              >star star star star star_half</span
             >
+            <p>16/11/2023</p>
             <p>
               "La página es muy amigable para dispositivos móviles. Puedo
               acceder a ella desde mi smartphone sin problemas."
             </p>
           </div>
         </div>
-        <br>
-        <!--
-          <div class="text-center">
-          <button class="boton" id="formulario" title="Añade tu reseña">Añade tu reseña</button>
+        <br />
+        
+        <!--Modal y boton añadir reseña-->
+        <div class="text-center">
+          <button class="boton" id="resena" title="Añade tu reseña">
+            Añade tu reseña
+          </button>
         </div>
-        -->
       </div>
 
       <hr />
+      
       <!--FAQ-->
       <div class="container">
         <h1 id="h1"><u>FAQs</u></h1>
-        <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion accordion-flush">
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
@@ -326,7 +335,8 @@
                 aria-expanded="false"
                 aria-controls="flush-collapseOne"
               >
-              ¿Qué servicios ofrece esta plataforma web de estaciones de carga de coches eléctricos?
+                ¿Qué servicios ofrece esta plataforma web de estaciones de carga
+                de coches eléctricos?
               </button>
             </h2>
             <div
@@ -335,10 +345,11 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                Nuestra plataforma proporciona información detallada sobre las estaciones de carga, 
-                como ubicaciones, disponibilidad, tipos de conectores y tarifas. También ofrecemos 
-                herramientas de planificación de viajes para ayudarte a encontrar rutas con paradas en 
-                estaciones de carga.
+                Nuestra plataforma proporciona información detallada sobre las
+                estaciones de carga, como ubicaciones, disponibilidad, tipos de
+                conectores y tarifas. También ofrecemos herramientas de
+                planificación de viajes para ayudarte a encontrar rutas con
+                paradas en estaciones de carga.
               </div>
             </div>
           </div>
@@ -352,7 +363,7 @@
                 aria-expanded="false"
                 aria-controls="flush-collapseTwo"
               >
-              ¿Cómo puedo agregar una nueva estación de carga a la plataforma?
+                ¿Cómo puedo agregar una nueva estación de carga a la plataforma?
               </button>
             </h2>
             <div
@@ -361,9 +372,11 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                Si tienes información sobre una estación de carga que no está en nuestra 
-                plataforma, puedes sugerir su inclusión a traves de los correos electronicos de cualquiera del equipo 
-                proporcionando detalles como la ubicación, tipos de conectores y horarios de operación.
+                Si tienes información sobre una estación de carga que no está en
+                nuestra plataforma, puedes sugerir su inclusión a traves de los
+                correos electronicos de cualquiera del equipo proporcionando
+                detalles como la ubicación, tipos de conectores y horarios de
+                operación.
               </div>
             </div>
           </div>
@@ -377,7 +390,8 @@
                 aria-expanded="false"
                 aria-controls="flush-collapseThree"
               >
-              ¿Cómo puedo planificar un viaje en coche eléctrico usando su plataforma?
+                ¿Cómo puedo planificar un viaje en coche eléctrico usando su
+                plataforma?
               </button>
             </h2>
             <div
@@ -386,8 +400,10 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                Nuestra plataforma ofrece una herramienta de planificación de viajes que te permite rellenar un 
-                itinerario el cual te enviara a tu correo tu ruta mas precisa segun los datos que has rellenado.
+                Nuestra plataforma ofrece una herramienta de planificación de
+                viajes que te permite rellenar un itinerario el cual te enviara
+                a tu correo tu ruta mas precisa segun los datos que has
+                rellenado.
               </div>
             </div>
           </div>
@@ -401,7 +417,8 @@
                 aria-expanded="false"
                 aria-controls="flush-collapseFour"
               >
-              ¿Cómo se mantiene actualizada la información de las estaciones de carga en la plataforma?
+                ¿Cómo se mantiene actualizada la información de las estaciones
+                de carga en la plataforma?
               </button>
             </h2>
             <div
@@ -410,8 +427,9 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                Actualizamos continuamente la información de las estaciones de carga a través de fuentes confiables 
-                y la retroalimentación de la comunidad de usuarios.
+                Actualizamos continuamente la información de las estaciones de
+                carga a través de fuentes confiables y la retroalimentación de
+                la comunidad de usuarios.
               </div>
             </div>
           </div>
@@ -425,7 +443,7 @@
                 aria-expanded="false"
                 aria-controls="flush-collapseFive"
               >
-              ¿Ofrecen información sobre estaciones de carga en otros países?
+                ¿Ofrecen información sobre estaciones de carga en otros países?
               </button>
             </h2>
             <div
@@ -434,7 +452,8 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                No, de momento la plataforma se basa de las estaciones que hay en España, pero a futuro es posible una expancion.
+                No, de momento la plataforma se basa de las estaciones que hay
+                en España, pero a futuro es posible una expancion.
               </div>
             </div>
           </div>
@@ -448,7 +467,8 @@
                 aria-expanded="false"
                 aria-controls="flush-collapseSix"
               >
-              ¿Cuál es el costo de cargar mi coche eléctrico en estas estaciones?
+                ¿Cuál es el costo de cargar mi coche eléctrico en estas
+                estaciones?
               </button>
             </h2>
             <div
@@ -457,8 +477,9 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                El costo de la carga puede variar según la estación y el proveedor de servicios. 
-                Te proporcionamos información sobre tarifas cuando esté disponible.
+                El costo de la carga puede variar según la estación y el
+                proveedor de servicios. Te proporcionamos información sobre
+                tarifas cuando esté disponible.
               </div>
             </div>
           </div>
@@ -472,7 +493,7 @@
                 aria-expanded="false"
                 aria-controls="flush-collapseSeven"
               >
-              ¿Es necesario registrarse en el sitio para usar el servicio?
+                ¿Es necesario registrarse en el sitio para usar el servicio?
               </button>
             </h2>
             <div

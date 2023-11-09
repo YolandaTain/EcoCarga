@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Esilo de fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marvel&display=swap"
+      rel="stylesheet"
+    />
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="../bootstrap/css/bootstrap-utilities.min.css"
+    />
+    <script src="../bootStrap/js/bootstrap.bundle.min.js"></script>
+    <!--Nav y Header son los faltantes-->
+    <script src="../Nav/js/nav.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Nav/css/nav.css" />
+    <!--SVG-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--Css y js personal del apartado-->
+    <link rel="stylesheet" type="text/css" href="./css/sobreNosotros.css" />
+    <script href="./js/sobreNosotros.js"></script>
+  </head>
+  <body>
+
+
+
+    <br /><br /><br />
+    <div class="text-center prueba">
+      <button
+        type="button"
+        class="btn btn-primary boton"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Añade tu reseña
+      </button>
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Nueva Reseña
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="ecocarga" class="col-form-label"
+                    >Valora de 1 a 5:</label
+                  >
+                  <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    class="form-control"
+                    id="ecocarga"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label"
+                    >Comentario:</label
+                  >
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary boton"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button type="button" class="btn btn-primary boton" data-bs-dismiss="modal">
+                Enviar Reseña
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
