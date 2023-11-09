@@ -121,6 +121,7 @@ function siguiente(numero) {
     var formulario2 = document.getElementById('miFormulario2');
     var formulario3 = document.getElementById('miFormulario3');
     validarEmail();
+    validarFechaNac()
     if (numero === "2") {
         // Llama a la función para recopilar los datos del formulario 1
         recopilarDatosFormulario1();
@@ -163,5 +164,13 @@ function validarEmail() {
 
     if (regex.test(email)==false) {
         alert("Email no válido. Por favor, introduce un email válido.");
+    }
+}
+
+function validarFechaNac(){
+    var fechaNac=document.getElementById("fechaNac").value;
+    var fecha=new Date().toLocaleDateString();
+    if(fechaNac.getTime()>fecha.getTime()){
+        alert("Esta fecha no es posible")
     }
 }
