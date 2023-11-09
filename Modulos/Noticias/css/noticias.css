@@ -8,6 +8,70 @@
   --botonHover: #1c2206;
 }
 
+.titulo{
+  margin-left: 15px;
+  position: relative;
+  width:960px;
+  height: 50px;
+  color: #fff;
+  background: transparent;
+  border-bottom: 1px solid rgba(37, 193, 9, 0.5);
+  font-family: 'Marvel';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+#tituloMapa {
+  text-align: center;
+  
+  width:960px;
+  height: 50px;
+  background: transparent;
+  font-family: 'Marvel';
+}
+
+span {
+  position: absolute;
+  border-radius: 100vmax;
+}
+
+.bottom {
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    rgb(104, 235, 81),
+    rgba(83, 248, 54, 0.5),
+    transparent 50%
+  );
+}
+
+.bottom {
+  animation: animateBottom 3s ease-in-out infinite;
+}
+
+
+@keyframes animateBottom {
+  0%,
+  50% {
+    opacity: 0;
+    width: 0;
+  }
+
+  75% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .justify-content-center{
   margin-left: -30px;
 }
@@ -237,12 +301,6 @@ body {
 
 }
 
-#tituloMapa {
-  text-align: center;
-  box-shadow:
-  3px 3px rgb(167, 161, 161),
-  -1em 0 0.4em olive;
-}
 
 #botonBanner {
   border: none;
@@ -256,7 +314,7 @@ body {
   font-family: 'Marvel', sans-serif;
   font-size: 2rem;
   outline: none;
-  transform: translate(0px, 20px);
+  transform: translate(0px, 40px);
 }
 
 #botonBanner:hover {
@@ -326,9 +384,6 @@ body {
   text-align: center;
   font-weight: bold;
   color:#123f0a;
-  box-shadow:
-  3px 3px rgb(167, 161, 161),
-  -1em 0 0.4em olive;
 }
 
 .card img{
@@ -534,6 +589,21 @@ h3 {
     z-index: -1;
   }
   
+  .titulo{
+    margin-left: 10px;
+    position: relative;
+    width:730px;
+    height: 50px;
+    color: #fff;
+    background: transparent;
+    border-bottom: 1px solid rgba(37, 193, 9, 0.5);
+    font-family: 'Marvel';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
   .titulo-h1 h1{
     background-color: #344306;
     color: #fffdfd;
@@ -658,6 +728,21 @@ h3 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+
+  .titulo{
+    margin-left: 15px;
+    position: relative;
+    width:340px;
+    height: 50px;
+    color: #fff;
+    background: transparent;
+    border-bottom: 1px solid rgba(37, 193, 9, 0.5);
+    font-family: 'Marvel';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
   }
   
   .titulo-h1 h1{

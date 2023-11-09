@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Obtén los elementos del modal
   const modalTitle = document.getElementById("modal-title");
   const modalDate = document.getElementById("modal-date");
-  const modalDescription = document.getElementById("modal-description");
+  const modalDescription = document.getElementById("modal-descriptioncompleta");
   const modalImage = document.getElementById("modal-image");
 
   // Obtén los botones "Leer Más"
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const noticia = data[noticiaId - 1]; // Restamos 1 para obtener el índice correcto del arreglo
         modalTitle.textContent = noticia.titulo;
         modalDate.textContent = noticia.fecha;
-        modalDescription.textContent = noticia.descripcion;
+        modalDescription.innerHTML = noticia.descripcioncompleta;
 
         // Obtén la extensión de la imagen desde el campo "imagen"
         const imageExtension = noticia.imagen.split('.').pop().toLowerCase();
