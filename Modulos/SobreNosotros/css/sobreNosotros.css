@@ -119,10 +119,28 @@ a {
   font-size: 2rem;
 }
 
-.card{
-    border-radius: 10px;
+.card {
+  border-radius: 10px;
 }
 
-.card-img-top{
-    border-radius: 10px 10px 0 0;
+.card-img-top {
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-title{
+    font-size: 2rem;
+}
+
+.col-form-label{
+    font-size: 2rem;
+}
+
+.form-control{
+    font-size: 2rem;
+}
+
+.resena{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
 }
