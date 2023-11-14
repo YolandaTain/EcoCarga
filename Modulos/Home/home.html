@@ -8,6 +8,7 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <link rel="stylesheet" href="/Modulos/bootstrap/css/bootstrap.min.css">
     <script src="/Modulos/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1NDjFuLVegBGCqZtPqGqJeV3uhTXCn-M&libraries=places"></script>
     <script src="js/home.js"></script>
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,19 +67,22 @@
             <div class="tituloSearchContenedor col-10 justify-content-center">
                 <div class="row">
                     <div class="col-1 col-md-1 col-lg-1 align-self-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plug" width="34"
-                            height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFDF4" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M9.785 6l8.215 8.215l-2.054 2.054a5.81 5.81 0 1 1 -8.215 -8.215l2.054 -2.054z" />
-                            <path d="M4 20l3.5 -3.5" />
-                            <path d="M15 4l-3.5 3.5" />
-                            <path d="M20 9l-3.5 3.5" />
-                        </svg>
+                        <div class="apartado">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plug" width="34"
+                                height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFDF4" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M9.785 6l8.215 8.215l-2.054 2.054a5.81 5.81 0 1 1 -8.215 -8.215l2.054 -2.054z" />
+                                <path d="M4 20l3.5 -3.5" />
+                                <path d="M15 4l-3.5 3.5" />
+                                <path d="M20 9l-3.5 3.5" />
+                            </svg>
 
-                    </div>
-                    <div class="col-10">
-                        <h1 id="tituloSearch">Mapa puntos de recarga coche eléctrico</h1>
+                        </div>
+                        <div class="col-10">
+                            <h1 id="tituloSearch">Mapa puntos de recarga coche eléctrico</h1>
+                        </div>
                     </div>
                 </div>
 
@@ -105,12 +109,12 @@
                 </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade" id="ModalCenterF" tabindex="-1" role="dialog"
+            <div class="modal fadef" id="ModalCenterF" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-contentF">
-                        <div class="modal-header">
-                            <h5 class="modal-titleF" id="exampleModalLongTitle">Modal title</h5>
+                        <div class="modal-headerF">
+                            <h5 class="modal-titleF" id="exampleModalLongTitleF"></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -123,24 +127,21 @@
                 </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Título del Modal</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ...
+                            <!-- Contenido del cuerpo del modal -->
+                            <p>Contenido del cuerpo del modal...</p>
                         </div>
-
+                        <div id="map"></div>
                     </div>
                 </div>
             </div>
-
             <!--
         <div id="destacados" class="des-menu">
             </h1>
