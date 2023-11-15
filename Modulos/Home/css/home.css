@@ -36,14 +36,33 @@
     padding: 0rem;
   }
 
-  .tituloSearchContenedor {
-    background-color: var(--oscuro);
-    padding: 1rem;
-    border: 3px solid #515151;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 250rem;
-    font-family: 'Marvel', sans-serif;
-  }
+  .tituloSearchContenedor h1{
+    background-color: #344306;
+    color: #fffdfd;
+    margin-top: 10px;
+    margin-right: 160px;
+    font-size: 30px;
+    margin-left: 355px;
+    justify-content: center;
+    font-family: "Marvel";
+}
+    .tituloSearchContenedor h1::before {
+      background-color: #000000;
+      color: #fffdfd;
+      margin-right: 100px;
+      font-size: 30px;
+      margin-left: 346px;
+      margin-top: -10px;
+      content: '';
+      position: absolute;
+      border-top: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 30px solid #344306;
+      /* El color coincide con el fondo del div */
+      border-left: 30px solid #344306;
+    }
+
+
 
   .tituloSearchContenedor svg {
     margin-left: 16rem;
@@ -67,12 +86,6 @@
   }
 
 
-  #tituloSearch {
-    font-size: 2.5rem;
-    color: var(--body);
-    margin-left: 6rem;
-    padding: 1.5rem;
-  }
 
   /*
 @media (max-width:391px){
@@ -154,10 +167,12 @@
 
   .card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10rem;
   }
 
   .card img{
-    height: 250px;
+    height: 280px;
+    margin-top: 0.8rem;
   }
 
   @media(max-width:768px) {

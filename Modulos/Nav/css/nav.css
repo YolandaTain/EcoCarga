@@ -99,7 +99,11 @@ body {
   font-size: 4rem;
   color: var(--claro);
   margin-bottom: 0.2rem;
+}
 
+.dropdown-menu{
+  padding: 0rem;
+  border: none;
 }
 
 .scale-up-hor-right {
