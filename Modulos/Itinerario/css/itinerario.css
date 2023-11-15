@@ -403,3 +403,14 @@ button:hover {
     background-color: #344306 !important;
     color: #ffffff;
 }
+
+#nombre, #email, #fechaNac{
+    width:50%;
+    margin-left: 2rem;
+    margin-top:3rem;
+}
+
+#siguiente-button1{
+    margin-bottom: -3rem;
+}
+
