@@ -233,13 +233,13 @@ body {
 
 .card-img-top{
   margin-top:5px;
-  border-radius: 15px 50px 30px;
+  border-radius: 15px 50px;
   border-style: groove;
 }
 
 .slide-image img {
   max-width: 100%;
-  border-radius: 15px 50px 30px; 
+  border-radius: 15px; 
   border: #123f0a;
   border-style: groove;
 }
@@ -396,13 +396,13 @@ body {
 }
 
 .card-body a{
-margin-top: -30px;
-margin-left: 180px;
-width: 8rem;
-height: 4rem;
-background-color: var(--rotulos);
-color:#fff;
-z-index: 0;
+  margin-top: -30px;
+  margin-left: 180px;
+  width: 8rem;
+  height: 4.2rem;
+  background-color: var(--rotulos);
+  color:#fff;
+  border-radius: 15px;
 }
 
 .card-body a:hover{
@@ -557,6 +557,7 @@ h3 {
   height: 30px;
   width: 80px;
   font-size: 15px;
+  border-radius: 20px;
 }
 
 .slide-content img{
@@ -640,7 +641,7 @@ h3 {
     max-width: 80%;
     max-height: 80%;
     margin-left:60px;
-    border-radius: 15px 50px 30px; 
+    border-radius: 15px; 
   }
 
   .video-carousel {

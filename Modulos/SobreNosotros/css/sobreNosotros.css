@@ -36,16 +36,35 @@ body {
   font-weight: bold;
 }
 
-#h3 {
+.tarjetap {
+  background-color: #6a6e66ab;
+  border-radius: 10px;
+  margin: 1rem;
+  color: var(--body);
+}
+
+#h2 {
   font-size: 4rem;
 }
 
-#h4 {
+#h3 {
   font-size: 3rem;
   font-style: italic;
 }
 
-p {
+.persona {
+  width: 40rem;
+  margin-top: 2rem;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+.descr {
   text-align: justify;
 }
 
@@ -101,46 +120,73 @@ p {
   color: var(--body);
 }
 
-.card {
-  background-color: #6a6e66ab;
-  color: var(--body);
+p {
+  text-align: justify;
 }
 
 a {
-  color: white;
-  font-weight: bold;
+  color: var(--body);
 }
 
-.card-title {
-  font-size: 3.5rem;
-}
-
-.card-text {
+/*
+.modal-title {
   font-size: 2rem;
 }
 
-.card {
-  border-radius: 10px;
+.col-form-label {
+  font-size: 2rem;
 }
 
-.card-img-top {
-  border-radius: 10px 10px 0 0;
+.form-control {
+  font-size: 2rem;
 }
 
-.modal-title{
-    font-size: 2rem;
+.resena {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+*/
+
+.apartado {
+  position: relative;
+  background-color: #000000;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.col-form-label{
-    font-size: 2rem;
+.apartado .titulo-h1 {
+  background-color: #344306;
+  color: #344306;
+  font-family: "Marvel";
+  margin-left: -0.8rem;
 }
 
-.form-control{
-    font-size: 2rem;
+.titulo-h1 h1 {
+  background-color: #344306;
+  color: #fffdfd;
+  margin-top: 10px;
+  margin-right: 160px;
+  font-size: 30px;
+  margin-left: 350px;
+  justify-content: center;
+  font-family: "Marvel";
 }
 
-.resena{
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
+.titulo-h1 h1::before {
+  background-color: #000000;
+  color: #fffdfd;
+  margin-right: 100px;  
+  font-size: 30px;
+  margin-left: 346px;
+  margin-top: -10px;
+  content: "";
+  position: absolute;
+  border-top: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #344306;
+  /* El color coincide con el fondo del div */
+  border-left: 30px solid #344306;
 }
