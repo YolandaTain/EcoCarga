@@ -36,16 +36,35 @@ body {
   font-weight: bold;
 }
 
-#h3 {
+.tarjetap{
+  background-color: #6a6e66ab;
+  border-radius: 10px;
+  margin: 1rem;
+  color: var(--body);
+}
+
+#h2 {
   font-size: 4rem;
 }
 
-#h4 {
+#h3 {
   font-size: 3rem;
   font-style: italic;
 }
 
-p {
+.persona {
+  width: 40rem;
+  margin-top: 2rem;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+.descr {
   text-align: justify;
 }
 
@@ -101,46 +120,29 @@ p {
   color: var(--body);
 }
 
-.card {
-  background-color: #6a6e66ab;
+p{
+  text-align: justify;
+}
+
+a{
   color: var(--body);
 }
 
-a {
-  color: white;
-  font-weight: bold;
-}
-
-.card-title {
-  font-size: 3.5rem;
-}
-
-.card-text {
+/*
+.modal-title {
   font-size: 2rem;
 }
 
-.card {
-  border-radius: 10px;
+.col-form-label {
+  font-size: 2rem;
 }
 
-.card-img-top {
-  border-radius: 10px 10px 0 0;
+.form-control {
+  font-size: 2rem;
 }
 
-.modal-title{
-    font-size: 2rem;
-}
-
-.col-form-label{
-    font-size: 2rem;
-}
-
-.form-control{
-    font-size: 2rem;
-}
-
-.resena{
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
+.resena {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }
