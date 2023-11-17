@@ -233,13 +233,13 @@ body {
 
 .card-img-top{
   margin-top:5px;
-  border-radius: 15px 50px 30px;
+  border-radius: 15px 50px;
   border-style: groove;
 }
 
 .slide-image img {
   max-width: 100%;
-  border-radius: 15px 50px 30px; 
+  border-radius: 15px ; 
   border: #123f0a;
   border-style: groove;
 }
