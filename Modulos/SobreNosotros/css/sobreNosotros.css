@@ -187,7 +187,6 @@ a {
   border-top: 30px solid transparent;
   border-right: 30px solid transparent;
   border-bottom: 30px solid #344306;
-  /* El color coincide con el fondo del div */
   border-left: 30px solid #344306;
 }
 
@@ -238,7 +237,6 @@ a {
     border-top: 30px solid transparent;
     border-right: 30px solid transparent;
     border-bottom: 30px solid #344306;
-    /* El color coincide con el fondo del div */
     border-left: 30px solid #344306;
   }
 }
@@ -289,7 +287,6 @@ a {
     border-top: 30px solid transparent;
     border-right: 30px solid transparent;
     border-bottom: 30px solid #344306;
-    /* El color coincide con el fondo del div */
     border-left: 30px solid #344306;
   }
 }
