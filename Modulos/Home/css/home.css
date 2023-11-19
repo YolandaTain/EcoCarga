@@ -33,7 +33,12 @@
 
   /* Con esto consigo que el padding sea cero de la barra de navegación pero el botón con más padding */
   .agrupar {
-    padding: 0rem;
+    padding: 0;
+  
+  }
+
+  .input-group{
+    padding:0;
   }
 
   .tituloSearchContenedor h1{
@@ -134,6 +139,7 @@
     font-size: 2rem;
     border-radius: 0 15px 15px 0;
     padding: 1.5rem;
+    margin-right: -2rem;
 
   }
 
@@ -149,16 +155,19 @@
     }
   }
 
+
   /* Estilo para el campo de entrada */
-  #searchBar {
+  #place_input {
     background-color: --claro;
     color: var(--oscuro);
     font-family: 'Marvel', sans-serif;
     font-size: 2rem;
+
   }
 
+ 
   /* Estilo para el texto de marcador de posición en el campo de entrada */
-  #searchBar::placeholder {
+  #place_input::placeholder {
     color: var(--oscuro);
     /* Color del marcador de posición */
     opacity: 0.7;
@@ -207,13 +216,20 @@
     background-color: var(--claro);
     padding: 0.5rem;
     box-shadow: 0.5rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5);
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 15px;
     width: 100rem;
-    font-size: 3rem;
-    padding: 1rem;
+    font-size: 2.5rem;
+    padding: 0.5rem;
     color: var(--oscuro);
-    text-align: left;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .resultado-hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo en hover según tus preferencias */
+    transform: scale(1.05)
   }
 
   @media(max-width:768px) {
@@ -239,6 +255,19 @@
     font-weight: 400;
   }
 
+  .text-reset{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+  }
+
+  .justify-content-space-between{
+    justify-content: space-between;
+  }
+
+  .py-1{
+    padding: .5rem 0;
+  }
 
   #botonBanner {
     border: none;
@@ -318,4 +347,84 @@
     font-family: "Marvel";
   }
 
- 
+  @media (max-width: 768px) {
+    .apartado {
+        position: relative;
+        background-color: #000000;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        z-index: -1;
+    }
+
+    .titulo-h1 h1 {
+        background-color: #344306;
+        color: #fffdfd;
+        margin-top: 10px;
+        margin-right: 100px;
+        font-size: 30px;
+        margin-left: 70px;
+        justify-content: center;
+    }
+
+    .titulo-h1 h1::before {
+        background-color: #000000;
+        color: #fffdfd;
+        margin-right: 100px;
+        font-size: 30px;
+        margin-left: 250px;
+        margin-top: -10px;
+        content: '';
+        position: absolute;
+        border-top: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 30px solid #344306;
+        /* El color coincide con el fondo del div */
+        border-left: 30px solid #344306;
+    }
+}
+
+@media (max-width: 576px) {
+    .apartado {
+        position: relative;
+        background-color: #060606;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .titulo-h1 h1 {
+        background-color: #344306;
+        color: #fffdfd;
+        margin-top: 10px;
+        margin-right: 130px;
+        font-size: 22px;
+        margin-left: 20px;
+        justify-content: center;
+    }
+}
+
+.modal-custom {
+  max-width: 150rem; /* Ajusta el porcentaje según tus necesidades */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
