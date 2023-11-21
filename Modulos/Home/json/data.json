@@ -2,7 +2,7 @@
   "puntosCarga": [
     {
       "id": 1,
-      "imagen": "/img/gas1.jpg",
+      "imagen": "./img/gas1.jpg",
       "direccion": "Calle Alhambra",
       "numeroDireccion": "123",
       "codigoPostal": "29604",
@@ -16,7 +16,7 @@
     },
     {
       "id": 2,
-      "imagen": "/img/gas2.jpg",
+      "imagen": "./img/gas2.jpg",
       "direccion": "Avenida de la Palmera",
       "numeroDireccion": "45",
       "codigoPostal": "41013",
@@ -30,7 +30,7 @@
     },
     {
       "id": 3,
-      "imagen": "/img/gas3.jpg",
+      "imagen": "./img/gas3.jpg",
       "direccion": "Calle Playa de la Victoria",
       "numeroDireccion": "7",
       "codigoPostal": "11406",
@@ -44,6 +44,7 @@
     },
     {
       "id": 4,
+      "imagen": "./img/gas1.jpg",
       "direccion": "Paseo de la Ribera",
       "numeroDireccion": "9",
       "codigoPostal": "14002",
@@ -57,6 +58,7 @@
     },
     {
       "id": 5,
+      "imagen": "./img/gas2.jpg",
       "direccion": "Avenida de Andalucía",
       "numeroDireccion": "15",
       "codigoPostal": "41007",
@@ -70,6 +72,7 @@
     },
     {
       "id": 6,
+      "imagen": "./img/gas3.jpg",
       "direccion": "Avenida de Andalucía",
       "numeroDireccion": "15",
       "codigoPostal": "41002",
@@ -83,6 +86,7 @@
     },
     {
       "id": 7,
+      "imagen": "./img/gas1.jpg",
       "direccion": "Calle Nueva",
       "numeroDireccion": "42",
       "codigoPostal": "11404",
@@ -96,6 +100,7 @@
     },
     {
       "id": 8,
+      "imagen": "./img/gas2.jpg",
       "direccion": "Paseo de los Tristes",
       "numeroDireccion": "17",
       "codigoPostal": "18002",
@@ -109,6 +114,7 @@
     },
     {
       "id": 9,
+      "imagen": "./img/gas3.jpg",
       "direccion": "Avenida de la Playa",
       "numeroDireccion": "21",
       "codigoPostal": "29020",
@@ -122,6 +128,7 @@
     },
     {
       "id": 10,
+      "imagen": "./img/gas1.jpg",
       "direccion": "Calle de la Giralda",
       "numeroDireccion": "60",
       "codigoPostal": "41003",
@@ -135,6 +142,7 @@
     },
     {
       "id": 11,
+      "imagen": "./img/gas2.jpg",
       "direccion": "Calle de las Flores",
       "numeroDireccion": "11",
       "codigoPostal": "11004",
@@ -148,6 +156,7 @@
     },
     {
       "id": 12,
+      "imagen": "./img/gas3.jpg",
       "direccion": "Paseo de la Alhambra",
       "numeroDireccion": "27",
       "codigoPostal": "18003",
@@ -161,6 +170,7 @@
     },
     {
       "id": 13,
+      "imagen": "./img/gas1.jpg",
       "direccion": "Calle Alameda",
       "numeroDireccion": "8",
       "codigoPostal": "29030",
@@ -174,6 +184,7 @@
     },
     {
       "id": 14,
+      "imagen": "./img/gas2.jpg",
       "direccion": "Avenida de las Delicias",
       "numeroDireccion": "33",
       "codigoPostal": "41004",
@@ -187,6 +198,7 @@
     },
     {
       "id": 15,
+      "imagen": "./img/gas3.jpg",
       "direccion": "Calle Real",
       "numeroDireccion": "19",
       "codigoPostal": "11005",
@@ -200,6 +212,7 @@
     },
     {
       "id": 16,
+      "imagen": "./img/gas1.jpg",
       "direccion": "Calle Alhambra Sur",
       "numeroDireccion": "55",
       "codigoPostal": "29005",
@@ -213,6 +226,7 @@
     },
     {
       "id": 17,
+      "imagen": "./img/gas2.jpg",
       "direccion": "Avenida de la Constitución",
       "numeroDireccion": "12",
       "codigoPostal": "41010",
@@ -226,6 +240,7 @@
     },
     {
       "id": 18,
+      "imagen": "./img/gas3.jpg",
       "direccion": "Calle de la Palma",
       "numeroDireccion": "28",
       "codigoPostal": "11010",
@@ -239,6 +254,7 @@
     },
     {
       "id": 19,
+      "imagen": "./img/gas1.jpg",
       "direccion": "Paseo de los Alamos",
       "numeroDireccion": "7",
       "codigoPostal": "18010",
@@ -252,6 +268,7 @@
     },
     {
       "id": 20,
+      "imagen": "./img/gas2.jpg",
       "direccion": "Calle San Andrés",
       "numeroDireccion": "14",
       "codigoPostal": "29015",

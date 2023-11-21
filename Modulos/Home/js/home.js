@@ -1,14 +1,22 @@
 document.addEventListener("DOMContentLoaded", init());
 
 var dataset;
+// Función para mezclar aleatoriamente un array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 function init() {
-
     fetch('./json/data.json')
         .then((response) => response.json())
         .then((data) => {
-            dataset = data.puntosCarga;
+            dataset = shuffleArray(data.puntosCarga); // Mezclar el array de puntos de carga
             var contador = 0;  // Variable contador para limitar a tres tarjetas
+
             dataset.forEach((punto) => {
                 if (contador < 3) {
                     var puntoCard = document.createElement('div');
@@ -20,23 +28,41 @@ function init() {
                             <div class="card-body text-center">
                                 <h5 class="card-title">${punto.direccion}, ${punto.numeroDireccion}</h5>
                                 <p class="card-text">${punto.ciudad}, ${punto.codigoPostal}</p>
-                                <a href="#" class="btn btn-primary añadir-carrito"
-                                    style="padding: 1rem; width: 15rem; font-size: 1.5rem;">Añadir al carrito</a>
+                                <a href="#" class="btn btn-dark googleMaps"
+                                    style="padding: 1rem; width: 15rem; font-size: 1.5rem;">Google Maps</a>
                             </div>
                         </div>
                     `;
                     cards.appendChild(puntoCard);
 
-                    var btnAñadirCarrito = puntoCard.querySelector('.añadir-carrito');
+                    var btnGoogleMaps = puntoCard.querySelector('.googleMaps');
 
-                    btnAñadirCarrito.addEventListener('click', () => {
-                        añadir(punto, dropdownMenu);
+                    btnGoogleMaps.addEventListener('click', () => {
+                        var iframeURL = obtenerIframeLink(punto);
+                        window.open(iframeURL);
                     });
 
                     contador++;
                 }
             });
         });
+}
+// Función para obtener el enlace del iframe del objeto element
+function obtenerIframeLink(punto) {
+    // Verificar si el elemento tiene un iframe y devolver el enlace
+    if (punto.iframe) {
+        var iframeElement = document.createElement('div');
+        iframeElement.innerHTML = punto.iframe;
+        // Obtener el enlace (src) del iframe
+        //var iframeSrc = iframeElement.querySelector('iframe').src;
+        var iframeSrc = iframeElement.querySelector('iframe').src;
+
+        // Devolver el enlace del iframe
+        return iframeSrc;
+    }
+
+    // Devolver null si no hay iframe
+    return null;
 }
 
 let map;
@@ -453,7 +479,6 @@ function showInfoModal(element) {
         "Ciudad: " + element.ciudad + "<br>" +
         "Código Postal: " + element.codigoPostal + "<br>" +
         "Tipo Carga: " + element.tipoCarga + "</strong>"
-
 
     // Crear un contenedor div para el iframe
     var iframeContainer = document.createElement("div");
