@@ -114,6 +114,15 @@ function mostrarResumenModal() {
     // Abre el modal
     var modal = new bootstrap.Modal(document.getElementById("resumenItinerario"));
     modal.show();
+
+    var enviarEmailBtn = document.getElementById('enviarEmailBtn');
+
+    
+    enviarEmailBtn.addEventListener('click', function () {
+
+        var mailtoLink = 'mailto:destinatario@ejemplo.com?subject=Solicitud%20de%20datos';
+        window.location.href = mailtoLink;
+    });
 }
 
 //Se organiza la recopilación de datos por formulario y permite avanzar al siguiente
