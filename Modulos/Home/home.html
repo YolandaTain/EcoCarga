@@ -107,12 +107,12 @@
                     </div>
                     <div class="col 8 input-group">
                         <input type="search" class="align-self-center form-control rounded" id="place_input"
-                            placeholder="Introduce código postal o ciudad...">
+                            placeholder="Introduce una ubicación...">
 
                         <div class="dropdown">
-                            <button id="boton" type="button" class="botonContenedor" onclick="searchGoogleMapWithButton()">BUSCADOR</button>
+                            <button id="boton" type="button" class="botonContenedor" onclick="getData()">BUSCADOR</button>
                             <div class="dropdown-content">
-                                <p>Ofrece un listado de ofertas y más información</p>
+                                <p>Ofrece un listado puntos de carga por código postal o ciudad</p>
                             </div>
                         </div>
 
@@ -155,7 +155,8 @@
     <h1 id="tituloMapa">EXPLORA TUS PUNTOS DE CARGA</h1>
     <hr>
     <br><br>
-    <div class="row justify-content-around card-deck">
+    <!--
+    <div class="row justify-content-around card-deck" id="cards">
         <div class="card col-10 col-md-7 col-lg-3">
             <div class="row">
                 <img class="card-img-top col-12" src="img/gas1.jpg" alt="Card image cap">
@@ -167,6 +168,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="card col-10 col-md-7 col-lg-3">
             <div class="row">
                 <img class="card-img-top col-12" src="img/gas2.jpg" alt="Card image cap">
@@ -190,6 +192,7 @@
             </div>
         </div>
     </div>
+    -->
     <br><br>
     <hr>
     <br>
