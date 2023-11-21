@@ -145,7 +145,6 @@ function siguiente(numero) {
                 mostrarFormulario(numero);
             } else {
                 mostrarModalError("Por favor, completa todos los campos requeridos.")
-                //alert("Por favor, completa todos los campos requeridos.");
             }
         } else if (checkFechaInicioyFin) {
             if (numero === "3") {
@@ -155,7 +154,6 @@ function siguiente(numero) {
                     mostrarFormulario(numero);
                 } else {
                     mostrarModalError("Por favor, completa todos los campos requeridos.")
-                    //alert("Por favor, completa todos los campos requeridos.");
                 }
             } else if (numero === "3") {
                 // Llama a la función para recopilar los datos del formulario 3
@@ -165,7 +163,7 @@ function siguiente(numero) {
                     mostrarFormulario(numero);
                 } else {
                     mostrarModalError("Por favor, completa todos los campos requeridos.")
-                    //alert("Por favor, completa todos los campos requeridos.");
+                    
                 }
             }
         }
