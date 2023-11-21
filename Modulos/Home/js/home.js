@@ -453,7 +453,7 @@ function showInfoModal(element) {
         "Ciudad: " + element.ciudad + "<br>" +
         "Código Postal: " + element.codigoPostal + "<br>" +
         "Tipo Carga: " + element.tipoCarga + "</strong>"
-        
+
 
     // Crear un contenedor div para el iframe
     var iframeContainer = document.createElement("div");
@@ -461,6 +461,9 @@ function showInfoModal(element) {
 
     // Agregar el contenedor del iframe al contenido del modal
     modalContent.appendChild(iframeContainer);
+
+    modalContent.style.display = "flex";
+    modalContent.style.justifyContent = "space-between";
 
     // Muestra el modal utilizando Bootstrap clases
     modal.classList.add("show");
@@ -633,169 +636,6 @@ const getYourLocation = () => {
         alert("Tu navegador no cuanta con localización")
     }
 }
-
-
-function getData() {
-
-    var resultadoBusqueda = document.querySelector('input').value;
-    var resultados = document.getElementById("resultadosBusqueda");
-
-    // Limpia los resultados anteriores
-    resultados.innerHTML = "";
-
-    // Variable para realizar un seguimiento de si se encontró el código postal
-    var codigoPostalEncontrado = false;
-    var ciudadEncontrada = false;
-
-    var resultadosEncontrados = 0; // Variable para contar resultados
-    var countElement = document.createElement("h1");
-
-    dataset.forEach(element => {
-        if (resultadoBusqueda == element.codigoPostal || resultadoBusqueda == element.ciudad) {
-            resultadosEncontrados++;
-            // Incrementa el contador de resultados
-            // Muestra el número de resultados encontrados
-
-            countElement.style.fontSize = '3rem';
-            countElement.style.textAlign = 'center';
-            resultados.appendChild(countElement);
-            countElement.innerHTML = "<strong>" + resultadosEncontrados + " Puntos de carga cercanos" + "</strong>" + "<br>" + "Selecciona " + "<strong>" + "+Info" + "</strong>" + " en la lista";
-
-        }
-
-
-    });
-
-    dataset.forEach(element => {
-        if (resultadoBusqueda == element.codigoPostal || resultadoBusqueda == element.ciudad) {
-
-            // Creo el elemento para svg que necesito
-            var svgElement = document.createElement("span");
-            svgElement.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#344306" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/></svg>';
-
-            // Crear el elemento div principal
-            var div = document.createElement("div");
-
-            // Agregar el contenedor SVG al div principal antes del contenido de texto
-            div.appendChild(svgElement);
-
-            // Agregar el contenido de texto (dirección, etc.) al div
-            div.innerHTML += element.direccion + ", " + element.numeroDireccion +
-                " | Ciudad: " + element.ciudad + " | Código Postal: " + element.codigoPostal + " | Tipo Carga: " + element.tipoCarga;
-
-            // Añadir una clase al elemento div
-            div.classList.add("resultado");
-            div.classList.add("col-10");
-            div.classList.add("col-md-8");
-            div.classList.add("col-lg-6");
-
-            // Agregar un manejador de eventos para el hover
-            div.addEventListener("mouseover", function () {
-                div.classList.add("resultado-hover");
-            });
-
-            // Agregar un manejador de eventos para cuando el mouse sale del elemento
-            div.addEventListener("mouseout", function () {
-                div.classList.remove("resultado-hover");
-            });
-
-            // Crea un botón para mostrar el modal
-            var infoButton = document.createElement("button");
-            infoButton.style.padding = '1rem';
-            infoButton.style.margin = '1rem';
-            infoButton.style.width = '10rem';
-            infoButton.style.fontSize = '2rem';
-            infoButton.textContent = "+Info";
-            infoButton.classList.add("btn", "btn-dark");
-
-            // Agrega un manejador de eventos para mostrar el modal cuando se hace clic en el botón
-            infoButton.addEventListener("click", function () {
-                showInfoModal(element);
-
-            });
-
-            // Agrega el botón al div de resultados
-            div.appendChild(infoButton);
-
-            // Agrega el div al contenedor de resultados
-            resultados.appendChild(div);
-
-            // Cambia la variable a true porque encontraste un código postal
-            codigoPostalEncontrado = true;
-            ciudadEncontrada = true;
-
-
-        }
-
-    });
-
-
-    // Después del bucle, verifica si se encontró el código postal o no
-    if (!codigoPostalEncontrado || !ciudadEncontrada) {
-        // Si no se encuentra el código postal, muestra un mensaje de error en un modal
-        var modal = document.getElementById("exampleModal");
-        var modalTitleF = modal.querySelector(".modal-title");
-        var modalContentF = modal.querySelector(".modal-body");
-        modalTitleF.textContent = "Código Postal no encontrado";
-        modalContentF.innerHTML = "El código postal  o ciudad que ingresaste no se encuentra en la base de datos.";
-        // Muestra el modal
-        modal.classList.add("show");
-        modal.style.display = "block";
-        document.body.classList.add("modal-open");
-        document.body.style.paddingRight = "15px"; // Ajusta el desplazamiento del cuerpo si es necesario
-
-        //Obtén una referencia al botón de cerrar
-        var closeButton = document.querySelector('.btn-close');
-
-        // Asocia la función de cierre al evento de clic en el botón de cerrar
-        closeButton.addEventListener('click', function () {
-            // Oculta el modal utilizando Bootstrap clases
-            modal.classList.remove('show');
-            modal.style.display = 'none';
-            document.body.classList.remove('modal-open');
-        });
-
-    }
-}
-
-function showInfoModal(element) {
-    var modal = document.getElementById("exampleModal");
-    var modalTitle = modal.querySelector(".modal-title");
-    var modalContent = modal.querySelector(".modal-body");
-
-    modalTitle.textContent = "Información del Código Postal: " + element.codigoPostal;
-    modalTitle.style.fontSize = "2rem";
-    modalContent.style.fontSize = "2.5rem";
-
-
-    modalContent.innerHTML =
-        "<strong>" + element.direccion + ", " + element.numeroDireccion + "<br>" +
-        "Ciudad: " + element.ciudad + "<br>" +
-        "Código Postal: " + element.codigoPostal + "<br>" +
-        "Tipo Carga: " + element.tipoCarga + "</strong>"
-    // Muestra el modal utilizando Bootstrap clases
-    modal.classList.add("show");
-    modal.style.display = "block";
-    document.body.classList.add("modal-open");
-
-    var div = document.createElement("div");
-
-
-    modalContent.appendChild(div);
-
-    //Obtén una referencia al botón de cerrar
-    var closeButton = document.querySelector('.btn-close');
-
-    // Asocia la función de cierre al evento de clic en el botón de cerrar
-    closeButton.addEventListener('click', function () {
-        // Oculta el modal utilizando Bootstrap clases
-        modal.classList.remove('show');
-        modal.style.display = 'none';
-        document.body.classList.remove('modal-open');
-    });
-
-}
-
 
 function resultado() {
     var menu = document.getElementById("destacados");
