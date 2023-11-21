@@ -192,27 +192,58 @@
               proporcionar información valiosa."
             </p>
           </div>
-          <br /><br />
-          <div class="col 5 opinion mb-3">
-            <span class="material-symbols-outlined"
-              >star star star star star_half</span
-            >
-            <p>16/11/2023</p>
-            <p>
-              "La página es muy amigable para dispositivos móviles. Puedo
-              acceder a ella desde mi smartphone sin problemas."
-            </p>
-          </div>
         </div>
         <br />
 
-        <!--Modal y boton añadir reseña-->
+        <!--Boton añadir reseña-->
         <div class="text-center">
-          <button class="boton" id="resena" title="Añade tu reseña">
-            Añade tu reseña
-          </button>
+          <button type="button" class="btn btn-primary boton" data-bs-toggle="modal" data-bs-target="#dialogo2">Añade tu reseña</button>   
         </div>
         <br />
+
+        <!--Modal del boton-->
+        <div class="modal fade" id="dialogo2">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+        
+              <div class="modal-header">
+                <h4 class="modal-title">Reseña para EcoCarga</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+        
+              <!-- cuerpo del diálogo -->
+              <div class="modal-body .modal-sm">
+                  <div class="container-fluid">   
+                    <form>
+                      <div class="mb-3 row">
+                        <label for="evalucacion" class="col-sm-3 col-form-label">Evalua de 1 a 5:</label>
+                        <div class="col-sm-9">
+                          <input type="number" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="Comentario" class="col-sm-3 col-form-label" >Comentario:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="message-text" required>
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <div class="offset-sm-3 col-sm-9">
+                          <button type="submit" class="btn btn-primary boton">Enviar</button> 
+                          <button type="button" class="btn btn-primary boton" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                      </div>  
+                    </form>
+                  </div>            
+              </div>
+              <div class="modal-footer">
+                <p>Al dar enviar su reseña sera revisada antes de su publicacion.</p>
+                <p>¡Gracias por su colaboración!</p>
+              </div>
+        
+            </div>
+          </div>
+        </div> 
       </div>
 
       <div class="row justify-content-center">
@@ -228,7 +259,7 @@
           <!--Yoli-->
           <div class="col-11 col-md-11 col-lg-5 tarjetap">
             <img
-              src="./img/yolilightcircle.jpg"
+              src="./img/Yolanda.jpeg"
               class="rounded-circle persona img-thumbnail"
               alt="Yolanda"
             />
@@ -252,7 +283,7 @@
           <!--Jorge-->
           <div class="col-11 col-md-11 col-lg-5 tarjetap">
             <img
-              src="./img/jorgelightcircle.jpg"
+              src="./img/Jorge.jpeg"
               class="rounded-circle persona img-thumbnail"
               alt="Jorge"
             />
@@ -277,7 +308,7 @@
           <!--Ronnie-->
           <div class="col-11 col-md-11 col-lg-5 tarjetap">
             <img
-              src="./img/ronnielight.jpg"
+              src="./img/Ronnie.jpeg"
               class="rounded-circle persona img-thumbnail"
               alt="Ronnie"
             />
@@ -296,7 +327,7 @@
           <!--Vero-->
           <div class="col-11 col-md-11 col-lg-5 tarjetap">
             <img
-              src="./img/verolightcircle.png"
+              src="./img/Veronika.jpg"
               class="rounded-circle persona img-thumbnail"
               alt="Vero"
             />

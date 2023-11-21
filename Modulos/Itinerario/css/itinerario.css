@@ -392,6 +392,7 @@ button:hover {
     font-size: 2.5rem;
     padding: 2rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .modal-footer2 {
@@ -407,6 +408,14 @@ button:hover {
     width:50%;
     margin-left: 2rem;
     margin-top:3rem;
+}
+
+@media (max-width:576px){
+    #nombre, #email, #fechaNac{
+        width:90%;
+        margin-left: 2rem;
+        margin-top:3rem;
+    }
 }
 
 #siguiente-button1{
