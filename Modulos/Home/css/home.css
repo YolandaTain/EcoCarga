@@ -428,3 +428,12 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.iframe-container {
+ align-items: strech;
+}
+
+#exampleModal{
+  width: 100rem;
+  margin-left: 30rem;
+}
