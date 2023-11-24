@@ -109,7 +109,7 @@ span {
   position: absolute;
   border-top: 30px solid transparent;
   border-right:  30px  solid transparent;
-  border-bottom:  30px  solid  #344306; /* El color coincide con el fondo del div */
+  border-bottom:  30px  solid  #344306; 
   border-left:  30px  solid  #344306; 
 }
 
@@ -454,7 +454,6 @@ footer p {
   background-color: var(--claro);
 }
 
-/* Estilos para el contenedor principal */
 .video-carousel {
   background-color: var(--claro);
   display: flex;
@@ -466,13 +465,12 @@ footer p {
   overflow: hidden;
 }
 
-/* Estilos para la lista de videos en la zona izquierda */
 .video-list {
   float: left;
   width: 400px;
   background: #fff;
   padding: 10px;
-  overflow: auto; /* Permite hacer scroll si hay demasiados elementos */
+  overflow: auto; 
 }
 
 .lista {
@@ -486,15 +484,15 @@ footer p {
 .listaVideo {
   align-items: center;
   justify-content: center;
-  color: #c0ff39; /* Cambia esto al color que desees */
-  background-color: #000000; /* Cambia el color del texto si es necesario */
-  border: 1px solid #000000; /* Agrega un borde alrededor del botón */
-  border-radius: 15px; /* Redondea las esquinas del botón */
-  padding: 10px 20px; /* Añade espacio interno para el contenido */
-  display: inline-block; /* Hace que el botón sea un elemento en línea */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-  text-align: center; /* Centra el texto horizontalmente */
-  text-decoration: none; /* Quita el subrayado por defecto de los enlaces (si es un enlace) */
+  color: #c0ff39;
+  background-color: #000000; 
+  border: 1px solid #000000; 
+  border-radius: 15px; 
+  padding: 10px 20px; 
+  display: inline-block;
+  cursor: pointer; 
+  text-align: center; 
+  text-decoration: none; 
 }
 
 
@@ -526,18 +524,17 @@ h3 {
  
 }
 
-/* Estilos para la barra divisoria en el medio (middle-border) */
 #middle-border {
   background-color: var(--boton);
-  height: 75%; /* Ajusta el tamaño de la barra según tus necesidades */
+  height: 75%; 
   max-width: 2px;
   width: 5px;
   margin-top: 50px;
 }
 
 .listaVideo.selected {
-  color: #c0ff39; /* Cambia esto al color que desees */
-  background-color: #000000; /* Cambia el color del texto si es necesario */
+  color: #c0ff39; 
+  background-color: #000000; 
 }
 
 .video-list h3 {
@@ -673,7 +670,7 @@ h3 {
 
   #middle-border {
     background-color: var(--boton);
-    height: 75%; /* Ajusta el tamaño de la barra según tus necesidades */
+    height: 75%; 
     max-width: 2px;
     width: 5px;
     margin-top: 40px;
@@ -699,7 +696,7 @@ h3 {
     position: absolute;
     border-top: 30px solid transparent;
     border-right:  30px  solid transparent;
-    border-bottom:  30px  solid  #344306; /* El color coincide con el fondo del div */
+    border-bottom:  30px  solid  #344306;
     border-left:  30px  solid  #344306; 
   }
 
@@ -713,7 +710,7 @@ h3 {
     width: 320px;
     background: #fff;
     padding: 10px;
-    overflow: auto; /* Permite hacer scroll si hay demasiados elementos */
+    overflow: auto;
     margin-right: -10px;
   }
 
@@ -822,7 +819,7 @@ h3 {
 
   #middle-border {
     background-color: var(--boton);
-    height: 75%; /* Ajusta el tamaño de la barra según tus necesidades */
+    height: 75%; 
     max-width: 2px;
     width: 5px;
     margin-top: 28px;
