@@ -19,7 +19,6 @@ listaItems.forEach(function (item) {
 
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
 const listaItems = document.querySelectorAll('.video-list li');
 
@@ -35,7 +34,7 @@ listaItems.forEach(function (item) {
 });
 });
 
-  // Función para cargar los datos del JSON y llenar el carrusel
+
   function cargarNoticias() {
     fetch('noticias.json') 
       .then((response) => response.json())
@@ -56,30 +55,26 @@ listaItems.forEach(function (item) {
       .catch((error) => console.error('Error al cargar noticias: ' + error));
   }
 
-// Llama a la función para cargar las noticias
 cargarNoticias();
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Obtén los elementos del modal
+
   const modalTitle = document.getElementById("modal-title");
   const modalDate = document.getElementById("modal-date");
   const modalDescription = document.getElementById("modal-descriptioncompleta");
   const modalImage = document.getElementById("modal-image");
 
-  // Obtén los botones "Leer Más"
   const buttons = document.querySelectorAll(".btn[data-bs-toggle='modal']");
 
-  // Función para cargar los datos del JSON
   function cargarDatosNoticia(noticiaId) {
     fetch("noticias.json")
       .then((response) => response.json())
       .then((data) => {
-        const noticia = data[noticiaId - 1]; // Restamos 1 para obtener el índice correcto del arreglo
+        const noticia = data[noticiaId - 1]; 
         modalTitle.textContent = noticia.titulo;
         modalDate.textContent = noticia.fecha;
         modalDescription.innerHTML = noticia.descripcioncompleta;
 
-        // Obtén la extensión de la imagen desde el campo "imagen"
         const imageExtension = noticia.imagen.split('.').pop().toLowerCase();
         modalImage.src = `img/imagen_${noticia.noticia}.${imageExtension}`;
         modalImage.alt = noticia.titulo;
@@ -87,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) => console.error("Error al cargar los datos:", error));
   }
 
-  // Agregar un evento clic a cada botón "Leer Más"
   buttons.forEach(function (button, index) {
     button.addEventListener("click", function () {
       cargarDatosNoticia(index + 1);
@@ -97,25 +91,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-let currentSlide = 1; // Inicialmente, estamos en el botón btn-1
+let currentSlide = 1; 
 
 function cambiarCarrusel() {
-  // Obtén el botón de control actual
   const currentInput = document.querySelector(`#btn-${currentSlide}`);
   
-  // Simula un clic en el botón de control actual
   if (currentInput) {
     currentInput.click();
   }
   
   currentSlide++;
   if (currentSlide > 8) {
-    currentSlide = 1; // Vuelve al botón btn-1 cuando llegues a btn-8
+    currentSlide = 1; 
   }
 }
 
-// Cambia automáticamente el carrusel cada 20 segundos
-setInterval(cambiarCarrusel, 4000); // milisegundos
+setInterval(cambiarCarrusel, 4000); 
 
 
 
